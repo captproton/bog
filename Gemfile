@@ -50,7 +50,7 @@ group :development, :test do
   gem "guard-bundler", "~> 2.0.0"
   gem 'rr', '~> 1.1.2'
   gem 'minitest-spec-rails'
-  gem 'activerecord-nulldb-adapter'
+  # gem 'activerecord-nulldb-adapter', :git => 'git://github.com/nulldb/nulldb.git'
   gem 'database_cleaner', '~> 1.4.0'
   gem 'travis', '~> 1.7.4'
   
