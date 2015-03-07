@@ -41,5 +41,30 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  
+  # App-specfic
+  gem 'passenger'
+  gem 'guard'
+  gem 'guard-minitest'
+  # gem 'guard-passenger', '~> 0.6.0' # the code for this gem needs to be updated
+  gem "guard-bundler", "~> 2.0.0"
+  gem 'rr', '~> 1.1.2'
+  gem 'minitest-spec-rails'
+  gem 'activerecord-nulldb-adapter'
+  gem 'database_cleaner', '~> 1.4.0'
+  gem 'travis', '~> 1.7.4'
+  
 end
 
+# App specfic gems
+gem 'geocoder'
+gem 'calendar_helper'
+# gem 'flickr_fu', '~> 0.3.2'
+gem 'figaro'
+gem 'faker'
+gem 'launchy'
+gem 'kaminari', '~> 0.16.3'
+
+gem 'high_voltage', '~> 2.2.1' # static pages
+# instant backend
+gem 'rails_admin', '~> 0.6.6'
