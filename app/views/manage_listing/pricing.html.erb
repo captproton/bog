@@ -1,0 +1,496 @@
+<h1>MangageListing#pricing</h1>
+<p>Space Title: <%= @space.title %></p>
+<%= render layout: 'form' do |f| %>
+    <%= f.label :listing_weekly_price_native %>
+    <%= f.text_field :listing_weekly_price_native %>
+    <%# f.text_field :listing_monthly_price_native) %>
+
+<% end %>
+<!-- -->
+<div class="manage-listing-content" id="js-manage-listing-content"><div>
+<div class="row js-section js-tooltip-trigger" id="js-standard-price">
+  <div class="js-saving-progress saving-progress" style="display:none;">
+  <h5>Saving...</h5>
+</div>
+
+
+  <div class="col-4">
+    
+    <h3>Base Price</h3>
+
+    
+    
+    <p class="text-muted">
+      The base nightly price and default currency for your listing.
+    </p>
+    
+
+    
+    
+  </div>
+
+  <div class="col-8">
+    
+    
+<label class="label-large" for="listing_price_native">Per night</label>
+<div class="row row-table row-space-1">
+  <div class="col-4 col-middle">
+    <div class="input-addon">
+      <span class="input-prefix">$</span>
+      <input class="input-stem input-large autosubmit-text" name="listing_price_native" value="2222" id="listing_price_native" data-suggested="$104" type="text">
+    </div>
+  </div>
+  <div class="col-8 col-middle">
+    
+      
+        <span class="text-highlight">
+          <strong>Price Tip: $104</strong> 
+        </span>
+        <span <i="" class="icon icon-question grey" id="suggestion_disclaimer_daily"></span>
+          
+        
+      
+    
+  </div>
+</div>
+
+<p class="ml-error" data-error="price"></p>
+
+
+  <p class="text-muted">
+    You can also edit custom prices for individual days in the <a href="/manage-listing/5572421/calendar">Calendar</a>.
+  </p>
+
+
+
+
+<div class="row row-space-top-3">
+  <div class="col-6">
+    <label class="label-large">Currency</label>
+    <div id="currency-picker"><div class="select
+            select-large
+            select-block">
+  <select name="listing_native_currency" id="select-listing_native_currency">
+    
+      <option value="AED">AED</option>
+    
+      <option value="ARS">ARS</option>
+    
+      <option value="AUD">AUD</option>
+    
+      <option value="BRL">BRL</option>
+    
+      <option value="CAD">CAD</option>
+    
+      <option value="CHF">CHF</option>
+    
+      <option value="CNY">CNY</option>
+    
+      <option value="CRC">CRC</option>
+    
+      <option value="CZK">CZK</option>
+    
+      <option value="DKK">DKK</option>
+    
+      <option value="EUR">EUR</option>
+    
+      <option value="GBP">GBP</option>
+    
+      <option value="HKD">HKD</option>
+    
+      <option value="HRK">HRK</option>
+    
+      <option value="HUF">HUF</option>
+    
+      <option value="IDR">IDR</option>
+    
+      <option value="ILS">ILS</option>
+    
+      <option value="INR">INR</option>
+    
+      <option value="JPY">JPY</option>
+    
+      <option value="KRW">KRW</option>
+    
+      <option value="MAD">MAD</option>
+    
+      <option value="MYR">MYR</option>
+    
+      <option value="MXN">MXN</option>
+    
+      <option value="NOK">NOK</option>
+    
+      <option value="NZD">NZD</option>
+    
+      <option value="PEN">PEN</option>
+    
+      <option value="PHP">PHP</option>
+    
+      <option value="PLN">PLN</option>
+    
+      <option value="RON">RON</option>
+    
+      <option value="RUB">RUB</option>
+    
+      <option value="SEK">SEK</option>
+    
+      <option value="SGD">SGD</option>
+    
+      <option value="THB">THB</option>
+    
+      <option value="TRY">TRY</option>
+    
+      <option value="TWD">TWD</option>
+    
+      <option selected="selected" value="USD">USD</option>
+    
+      <option value="VND">VND</option>
+    
+      <option value="ZAR">ZAR</option>
+    
+  </select>
+</div>
+</div>
+  </div>
+</div>
+
+  </div>
+</div>
+
+
+<hr class="section-divider">
+
+<p class="text-center text-muted hide" id="js-set-long-term-prices">
+  Want to offer a discount for longer stays?
+  <a href="#">You can also set weekly and monthly prices.</a>
+</p>
+
+<div id="js-advanced-pricing-content">
+  <!-- Modal for advanced pricing goes here -->
+</div>
+
+<div id="js-long-term-prices" class="">
+  
+<div class="row js-section js-tooltip-trigger" id="js-long-term-prices">
+  <div class="js-saving-progress saving-progress" style="display:none;">
+  <h5>Saving...</h5>
+</div>
+
+
+  <div class="col-4">
+    
+    <h3>Long-Term Prices</h3>
+
+    
+    
+    <p class="text-muted">
+      Offer discounted prices for stays one week or longer.
+    </p>
+    
+
+    
+    
+  </div>
+
+  <div class="col-8">
+    
+    
+  
+  <div class="row-space-3">
+    <div>
+      <label class="label-large" for="listing_weekly_price_native">Per week</label>
+      <div class="row row-table row-space-1">
+        <div class="col-4 col-middle">
+          <div class="input-addon">
+            <span class="input-prefix">$</span>
+            <input name="listing_weekly_price_native" value="" class="input-stem input-large autosubmit-text" id="listing_weekly_price_native" data-suggested="" type="text">
+          </div>
+        </div>
+        <div class="col-8 col-middle text-highlight">
+          
+        </div>
+      </div>
+
+      <p class="ml-error hide" data-error="weekly_price"></p>
+      <div class="js-advanced-weekly-pricing"></div>
+    </div>
+  </div>
+  
+  <div class="row-space-3">
+    <div>
+      <label class="label-large" for="listing_monthly_price_native">Per month</label>
+      <div class="row row-table row-space-1">
+        <div class="col-4 col-middle">
+          <div class="input-addon">
+            <span class="input-prefix">$</span>
+            <input name="listing_monthly_price_native" value="1953" class="autosubmit-text input-stem input-large" id="listing_monthly_price_native" data-suggested="" type="text">
+          </div>
+        </div>
+        <div class="col-8 col-middle text-highlight">
+          
+        </div>
+      </div>
+
+      <p class="ml-error hide" data-error="monthly_price"></p>
+      <span class="js-advanced-monthly-pricing"></span>
+    </div>
+  </div>
+  
+  </div>
+</div>
+
+</div>
+
+<hr class="section-divider post-listed">
+
+
+<div class="row js-section post-listed">
+  <div class="js-saving-progress saving-progress" style="display:none;">
+  <h5>Saving...</h5>
+</div>
+
+
+  <div class="col-4">
+    
+    <h3>Additional Charges</h3>
+
+    
+    
+    <p class="text-muted">
+      These charges are added to the reservation total.
+    </p>
+    
+
+    
+    
+  </div>
+
+  <div class="col-8">
+    
+    
+
+
+  
+<div class="row-space-3 js-tooltip-trigger" id="js-cleaning-fee">
+  <label class="label-large label-inline" for="listing_cleaning_fee_native_checkbox">
+    <input id="listing_cleaning_fee_native_checkbox" data-extras="true" type="checkbox">
+    Cleaning Fee
+  </label>
+
+  <div class="hide" data-checkbox-id="listing_cleaning_fee_native_checkbox">
+    <div class="row row-table row-space-1">
+      <div class="col-4 col-middle">
+        <div class="input-addon">
+          <span class="input-prefix">$</span>
+          <input class="autosubmit-text input-stem input-large" name="listing_cleaning_fee_native" value="" data-extras="true" type="text">
+        </div>
+      </div>
+      <div class="col-8 col-middle">
+        
+      </div>
+    </div>
+    
+    <p class="ml-error" data-error="extras_price"></p>
+  </div>
+</div>
+
+  
+<div class="row-space-3 js-tooltip-trigger" id="js-weekend-pricing">
+  <label class="label-large label-inline" for="listing_weekend_price_native_checkbox">
+    <input id="listing_weekend_price_native_checkbox" data-extras="true" type="checkbox">
+    Weekend Pricing
+  </label>
+
+  <div class="hide" data-checkbox-id="listing_weekend_price_native_checkbox">
+    <div class="row row-table row-space-1">
+      <div class="col-4 col-middle">
+        <div class="input-addon">
+          <span class="input-prefix">$</span>
+          <input class="autosubmit-text input-stem input-large" name="listing_weekend_price_native" value="" data-extras="true" type="text">
+        </div>
+      </div>
+      <div class="col-8 col-middle">
+        
+      </div>
+    </div>
+
+    <p class="text-muted">
+      Price is <strong>per night</strong> and applied to every Friday and Saturday in your calendar.
+    </p>
+  </div>
+</div>
+
+  
+<div class="row-space-3 js-tooltip-trigger" id="js-additional-guests">
+  <label class="label-large label-inline" for="price_for_extra_person_checkbox">
+    <input id="price_for_extra_person_checkbox" data-extras="true" type="checkbox">
+    Additional Guests
+  </label>
+
+  <div class="hide" data-checkbox-id="price_for_extra_person_checkbox">
+    <div class="row row-space-1 row-condensed">
+      <div class="col-4">
+        <div class="input-addon">
+          <span class="input-prefix">$</span>
+          <input class="autosubmit-text input-stem input-large" name="listing_price_for_extra_person_native" value="0" data-extras="true" type="text">
+        </div>
+      </div>
+      <div class="col-5 text-right">
+        <label class="label-large">For each guest after</label>
+      </div>
+      <div class="col-3">
+        <div id="guests-included-select"><div class="select
+            select-large
+            select-block">
+  <select name="guests_included" id="select-guests_included">
+    
+      <option selected="selected" value="1">1</option>
+    
+      <option value="2">2</option>
+    
+      <option value="3">3</option>
+    
+      <option value="4">4</option>
+    
+      <option value="5">5</option>
+    
+      <option value="6">6</option>
+    
+      <option value="7">7</option>
+    
+      <option value="8">8</option>
+    
+      <option value="9">9</option>
+    
+      <option value="10">10</option>
+    
+      <option value="11">11</option>
+    
+      <option value="12">12</option>
+    
+      <option value="13">13</option>
+    
+      <option value="14">14</option>
+    
+      <option value="15">15</option>
+    
+      <option value="16">16+</option>
+    
+  </select>
+</div>
+</div>
+      </div>
+    </div>
+    <p class="ml-error" data-error="price_for_extra_person">
+      
+    </p>
+    <p class="text-muted">
+      per person per night
+    </p>
+  </div>
+</div>
+
+  
+<div class="row-space-3 js-tooltip-trigger" id="js-security-deposit">
+  <label class="label-large label-inline" for="listing_security_deposit_native_checkbox">
+    <input id="listing_security_deposit_native_checkbox" data-extras="true" type="checkbox">
+    Security Deposit
+  </label>
+
+  <div class="hide" data-checkbox-id="listing_security_deposit_native_checkbox">
+    <div class="row row-space-1">
+      <div class="col-4">
+        <div class="input-addon">
+          <span class="input-prefix">$</span>
+          <input class="autosubmit-text input-stem input-large" name="listing_security_deposit_native" value="" data-extras="true" type="text">
+        </div>
+      </div>
+    </div>
+    <p class="ml-error" data-error="security_deposit"></p>
+    <p class="text-muted">
+      This deposit is held by Airbnb and refunded to the guest unless you make claim within 48 hours of guest checkout.
+    </p>
+  </div>
+</div>
+
+
+
+
+  </div>
+</div>
+
+
+<div style="display: block; top: 54px; left: 650px; opacity: 1;" class="tooltip help-tooltip" data-trigger="#js-standard-price" data-event="none">
+  <div class="media">
+    <i class="pull-left icon icon-light-bulb icon-beach icon-size-2"></i>
+    <div class="media-body text-lead text-muted help-tooltip-body">
+      
+  <strong>Setting a price</strong>
+  <p>For new listings with no reviews, it's important to set a competitive price. Once you get your first booking and review, you can raise your price!</p>
+  
+    <p>The suggested nightly price tip is based on:</p>
+    <ol>
+      <li>Seasonal travel demand in your area.</li>
+      <li>The median nightly price of recent Airbnb bookings in your city.</li>
+      <li>The details of your listing.</li>
+    </ol>
+  
+
+    </div>
+  </div>
+</div>
+
+
+<div style="display: none; top: 362.783px; left: 650px; opacity: 1;" class="tooltip help-tooltip" data-trigger="#js-long-term-prices" data-event="none">
+  <div class="media">
+    <i class="pull-left icon icon-light-bulb icon-beach icon-size-2"></i>
+    <div class="media-body text-lead text-muted help-tooltip-body">
+      
+  <strong>Offer a discount</strong>
+  <p>Most hosts offer a discount for longer stays of a week or more.</p>
+
+    </div>
+  </div>
+</div>
+
+
+<div style="display: none;" class="tooltip help-tooltip" data-trigger="#js-cleaning-fee" data-event="none">
+  <div class="media">
+    <i class="pull-left icon icon-light-bulb icon-beach icon-size-2"></i>
+    <div class="media-body text-lead text-muted help-tooltip-body">
+      
+  <p>The cleaning fee is added to the total cost of every reservation at your listing.</p>
+
+    </div>
+  </div>
+</div>
+
+
+<div style="display: none;" class="tooltip help-tooltip" data-trigger="#js-weekend-pricing" data-event="none">
+  <div class="media">
+    <i class="pull-left icon icon-light-bulb icon-beach icon-size-2"></i>
+    <div class="media-body text-lead text-muted help-tooltip-body">
+      
+  <p>Enable weekend pricing to change the nightly price of <strong>every Friday and Saturday</strong> in your calendar.</p>
+
+    </div>
+  </div>
+</div>
+
+
+<div style="display: none;" class="tooltip help-tooltip" data-trigger="#js-additional-guests" data-event="none">
+  <div class="media">
+    <i class="pull-left icon icon-light-bulb icon-beach icon-size-2"></i>
+    <div class="media-body text-lead text-muted help-tooltip-body">
+      
+  <p>The additional guest charge is added to the nightly price of your listing (for each guest over the number you specify).</p>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<div id="js-donation-tool-placeholder"></div>
+</div></div>

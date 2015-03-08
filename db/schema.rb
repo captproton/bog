@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150307212112) do
+ActiveRecord::Schema.define(version: 20150308223535) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,9 +19,26 @@ ActiveRecord::Schema.define(version: 20150307212112) do
   create_table "spaces", force: :cascade do |t|
     t.string   "title"
     t.text     "summary"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.datetime "pubdate"
+    t.string   "status"
+    t.string   "calendar_frequency"
+    t.integer  "listing_weekly_price_native"
+    t.integer  "bedrooms"
+    t.integer  "beds"
+    t.integer  "bathrooms"
+    t.string   "bed_style"
+    t.string   "home_style"
+    t.string   "room_style"
+    t.integer  "person_capacity"
+    t.text     "directions"
+    t.string   "country_code"
+    t.text     "street_address"
+    t.string   "apt_ste_bld"
+    t.string   "city"
+    t.string   "state"
+    t.string   "postal_code"
   end
 
 end

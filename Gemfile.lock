@@ -154,7 +154,7 @@ GEM
       nenv (~> 0.1)
       shellany (~> 0.0)
     open4 (1.3.4)
-    passenger (5.0.1)
+    passenger (5.0.2)
       rack
       rake (>= 0.8.1)
     pg (0.18.1)
@@ -270,6 +270,8 @@ GEM
       railties (>= 4.0)
       sprockets-rails (>= 2.0, < 4.0)
     websocket (1.2.1)
+    wicked (1.1.1)
+      rails (>= 3.0.7)
 
 PLATFORMS
   ruby
@@ -291,7 +293,7 @@ DEPENDENCIES
   kaminari (~> 0.16.3)
   launchy
   minitest-spec-rails
-  passenger
+  passenger (~> 5.0.1)
   pg
   rails (= 4.2.0)
   rails_admin (~> 0.6.6)
@@ -303,3 +305,4 @@ DEPENDENCIES
   turbolinks
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
+  wicked

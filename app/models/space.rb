@@ -2,7 +2,7 @@ require 'date'
 require 'active_record'
  
 class Space < ActiveRecord::Base
-  validates :title, :presence => true
+  validates :title,      :presence => true #, :if => :active_or_title?
 
   attr_accessor :lodging
   
@@ -11,5 +11,13 @@ class Space < ActiveRecord::Base
     self.pubdate = clock.now
     @lodging.add_entry(self)
   end
-  
+
+  def active?
+    status == 'active'
+  end
+
+  # def active_or_title?
+  #   status.include?('title') || active?
+  # end
+
 end

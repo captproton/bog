@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+
+  get 'rooms/index'
+  resources :spaces, only: [:new, :create]
+  resources :manage_listing, only: [:show, :update]
+  resources :user_steps, only: [:show, :update]
+  resources :spaces  do
+    resources :manage_listing, only: [:show, :update]
+  end
+  resources :rooms
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

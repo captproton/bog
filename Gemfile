@@ -43,7 +43,7 @@ group :development, :test do
   gem 'spring'
   
   # App-specfic
-  gem 'passenger'
+  gem 'passenger', "~> 5.0.1"
   gem 'guard'
   gem 'guard-minitest'
   # gem 'guard-passenger', '~> 0.6.0' # the code for this gem needs to be updated
@@ -68,3 +68,5 @@ gem 'kaminari', '~> 0.16.3'
 gem 'high_voltage', '~> 2.2.1' # static pages
 # instant backend
 gem 'rails_admin', '~> 0.6.6'
+# Wicked is a Rails engine for producing easy wizard controllers
+gem 'wicked'
