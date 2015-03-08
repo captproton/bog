@@ -1,0 +1,1181 @@
+<h1>MangageListing#location</h1>
+<%= render layout: 'form' do |f| %>
+  <div class="col-4">
+    
+    <h3>Directions</h3>
+
+    
+    
+    <p class="text-muted">
+      Directions are private and only shared with guests after a reservation is confirmed.
+    </p>
+    
+
+    
+    
+  </div>
+
+  <div class="col-8">
+    
+    
+  <label class="label-large">Directions for confirmed guests</label>
+  
+  <%= f.text_area :directions,  rows: "10", placeholder: "Provide guests with directions to your place, suggestions on transportation, and any other details that may help them arrive easily and on time..." do %>
+  <% end %>
+<!-- -->
+
+    <div class="row-space-1">
+      <label for="country">Country</label>
+      <div id="country-select"><div class="select select-block">
+        <%= f.select(:country_code) do %>
+        
+      <option value=""></option>
+    
+      <option value="AF" data-prefix="93">
+        Afghanistan
+      </option>
+    
+      <option value="AX" data-prefix="358">
+        Åland Islands
+      </option>
+    
+      <option value="AL" data-prefix="355">
+        Albania
+      </option>
+    
+      <option value="DZ" data-prefix="213">
+        Algeria
+      </option>
+    
+      <option value="AS" data-prefix="1">
+        American Samoa
+      </option>
+    
+      <option value="AD" data-prefix="376">
+        Andorra
+      </option>
+    
+      <option value="AO" data-prefix="244">
+        Angola
+      </option>
+    
+      <option value="AI" data-prefix="1">
+        Anguilla
+      </option>
+    
+      <option value="AG" data-prefix="1">
+        Antigua and Barbuda
+      </option>
+    
+      <option value="AR" data-prefix="54">
+        Argentina
+      </option>
+    
+      <option value="AM" data-prefix="374">
+        Armenia
+      </option>
+    
+      <option value="AW" data-prefix="297">
+        Aruba
+      </option>
+    
+      <option value="AU" data-prefix="61">
+        Australia
+      </option>
+    
+      <option value="AT" data-prefix="43">
+        Austria
+      </option>
+    
+      <option value="AZ" data-prefix="994">
+        Azerbaijan
+      </option>
+    
+      <option value="BS" data-prefix="1">
+        Bahamas
+      </option>
+    
+      <option value="BH" data-prefix="973">
+        Bahrain
+      </option>
+    
+      <option value="BD" data-prefix="880">
+        Bangladesh
+      </option>
+    
+      <option value="BB" data-prefix="1">
+        Barbados
+      </option>
+    
+      <option value="BY" data-prefix="375">
+        Belarus
+      </option>
+    
+      <option value="BE" data-prefix="32">
+        Belgium
+      </option>
+    
+      <option value="BZ" data-prefix="501">
+        Belize
+      </option>
+    
+      <option value="BJ" data-prefix="229">
+        Benin
+      </option>
+    
+      <option value="BM" data-prefix="1">
+        Bermuda
+      </option>
+    
+      <option value="BT" data-prefix="975">
+        Bhutan
+      </option>
+    
+      <option value="BO" data-prefix="591">
+        Bolivia
+      </option>
+    
+      <option value="BA" data-prefix="387">
+        Bosnia and Herzegovina
+      </option>
+    
+      <option value="BW" data-prefix="267">
+        Botswana
+      </option>
+    
+      <option value="BR" data-prefix="55">
+        Brazil
+      </option>
+    
+      <option value="IO" data-prefix="246">
+        British Indian Ocean Territory
+      </option>
+    
+      <option value="VG" data-prefix="1">
+        British Virgin Islands
+      </option>
+    
+      <option value="BN" data-prefix="673">
+        Brunei
+      </option>
+    
+      <option value="BG" data-prefix="359">
+        Bulgaria
+      </option>
+    
+      <option value="BF" data-prefix="226">
+        Burkina Faso
+      </option>
+    
+      <option value="BI" data-prefix="257">
+        Burundi
+      </option>
+    
+      <option value="KH" data-prefix="855">
+        Cambodia
+      </option>
+    
+      <option value="CM" data-prefix="237">
+        Cameroon
+      </option>
+    
+      <option value="CA" data-prefix="1">
+        Canada
+      </option>
+    
+      <option value="CV" data-prefix="238">
+        Cape Verde
+      </option>
+    
+      <option value="BQ" data-prefix="599">
+        Caribbean Netherlands
+      </option>
+    
+      <option value="KY" data-prefix="1">
+        Cayman Islands
+      </option>
+    
+      <option value="CF" data-prefix="236">
+        Central African Republic
+      </option>
+    
+      <option value="TD" data-prefix="235">
+        Chad
+      </option>
+    
+      <option value="CL" data-prefix="56">
+        Chile
+      </option>
+    
+      <option value="CN" data-prefix="86">
+        China
+      </option>
+    
+      <option value="CX" data-prefix="61">
+        Christmas Island
+      </option>
+    
+      <option value="CC" data-prefix="61">
+        Cocos [Keeling] Islands
+      </option>
+    
+      <option value="CO" data-prefix="57">
+        Colombia
+      </option>
+    
+      <option value="KM" data-prefix="269">
+        Comoros
+      </option>
+    
+      <option value="CG" data-prefix="242">
+        Congo
+      </option>
+    
+      <option value="CK" data-prefix="682">
+        Cook Islands
+      </option>
+    
+      <option value="CR" data-prefix="506">
+        Costa Rica
+      </option>
+    
+      <option value="HR" data-prefix="385">
+        Croatia
+      </option>
+    
+      <option value="CW" data-prefix="599">
+        Curaçao
+      </option>
+    
+      <option value="CY" data-prefix="357">
+        Cyprus
+      </option>
+    
+      <option value="CZ" data-prefix="420">
+        Czech Republic
+      </option>
+    
+      <option value="CD" data-prefix="243">
+        Democratic Republic of the Congo
+      </option>
+    
+      <option value="DK" data-prefix="45">
+        Denmark
+      </option>
+    
+      <option value="DJ" data-prefix="253">
+        Djibouti
+      </option>
+    
+      <option value="DM" data-prefix="1">
+        Dominica
+      </option>
+    
+      <option value="DO" data-prefix="1">
+        Dominican Republic
+      </option>
+    
+      <option value="TL" data-prefix="670">
+        East Timor
+      </option>
+    
+      <option value="EC" data-prefix="593">
+        Ecuador
+      </option>
+    
+      <option value="EG" data-prefix="20">
+        Egypt
+      </option>
+    
+      <option value="SV" data-prefix="503">
+        El Salvador
+      </option>
+    
+      <option value="GQ" data-prefix="240">
+        Equatorial Guinea
+      </option>
+    
+      <option value="ER" data-prefix="291">
+        Eritrea
+      </option>
+    
+      <option value="EE" data-prefix="372">
+        Estonia
+      </option>
+    
+      <option value="ET" data-prefix="251">
+        Ethiopia
+      </option>
+    
+      <option value="FK" data-prefix="500">
+        Falkland Islands [Islas Malvinas]
+      </option>
+    
+      <option value="FO" data-prefix="298">
+        Faroe Islands
+      </option>
+    
+      <option value="FJ" data-prefix="679">
+        Fiji
+      </option>
+    
+      <option value="FI" data-prefix="358">
+        Finland
+      </option>
+    
+      <option value="FR" data-prefix="33">
+        France
+      </option>
+    
+      <option value="GF" data-prefix="594">
+        French Guiana
+      </option>
+    
+      <option value="PF" data-prefix="689">
+        French Polynesia
+      </option>
+    
+      <option value="GA" data-prefix="241">
+        Gabon
+      </option>
+    
+      <option value="GM" data-prefix="220">
+        Gambia
+      </option>
+    
+      <option value="GE" data-prefix="995">
+        Georgia
+      </option>
+    
+      <option value="DE" data-prefix="49">
+        Germany
+      </option>
+    
+      <option value="GH" data-prefix="233">
+        Ghana
+      </option>
+    
+      <option value="GI" data-prefix="350">
+        Gibraltar
+      </option>
+    
+      <option value="GR" data-prefix="30">
+        Greece
+      </option>
+    
+      <option value="GL" data-prefix="299">
+        Greenland
+      </option>
+    
+      <option value="GD" data-prefix="1">
+        Grenada
+      </option>
+    
+      <option value="GP" data-prefix="590">
+        Guadeloupe
+      </option>
+    
+      <option value="GU" data-prefix="1">
+        Guam
+      </option>
+    
+      <option value="GT" data-prefix="502">
+        Guatemala
+      </option>
+    
+      <option value="GG" data-prefix="44">
+        Guernsey
+      </option>
+    
+      <option value="GN" data-prefix="224">
+        Guinea
+      </option>
+    
+      <option value="GW" data-prefix="245">
+        Guinea-Bissau
+      </option>
+    
+      <option value="GY" data-prefix="592">
+        Guyana
+      </option>
+    
+      <option value="HT" data-prefix="509">
+        Haiti
+      </option>
+    
+      <option value="HN" data-prefix="504">
+        Honduras
+      </option>
+    
+      <option value="HK" data-prefix="852">
+        Hong Kong
+      </option>
+    
+      <option value="HU" data-prefix="36">
+        Hungary
+      </option>
+    
+      <option value="IS" data-prefix="354">
+        Iceland
+      </option>
+    
+      <option value="IN" data-prefix="91">
+        India
+      </option>
+    
+      <option value="ID" data-prefix="62">
+        Indonesia
+      </option>
+    
+      <option value="IQ" data-prefix="964">
+        Iraq
+      </option>
+    
+      <option value="IE" data-prefix="353">
+        Ireland
+      </option>
+    
+      <option value="IM" data-prefix="44">
+        Isle of Man
+      </option>
+    
+      <option value="IL" data-prefix="972">
+        Israel
+      </option>
+    
+      <option value="IT" data-prefix="39">
+        Italy
+      </option>
+    
+      <option value="CI" data-prefix="225">
+        Ivory Coast
+      </option>
+    
+      <option value="JM" data-prefix="1">
+        Jamaica
+      </option>
+    
+      <option value="JP" data-prefix="81">
+        Japan
+      </option>
+    
+      <option value="JE" data-prefix="44">
+        Jersey
+      </option>
+    
+      <option value="JO" data-prefix="962">
+        Jordan
+      </option>
+    
+      <option value="KZ" data-prefix="7">
+        Kazakhstan
+      </option>
+    
+      <option value="KE" data-prefix="254">
+        Kenya
+      </option>
+    
+      <option value="KI" data-prefix="686">
+        Kiribati
+      </option>
+    
+      <option value="KW" data-prefix="965">
+        Kuwait
+      </option>
+    
+      <option value="KG" data-prefix="996">
+        Kyrgyzstan
+      </option>
+    
+      <option value="LA" data-prefix="856">
+        Laos
+      </option>
+    
+      <option value="LV" data-prefix="371">
+        Latvia
+      </option>
+    
+      <option value="LB" data-prefix="961">
+        Lebanon
+      </option>
+    
+      <option value="LS" data-prefix="266">
+        Lesotho
+      </option>
+    
+      <option value="LR" data-prefix="231">
+        Liberia
+      </option>
+    
+      <option value="LY" data-prefix="218">
+        Libya
+      </option>
+    
+      <option value="LI" data-prefix="423">
+        Liechtenstein
+      </option>
+    
+      <option value="LT" data-prefix="370">
+        Lithuania
+      </option>
+    
+      <option value="LU" data-prefix="352">
+        Luxembourg
+      </option>
+    
+      <option value="MO" data-prefix="853">
+        Macau
+      </option>
+    
+      <option value="MK" data-prefix="389">
+        Macedonia
+      </option>
+    
+      <option value="MG" data-prefix="261">
+        Madagascar
+      </option>
+    
+      <option value="MW" data-prefix="265">
+        Malawi
+      </option>
+    
+      <option value="MY" data-prefix="60">
+        Malaysia
+      </option>
+    
+      <option value="MV" data-prefix="960">
+        Maldives
+      </option>
+    
+      <option value="ML" data-prefix="223">
+        Mali
+      </option>
+    
+      <option value="MT" data-prefix="356">
+        Malta
+      </option>
+    
+      <option value="MH" data-prefix="692">
+        Marshall Islands
+      </option>
+    
+      <option value="MQ" data-prefix="596">
+        Martinique
+      </option>
+    
+      <option value="MR" data-prefix="222">
+        Mauritania
+      </option>
+    
+      <option value="MU" data-prefix="230">
+        Mauritius
+      </option>
+    
+      <option value="YT" data-prefix="262">
+        Mayotte
+      </option>
+    
+      <option value="MX" data-prefix="52">
+        Mexico
+      </option>
+    
+      <option value="FM" data-prefix="691">
+        Micronesia
+      </option>
+    
+      <option value="MD" data-prefix="373">
+        Moldova
+      </option>
+    
+      <option value="MC" data-prefix="377">
+        Monaco
+      </option>
+    
+      <option value="MN" data-prefix="976">
+        Mongolia
+      </option>
+    
+      <option value="ME" data-prefix="382">
+        Montenegro
+      </option>
+    
+      <option value="MS" data-prefix="1">
+        Montserrat
+      </option>
+    
+      <option value="MA" data-prefix="212">
+        Morocco
+      </option>
+    
+      <option value="MZ" data-prefix="258">
+        Mozambique
+      </option>
+    
+      <option value="MM" data-prefix="95">
+        Myanmar [Burma]
+      </option>
+    
+      <option value="NA" data-prefix="264">
+        Namibia
+      </option>
+    
+      <option value="NR" data-prefix="674">
+        Nauru
+      </option>
+    
+      <option value="NP" data-prefix="977">
+        Nepal
+      </option>
+    
+      <option value="NL" data-prefix="31">
+        Netherlands
+      </option>
+    
+      <option value="NC" data-prefix="687">
+        New Caledonia
+      </option>
+    
+      <option value="NZ" data-prefix="64">
+        New Zealand
+      </option>
+    
+      <option value="NI" data-prefix="505">
+        Nicaragua
+      </option>
+    
+      <option value="NE" data-prefix="227">
+        Niger
+      </option>
+    
+      <option value="NG" data-prefix="234">
+        Nigeria
+      </option>
+    
+      <option value="NU" data-prefix="683">
+        Niue
+      </option>
+    
+      <option value="NF" data-prefix="672">
+        Norfolk Island
+      </option>
+    
+      <option value="MP" data-prefix="1">
+        Northern Mariana Islands
+      </option>
+    
+      <option value="NO" data-prefix="47">
+        Norway
+      </option>
+    
+      <option value="OM" data-prefix="968">
+        Oman
+      </option>
+    
+      <option value="PK" data-prefix="92">
+        Pakistan
+      </option>
+    
+      <option value="PW" data-prefix="680">
+        Palau
+      </option>
+    
+      <option value="PS" data-prefix="970">
+        Palestinian Territories
+      </option>
+    
+      <option value="PA" data-prefix="507">
+        Panama
+      </option>
+    
+      <option value="PG" data-prefix="675">
+        Papua New Guinea
+      </option>
+    
+      <option value="PY" data-prefix="595">
+        Paraguay
+      </option>
+    
+      <option value="PE" data-prefix="51">
+        Peru
+      </option>
+    
+      <option value="PH" data-prefix="63">
+        Philippines
+      </option>
+    
+      <option value="PN" data-prefix="64">
+        Pitcairn Islands
+      </option>
+    
+      <option value="PL" data-prefix="48">
+        Poland
+      </option>
+    
+      <option value="PT" data-prefix="351">
+        Portugal
+      </option>
+    
+      <option value="PR" data-prefix="1">
+        Puerto Rico
+      </option>
+    
+      <option value="QA" data-prefix="974">
+        Qatar
+      </option>
+    
+      <option value="RE" data-prefix="262">
+        Réunion
+      </option>
+    
+      <option value="RO" data-prefix="40">
+        Romania
+      </option>
+    
+      <option value="RU" data-prefix="7">
+        Russia
+      </option>
+    
+      <option value="RW" data-prefix="250">
+        Rwanda
+      </option>
+    
+      <option value="BL" data-prefix="590">
+        Saint Barthélemy
+      </option>
+    
+      <option value="SH" data-prefix="290">
+        Saint Helena
+      </option>
+    
+      <option value="KN" data-prefix="1">
+        Saint Kitts and Nevis
+      </option>
+    
+      <option value="LC" data-prefix="1">
+        Saint Lucia
+      </option>
+    
+      <option value="MF" data-prefix="590">
+        Saint Martin
+      </option>
+    
+      <option value="PM" data-prefix="508">
+        Saint Pierre and Miquelon
+      </option>
+    
+      <option value="VC" data-prefix="1">
+        Saint Vincent and the Grenadines
+      </option>
+    
+      <option value="WS" data-prefix="685">
+        Samoa
+      </option>
+    
+      <option value="SM" data-prefix="378">
+        San Marino
+      </option>
+    
+      <option value="ST" data-prefix="239">
+        São Tomé and Príncipe
+      </option>
+    
+      <option value="SA" data-prefix="966">
+        Saudi Arabia
+      </option>
+    
+      <option value="SN" data-prefix="221">
+        Senegal
+      </option>
+    
+      <option value="RS" data-prefix="381">
+        Serbia
+      </option>
+    
+      <option value="SC" data-prefix="248">
+        Seychelles
+      </option>
+    
+      <option value="SL" data-prefix="232">
+        Sierra Leone
+      </option>
+    
+      <option value="SG" data-prefix="65">
+        Singapore
+      </option>
+    
+      <option value="SX" data-prefix="1">
+        Sint Maarten
+      </option>
+    
+      <option value="SK" data-prefix="421">
+        Slovakia
+      </option>
+    
+      <option value="SI" data-prefix="386">
+        Slovenia
+      </option>
+    
+      <option value="SB" data-prefix="677">
+        Solomon Islands
+      </option>
+    
+      <option value="SO" data-prefix="252">
+        Somalia
+      </option>
+    
+      <option value="ZA" data-prefix="27">
+        South Africa
+      </option>
+    
+      <option value="GS" data-prefix="500">
+        South Georgia and the South Sandwich Islands
+      </option>
+    
+      <option value="KR" data-prefix="82">
+        South Korea
+      </option>
+    
+      <option value="SS" data-prefix="211">
+        South Sudan
+      </option>
+    
+      <option value="ES" data-prefix="34">
+        Spain
+      </option>
+    
+      <option value="LK" data-prefix="94">
+        Sri Lanka
+      </option>
+    
+      <option value="SR" data-prefix="597">
+        Suriname
+      </option>
+    
+      <option value="SJ" data-prefix="47">
+        Svalbard and Jan Mayen
+      </option>
+    
+      <option value="SZ" data-prefix="268">
+        Swaziland
+      </option>
+    
+      <option value="SE" data-prefix="46">
+        Sweden
+      </option>
+    
+      <option value="CH" data-prefix="41">
+        Switzerland
+      </option>
+    
+      <option value="TW" data-prefix="886">
+        Taiwan
+      </option>
+    
+      <option value="TJ" data-prefix="992">
+        Tajikistan
+      </option>
+    
+      <option value="TZ" data-prefix="255">
+        Tanzania
+      </option>
+    
+      <option value="TH" data-prefix="66">
+        Thailand
+      </option>
+    
+      <option value="TG" data-prefix="228">
+        Togo
+      </option>
+    
+      <option value="TK" data-prefix="690">
+        Tokelau
+      </option>
+    
+      <option value="TO" data-prefix="676">
+        Tonga
+      </option>
+    
+      <option value="TT" data-prefix="1">
+        Trinidad and Tobago
+      </option>
+    
+      <option value="TN" data-prefix="216">
+        Tunisia
+      </option>
+    
+      <option value="TR" data-prefix="90">
+        Turkey
+      </option>
+    
+      <option value="TM" data-prefix="993">
+        Turkmenistan
+      </option>
+    
+      <option value="TC" data-prefix="1">
+        Turks and Caicos Islands
+      </option>
+    
+      <option value="TV" data-prefix="688">
+        Tuvalu
+      </option>
+    
+      <option value="VI" data-prefix="1">
+        U.S. Virgin Islands
+      </option>
+    
+      <option value="UG" data-prefix="256">
+        Uganda
+      </option>
+    
+      <option value="UA" data-prefix="380">
+        Ukraine
+      </option>
+    
+      <option value="AE" data-prefix="971">
+        United Arab Emirates
+      </option>
+    
+      <option value="GB" data-prefix="44">
+        United Kingdom
+      </option>
+    
+      <option value="US" data-prefix="1">
+        United States
+      </option>
+    
+      <option value="UY" data-prefix="598">
+        Uruguay
+      </option>
+    
+      <option value="UZ" data-prefix="998">
+        Uzbekistan
+      </option>
+    
+      <option value="VU" data-prefix="678">
+        Vanuatu
+      </option>
+    
+      <option value="VA" data-prefix="379">
+        Vatican City
+      </option>
+    
+      <option value="VE" data-prefix="58">
+        Venezuela
+      </option>
+    
+      <option value="VN" data-prefix="84">
+        Vietnam
+      </option>
+    
+      <option value="WF" data-prefix="681">
+        Wallis and Futuna
+      </option>
+    
+      <option value="EH" data-prefix="212">
+        Western Sahara
+      </option>
+    
+      <option value="YE" data-prefix="967">
+        Yemen
+      </option>
+    
+      <option value="ZM" data-prefix="260">
+        Zambia
+      </option>
+    
+      <option value="ZW" data-prefix="263">
+        Zimbabwe
+      </option>
+    <% end %>
+  </div>
+  </div>
+    </div>
+    <div id="localized-fields">
+    <div class="row-space-1">
+      <%= f.label :street_address %>
+      <%= f.text_field :street_address, placeholder: "e.g. 123 Main St.", autocomplete: "off"  %>
+      
+    </div>
+
+    <div class="row-space-1">
+      <%= f.label :apt_ste_bld %>
+      <%= f.text_field :apt_ste_bld, placeholder: "e.g. Apt #7" %>
+    </div>
+
+    <div class="row-space-1">
+      <%= f.label :city %>
+      <%= f.text_field :city, placeholder: "e.g. San Francisco" %>
+    </div>
+
+    <div class="row-space-1">
+      <%= f.label :state %>
+      <%= f.text_field :state, placeholder: "e.g. CA" %>
+    </div>
+
+    <div class="row-space-1">
+      <%= f.label :postal_code %>
+      <%= f.text_field :postal_code, placeholder: "e.g. 94103"  %>
+    </div>
+
+  </div>
+
+  
+    <div class="map-canvas" style="display: none; position: relative; background-color: rgb(229, 227, 223); overflow: hidden;"><div class="gm-style" style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;), default;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1;"><div style="width: 256px; height: 256px; position: absolute; left: -124px; top: -148px;"></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: -1;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1;"><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -124px; top: -148px;"></div></div></div></div><div style="position: absolute; z-index: 0; left: 0px; top: 0px;"><div style="overflow: hidden;"></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1;"><div style="width: 256px; height: 256px; position: absolute; left: -124px; top: -148px;"><img draggable="false" src="https://mts1.googleapis.com/vt?pb=!1m4!1m3!1i11!2i387!3i769!2m3!1e0!2sm!3i293000000!3m14!2sen!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy50OjMzfHMuZTpsfHAudjpvZmY!4e0" style="width: 256px; height: 256px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 2; width: 100%; height: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 3; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;"></div></div></div><div style="margin-left: 5px; margin-right: 5px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;"><a title="Click to see this area on Google Maps" href="http://maps.google.com/maps?ll=40.770218,-111.887802&amp;z=11&amp;t=m&amp;hl=en&amp;gl=US&amp;mapclient=apiv3" target="_blank" style="position: static; overflow: visible; float: none; display: inline;"><div style="width: 62px; height: 26px; cursor: pointer;"><img draggable="false" src="https://maps.gstatic.com/mapfiles/api-3/images/google_white2.png" style="position: absolute; left: 0px; top: 0px; width: 62px; height: 26px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div></a></div><div style="z-index: 1000001; position: absolute; right: 0px; bottom: 0px; width: 12px;" class="gmnoprint"><div class="gm-style-cc" style="-moz-user-select: none;" draggable="false"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto,Arial,sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right;"><a style="color: rgb(68, 68, 68); text-decoration: none; cursor: pointer; display: none;">Map Data</a><span style="display: none;"></span></div></div></div><div style="background-color: white; padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Roboto,Arial,sans-serif; color: rgb(34, 34, 34); box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2); z-index: 10000002; display: none; width: 0px; height: 0px; position: absolute; left: 5px; top: 5px;"><div style="padding: 0px 0px 10px; font-size: 16px;">Map Data</div><div style="font-size: 13px;"></div><div style="width: 13px; height: 13px; overflow: hidden; position: absolute; opacity: 0.7; right: 12px; top: 12px; z-index: 10000; cursor: pointer;"><img draggable="false" src="https://maps.gstatic.com/mapfiles/api-3/images/mapcnt3.png" style="position: absolute; left: -2px; top: -336px; width: 59px; height: 492px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div></div><div style="position: absolute; right: 0px; bottom: 0px;" class="gmnoscreen"><div style="font-family: Roboto,Arial,sans-serif; font-size: 11px; color: rgb(68, 68, 68); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);"></div></div><div draggable="false" style="z-index: 1000001; position: absolute; -moz-user-select: none; right: 0px; bottom: 0px;" class="gmnoprint gm-style-cc"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto,Arial,sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right;"><a target="_blank" href="http://www.google.com/intl/en_US/help/terms_maps.html" style="text-decoration: none; cursor: pointer; color: rgb(68, 68, 68);">Terms of Use</a></div></div><div class="gm-style-cc" style="-moz-user-select: none; display: none; position: absolute; right: 0px; bottom: 0px;" draggable="false"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto,Arial,sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right;"><a href="https://www.google.com/maps/@40.770218,-111.887802,11z/data=!10m1!1e1!12b1?source=apiv3" style="font-family: Roboto,Arial,sans-serif; font-size: 10px; color: rgb(68, 68, 68); text-decoration: none; position: relative;" title="Report errors in the road map or imagery to Google" target="_new">Report a map error</a></div></div><div controlheight="84" controlwidth="32" draggable="false" style="margin: 5px; -moz-user-select: none; position: absolute; left: 0px; top: 0px;" class="gmnoprint"><div style="cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;), default; position: absolute; left: 0px; top: 0px;" controlheight="40" controlwidth="32"><div style="width: 32px; height: 40px; overflow: hidden; position: absolute; left: 0px; top: 0px;"><img draggable="false" src="https://maps.gstatic.com/mapfiles/api-3/images/cb_scout2.png" style="position: absolute; left: -9px; top: -102px; width: 1028px; height: 214px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div><div style="width: 32px; height: 40px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img draggable="false" src="https://maps.gstatic.com/mapfiles/api-3/images/cb_scout2.png" style="position: absolute; left: -107px; top: -102px; width: 1028px; height: 214px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div><div style="width: 32px; height: 40px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img draggable="false" src="https://maps.gstatic.com/mapfiles/api-3/images/cb_scout2.png" style="position: absolute; left: -58px; top: -102px; width: 1028px; height: 214px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div><div style="width: 32px; height: 40px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img draggable="false" src="https://maps.gstatic.com/mapfiles/api-3/images/cb_scout2.png" style="position: absolute; left: -205px; top: -102px; width: 1028px; height: 214px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div></div><div controlheight="0" controlwidth="0" style="opacity: 0.6; display: none; position: absolute;" class="gmnoprint"><div title="Rotate map 90 degrees" style="width: 22px; height: 22px; overflow: hidden; position: absolute; cursor: pointer;"><img draggable="false" src="https://maps.gstatic.com/mapfiles/api-3/images/mapcnt3.png" style="position: absolute; left: -38px; top: -360px; width: 59px; height: 492px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div></div><div style="position: absolute; left: 6px; top: 45px;" controlheight="39" controlwidth="20" class="gmnoprint"><div style="width: 20px; height: 39px; overflow: hidden; position: absolute;"><img draggable="false" src="https://maps.gstatic.com/mapfiles/api-3/images/mapcnt3.png" style="position: absolute; left: -39px; top: -401px; width: 59px; height: 492px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div><div title="Zoom in" style="position: absolute; left: 0px; top: 2px; width: 20px; height: 17px; cursor: pointer;"></div><div title="Zoom out" style="position: absolute; left: 0px; top: 19px; width: 20px; height: 17px; cursor: pointer;"></div></div></div><div style="margin: 5px; z-index: 0; position: absolute; cursor: pointer; text-align: left; width: 85px; right: 0px; top: 0px;" class="gmnoprint gm-style-mtc"><div title="Change map style" draggable="false" style="direction: ltr; overflow: hidden; text-align: left; position: relative; color: rgb(0, 0, 0); font-family: Roboto,Arial,sans-serif; -moz-user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 1px 6px; border-radius: 2px; background-clip: padding-box; border: 1px solid rgba(0, 0, 0, 0.15); box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.3); font-weight: 500;">Map<img style="-moz-user-select: none; border: 0px none; padding: 0px; margin: -2px 0px 0px; position: absolute; right: 6px; top: 50%; width: 7px; height: 4px;" draggable="false" src="https://maps.gstatic.com/mapfiles/arrow-down.png"></div><div style="background-color: white; z-index: -1; padding-top: 2px; background-clip: padding-box; border-width: 0px 1px 1px; border-style: none solid solid; border-color: -moz-use-text-color rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.3); position: relative; text-align: left; display: none;"><div title="Show street map" draggable="false" style="color: black; font-family: Roboto,Arial,sans-serif; -moz-user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 3px; font-weight: 500;">Map</div><div title="Show satellite imagery" draggable="false" style="color: black; font-family: Roboto,Arial,sans-serif; -moz-user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 3px;">Satellite</div><div style="margin: 1px 0px; border-top: 1px solid rgb(235, 235, 235);"></div><div title="Show street map with terrain" draggable="false" style="color: rgb(0, 0, 0); font-family: Roboto,Arial,sans-serif; -moz-user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 3px 8px 3px 3px; direction: ltr; text-align: left; white-space: nowrap;"><span style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle;" role="checkbox"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden; display: none;"><img draggable="false" src="https://maps.gstatic.com/mapfiles/mv/imgs8.png" style="position: absolute; left: -52px; top: -44px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">Terrain</label></div><div style="margin: 1px 0px; border-top: 1px solid rgb(235, 235, 235); display: none;"></div><div title="Zoom in to show 45 degree view" draggable="false" style="color: rgb(184, 184, 184); font-family: Roboto,Arial,sans-serif; -moz-user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 3px 8px 3px 3px; direction: ltr; text-align: left; white-space: nowrap; display: none;"><span style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(241, 241, 241); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle;" role="checkbox"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden; display: none;"><img draggable="false" src="https://maps.gstatic.com/mapfiles/mv/imgs8.png" style="position: absolute; left: -52px; top: -44px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">45°</label></div><div title="Show imagery with street names" draggable="false" style="color: rgb(0, 0, 0); font-family: Roboto,Arial,sans-serif; -moz-user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 3px 8px 3px 3px; direction: ltr; text-align: left; white-space: nowrap; display: none;"><span style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle;" role="checkbox"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden;"><img draggable="false" src="https://maps.gstatic.com/mapfiles/mv/imgs8.png" style="position: absolute; left: -52px; top: -44px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">Labels</label></div></div></div></div></div>
+  
+  </div>
+
+<% end %>
+<!-- -->
+<div class="manage-listing-content" id="js-manage-listing-content"><div>
+<div class="row js-section" id="js-location-container">
+  <div class="js-saving-progress saving-progress" style="display:none;">
+  <h5>Saving...</h5>
+</div>
+
+
+  <div class="col-4">
+    
+    <h3>Address</h3>
+
+    
+    
+    <p class="text-muted">
+      </p><p class="text-muted">
+  Your exact address is private and only shared with guests after a reservation is confirmed.
+</p>
+
+    <p></p>
+    
+
+    
+    
+  </div>
+
+  <div class="col-8">
+    
+    
+
+<div class="media-photo">
+  
+    <div class="location-map-container map-spotlight"></div>
+    <div class="location-map-pin map-pin set"></div>
+    <img src="//maps.googleapis.com/maps/api/staticmap?center=40.770218, -111.887802&amp;zoom=15&amp;size=371x275&amp;maptype=roadmap&amp;sensor=false&amp;style=undefined&amp;key=AIzaSyA8dBXcpx7L0t_36KxQwxwxSX6F5ASthMQ" height="275" width="371">
+  
+</div>
+<div class="panel">
+  <div class="panel-body">
+    
+      <address class="">
+  <span class="address-line">40 North State Street</span>
+  
+  <span class="address-line">1014</span>
+  
+  <span class="address-line">Salt Lake City, UT</span>
+  <span class="address-line">84103</span>
+  <span class="address-line">United States</span>
+</address>
+<a href="#" class="js-edit-address-link edit-address-link" data-event-name="edit_address_click">
+  Edit address
+</a>
+
+    
+  </div>
+</div>
+
+  
+
+  </div>
+</div>
+
+
+
+
+  <hr class="section-divider">
+
+  
+<div class="row js-section">
+  <div class="js-saving-progress saving-progress" style="display:none;">
+  <h5>Saving...</h5>
+</div>
+
+
+  <div class="col-4">
+    
+    <h3>Directions</h3>
+
+    
+    
+    <p class="text-muted">
+      Directions are private and only shared with guests after a reservation is confirmed.
+    </p>
+    
+
+    
+    
+  </div>
+
+  <div class="col-8">
+    
+    
+  <label class="label-large">Directions for confirmed guests</label>
+  
+  <textarea class="input-large textarea-resize-vertical" id="directions" name="directions" rows="10" placeholder="Provide guests with directions to your place, suggestions on transportation, and any other details that may help them arrive easily and on time..."></textarea>
+  
+  </div>
+</div>
+
+
+
+<hr class="section-divider">
+
+<div class="row">
+  <div class="col-12">
+    <div class="icon-kazan pull-left local-laws-header-icon">
+      <i class="icon icon-flag local-laws-header-flag"></i>
+    </div>
+    <h3 class="local-laws-header-text">
+      Notice About Your Local Laws
+    </h3>
+    <div class="text-lead text-muted">
+      
+        <div class="col-10">
+          <p>It's important for you to understand how the laws work in your city.</p>
+          <p>Some cities have laws that restrict your ability to host paying guests for short periods. These laws are often part of a city's zoning or administrative codes. In many cities, you must register, get a permit, or obtain a license before you list your property or accept guests. Certain types of short-term bookings may be prohibited altogether. Local governments vary greatly in how they enforce these laws. Penalties may include fines or other enforcement. These rules can be confusing. Often, even city administrators find it tough to explain their local laws.</p>
+          <p>We are working with governments around the world to clarify these rules so that everyone has a clear understanding of what the laws are. In the meantime, please review your local laws before listing your space on Airbnb. By accepting our Terms of Service and activating a listing, you certify that you will follow your local laws and regulations.</p>
+          <p>Many of us at Airbnb are hosts ourselves and we're passionate about making it s easy as possible to host around the world.</p>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div id="address-flow-view"></div>
+
+<div style="display: block; top: 47.0167px; left: 650px; opacity: 1;" class="tooltip help-tooltip" data-trigger="#js-location-container" data-event="none">
+  <div class="media">
+    <i class="pull-left icon icon-light-bulb icon-beach icon-size-2"></i>
+    <div class="media-body text-lead text-muted help-tooltip-body">
+      
+  <strong>Your Address is Private</strong>
+  <p>It will only be shared with guests after a reservation is confirmed.</p>
+
+  
+    <div class="row-space-1">
+      <div class="media-photo">
+        <i class="public-map-overlay"></i>
+        <img src="//maps.googleapis.com/maps/api/staticmap?center=40.770218, -111.887802&amp;zoom=15&amp;size=205x205&amp;maptype=roadmap&amp;sensor=false&amp;style=undefined&amp;key=AIzaSyA8dBXcpx7L0t_36KxQwxwxSX6F5ASthMQ" height="205" width="205">
+      </div>
+    </div>
+    <p>
+      This is how your location appears on your listing page.
+      <a href="/rooms/5572421?preview" target="_blank">
+        <strong>View on listing page »</strong>
+      </a>
+    </p>
+  
+
+    </div>
+  </div>
+</div>
+
+</div></div>

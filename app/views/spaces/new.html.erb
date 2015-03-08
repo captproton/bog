@@ -1,0 +1,27 @@
+<h1>Spaces#new for  <%= @lodging %></h1>
+
+<%= form_for @space do |f| %>
+  <% if @space.errors.any? %>
+    <div class="error_messages">
+      <h2><%= pluralize(@space.errors.count, "error") %> prohibited this space from being saved:</h2>
+      <ul>
+      <% @space.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :summary %><br />
+    <%= f.text_field :summary %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Make a space" %>
+  </div>
+<% end %>

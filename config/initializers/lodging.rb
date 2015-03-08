@@ -1,0 +1,1 @@
+THE_LODGING = Lodging.new

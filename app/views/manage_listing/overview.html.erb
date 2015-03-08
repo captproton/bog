@@ -1,0 +1,124 @@
+<h1>MangageListing#overview</h1>
+<%= render layout: 'form' do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+<hr />
+    <%= f.label :summary %>
+    <%= f.text_area :summary %>
+
+<% end %>
+<!-- -->
+
+<div class="manage-listing-content" id="js-manage-listing-content"><div>
+
+
+
+
+
+
+<div class="row js-section">
+  <div class="js-saving-progress saving-progress" style="display:none;">
+  <h5>Saving...</h5>
+</div>
+
+
+  <div class="col-4">
+    
+    <h3>Overview</h3>
+
+    
+    
+    <p class="text-muted">
+      A title and summary displayed on your public listing page.
+    </p>
+    
+
+    
+    
+  </div>
+
+  <div class="col-8">
+    
+    
+<div class="row-space-2" id="tooltip-help-name">
+  <label class="label-large">Title</label>
+  <input maxlength="35" name="name" value="Corporate Housing in Salt Lake City" class="overview-title input-large" placeholder="Write a title" type="text">
+  <p class="hide icon-rausch error-too-long row-space-top-1">Please shorten to save changes</p>
+
+  <p class="hide icon-rausch error-value-required row-space-top-1">A value is required to save changes</p>
+
+
+  <div id="js-name-count" class="row-space-top-1 h6 text-right">
+    <span class="ml-error">0</span> characters left
+  </div>
+</div>
+<div id="tooltip-help-summary">
+  <label class="label-large">Summary</label>
+  <textarea maxlength="250" class="overview-summary input-large" name="summary" rows="6" placeholder="Write a summary in 250 characters or less">On assignment away?  This is a great place for you.</textarea>
+  <p class="hide icon-rausch error-too-long row-space-top-1">Please shorten to save changes</p>
+
+  <p class="hide icon-rausch error-value-required row-space-top-1">A value is required to save changes</p>
+
+  <div id="js-summary-count" class="row-space-top-1 h6 text-right">
+    <span>199</span> characters left
+  </div>
+</div>
+
+
+
+
+  </div>
+</div>
+
+
+
+
+
+
+<hr class="section-divider not-post-listed">
+
+<p class="text-center not-post-listed">
+  Want to write even more? You can also <a href="#" id="js-write-more">add a detailed description</a> to your listing.
+</p>
+
+
+<div style="display: none;" class="tooltip help-tooltip" data-trigger="#tooltip-help-name" data-event="none">
+  <div class="media">
+    <i class="pull-left icon icon-light-bulb icon-beach icon-size-2"></i>
+    <div class="media-body text-lead text-muted help-tooltip-body">
+      
+  <strong>A great title</strong>
+  <p>
+    A great title is unique and descriptive!  It should highlight the main attractions of your space.
+  </p>
+  <p>
+    <strong>Examples:</strong>
+  </p>
+  <ul>
+    <li>Charming Victorian in the Mission.</li>
+    <li>Cozy 2BD with Parking Included</li>
+    <li>Amazing View from a Modern Loft</li>
+  </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div style="display: block; top: 158.167px; left: 650px; opacity: 1;" class="tooltip help-tooltip" data-trigger="#tooltip-help-summary" data-event="none">
+  <div class="media">
+    <i class="pull-left icon icon-light-bulb icon-beach icon-size-2"></i>
+    <div class="media-body text-lead text-muted help-tooltip-body">
+      
+  <strong>A great summary</strong>
+  <p>A great summary is rich and exciting! It should cover the major features of your space and neighborhood in 250 characters or less.</p>
+  <p>
+    <strong>Example: </strong>Our cool and comfortable one bedroom apartment with exposed brick has a true city feeling! It comfortably fits two and is centrally located on a quiet street, just two blocks from Washington Park. Enjoy a gourmet kitchen, roof access, and easy access to all major subway lines!
+  </p>
+
+    </div>
+  </div>
+</div>
+
+
+</div></div>
