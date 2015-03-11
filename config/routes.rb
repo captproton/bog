@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :manage_listing, only: [:show, :update]
   end
   resources :rooms
+  resources :photos
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,0 +1,13 @@
+<div class="photo">
+  <% if photo.image_processed? %>
+    <%= link_to image_tag(photo.image_url(:thumb)), photo %>
+  <% else %>
+    <em>Processing...</em>
+    <%= link_to image_tag(photo.image_url), photo %>
+  <% end %>
+  <div class="name"><%= photo.title %></div>
+  <div class="actions">
+    <%= link_to "edit", edit_photo_path(photo) %> |
+    <%= link_to "remove", photo, :confirm => 'Are you sure?', :method => :delete %>
+  </div>
+</div>

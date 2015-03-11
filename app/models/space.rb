@@ -5,6 +5,8 @@ class Space < ActiveRecord::Base
   validates :title,      :presence => true #, :if => :active_or_title?
 
   attr_accessor :lodging
+
+  # mount_uploaders :images, ImageUploader
   
   def publish(clock=DateTime)
     return false unless valid?
