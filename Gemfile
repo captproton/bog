@@ -60,6 +60,7 @@ group :development, :test do
   # gem 'activerecord-nulldb-adapter', :git => 'git://github.com/nulldb/nulldb.git'
   gem 'database_cleaner', '~> 1.4.0'
   gem 'travis', '~> 1.7.4'
+  # gem 'redis-browser', '~> 0.3.2'
   
 end
 
