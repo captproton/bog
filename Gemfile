@@ -3,6 +3,10 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
+
+# Loads environment variables from `.env`.
+gem 'dotenv-rails', :groups => [:development, :test]
+
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -40,7 +44,10 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+  gem 'spring', group: :development
+  # rails console alternative
+  gem 'pry-rails', :group => :development
+  
   
   # App-specfic
   gem 'passenger', "~> 5.0.1"
@@ -53,6 +60,7 @@ group :development, :test do
   # gem 'activerecord-nulldb-adapter', :git => 'git://github.com/nulldb/nulldb.git'
   gem 'database_cleaner', '~> 1.4.0'
   gem 'travis', '~> 1.7.4'
+  # gem 'redis-browser', '~> 0.3.2'
   
 end
 
@@ -70,3 +78,15 @@ gem 'high_voltage', '~> 2.2.1' # static pages
 gem 'rails_admin', '~> 0.6.6'
 # Wicked is a Rails engine for producing easy wizard controllers
 gem 'wicked'
+
+## Image uploading to S3
+# Carrierwave enables image upload
+gem 'carrierwave', '~> 0.10.0'
+gem 'carrierwave_direct'
+gem 'fog', '~> 1.28.0'
+# gem "fog-aws"
+gem 'sidekiq'
+gem 'rmagick', '~> 2.13.4'
+
+# better Heroku
+gem 'rails_12factor', '~> 0.0.3'
