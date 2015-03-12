@@ -1,5 +1,6 @@
 class Photo < ActiveRecord::Base
   belongs_to :location
+  belongs_to :space
   mount_uploader :image, ImageUploader
 
   after_save :enqueue_image

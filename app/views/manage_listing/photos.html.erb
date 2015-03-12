@@ -4,7 +4,7 @@
 <% end %>
 <!-- -->
 <h1 id="new_photo">new photo</h1>
-<%= render 'photo_form' %>
+<%# render 'photo_form' %>
 
 <!-- -->
 <div class="manage-listing-content" id="js-manage-listing-content"><div id="photos"><div class="panel row-space-2 add-photos-header" id="js-add-photos-header">
@@ -42,24 +42,9 @@
 <ul class="row list-unstyled sortable" id="js-photo-grid">
   
     
-      
-  <li draggable="true" data-index="0" data-id="69398447" data-picture-url="https://a1.muscache.com/ic/pictures/69398447/1d3e7190_original.jpg?interpolation=lanczos-none&amp;size=large_cover&amp;output-format=jpg&amp;output-quality=70" class="col-4 row-space-4">
-    <div class="panel photo-item">
-      <div class="first-photo-ribbon"><i class="icon icon-star text-center"></i></div>
-      
-      <div id="photo-69398447" class="photo-drag-target js-photo-link"></div>
-      <a href="#">
-        <img src="https://a1.muscache.com/pictures/69398447/small.jpg" width="100%">
-      </a>
-      <button class="delete-photo-btn overlay-btn js-delete-photo-btn" data-photo-id="69398447">
-        <i class="icon icon-trash"></i>
-      </button>
-
-      <div class="panel-body panel-condensed">
-        <textarea tabindex="1" class="input-large highlights" placeholder="What are the highlights of this photo?" rows="3" name="69398447">Everything at your feet!</textarea>
-      </div>
-    </div>
-  </li>
+   
+  <%= render @photos %>
+    
 
 
     

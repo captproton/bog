@@ -3,7 +3,7 @@ require 'active_record'
  
 class Space < ActiveRecord::Base
   validates :title,      :presence => true #, :if => :active_or_title?
-
+  has_many :photos
   attr_accessor :lodging
 
   # mount_uploaders :images, ImageUploader

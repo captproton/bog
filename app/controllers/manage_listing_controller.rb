@@ -3,7 +3,8 @@ class ManageListingController < ApplicationController
   steps :calendar, :pricing, :overview, :photos, :amenities, :listing, :location
   
   def show
-    @space = Space.find(params[:space_id])
+    @space    = Space.find(params[:space_id])
+    @photos   = @space.photos
     render_wizard
   end
   
