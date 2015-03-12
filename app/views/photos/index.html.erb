@@ -1,0 +1,14 @@
+<h1>Photo Gallery</h1>
+
+<%= direct_upload_form_for @uploader do |f| %>
+  <p><%= f.file_field :image %></p>
+  <p><%= f.submit "Upload Photo" %></p>
+<% end %>
+
+<div id="photos">
+  <%= render @photos %>
+  <%# render :partial => "photo", :collection => @photos %>
+</div>
+
+<div class="clear"></div>
+<%# render "direct_upload_form" %>
