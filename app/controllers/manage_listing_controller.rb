@@ -5,6 +5,33 @@ class ManageListingController < ApplicationController
   def show
     @space    = Space.find(params[:space_id])
     @photos   = @space.photos
+    
+    ## Listing page is divided into two sections options. The OpenStruct feeds options.
+    # Rooms and Beds
+    rooms_n_beds = {bedrooms: [*1..10], 
+                    beds: [*1..15], 
+                    bed_style: ["airbed","futon","pull_out_sofa","couch","real_bed"],
+                    bathrooms: [0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5]
+                  }
+
+    # Listing Info
+    # home_style is huge, so we break it down
+    home_style_keys         = [*1..25]
+    home_style_description  = ["Apartment", "House", "Bed and Breakfast", "Condo", "Loft", "Cabin", "Villa", "Castle",
+                              "Dorm", "Treehouse", "Boat", "Plane", "Camper/RV", "Igloo", "Lighthouse", "Yurt", "Tipi",
+                              "Cave", "Island", "Chalet", "Earth House", "Hut", "Train", "Tent", "Other"
+                            ]
+    home_styles              = Hash[*home_style_description.zip(home_style_keys).flatten]
+    
+    # roome_style and person capacity are simple
+    room_styles  =  {"Entire home/apt" => "entire_home", "Private room" =>"private_room", "Shared room" => "shared_room"}
+    guest_capacity   = [*1..15]
+    listing_info      = {home_styles: home_styles, room_styles: room_styles, guest_capacity: guest_capacity}
+    
+    listing_params = {rooms_n_beds: rooms_n_beds, listing_info: listing_info}
+    # OpenStruct for easy access
+    @listing = OpenStruct.new(listing_params)
+    
     render_wizard
   end
   

@@ -1,321 +1,4 @@
 <h1>MangageListing#listing</h1>
-<%= render layout: 'form' do |f| %>
-  <!-- HTML for rooms and beds subsection -->
-  <div class="row row-space-2">
-    <div class="col-6">
-        <%= f.label :bedrooms %>
-        
-      <label class="label-large">Bedrooms</label>
-      <div id="bedrooms-select"><div class="select
-            select-large
-            select-block">
-            <%= f.select(:bedrooms) do %>
-    
-              <option disabled="" selected="" value="Select...">Select...</option>
-    
-              <option value="0">Studio</option>
-    
-              <option selected="selected" value="1">1</option>
-    
-              <option value="2">2</option>
-    
-              <option value="3">3</option>
-    
-              <option value="4">4</option>
-    
-              <option value="5">5</option>
-    
-              <option value="6">6</option>
-    
-              <option value="7">7</option>
-    
-              <option value="8">8</option>
-    
-              <option value="9">9</option>
-    
-              <option value="10">10</option>
-            <% end %>
-</div>
-</div>
-    </div>
-  </div>
-  <div class="row row-space-2">
-    <div class="col-6">
-      <%= f.label :beds %>
-      
-      <div id="beds-select"><div class="select
-            select-large
-            select-block">
-            <%= f.select(:beds) do %>
-    
-      <option disabled="" selected="" value="Select...">Select...</option>
-    
-      <option selected="selected" value="1">1</option>
-    
-      <option value="2">2</option>
-    
-      <option value="3">3</option>
-    
-      <option value="4">4</option>
-    
-      <option value="5">5</option>
-    
-      <option value="6">6</option>
-    
-      <option value="7">7</option>
-    
-      <option value="8">8</option>
-    
-      <option value="9">9</option>
-    
-      <option value="10">10</option>
-    
-      <option value="11">11</option>
-    
-      <option value="12">12</option>
-    
-      <option value="13">13</option>
-    
-      <option value="14">14</option>
-    
-      <option value="15">15</option>
-    
-      <option value="16">16+</option>
-    <% end %>
-</div>
-</div>
-    </div>
-
-      <div class="col-6">
-        <label class="label-large">Bed Type</label>
-        <div id="bedtype-select"><div class="select
-            select-large
-            select-block">
-            <%= f.select(:bed_style) do %>
-    
-      <option disabled="" selected="" value="Select...">Select...</option>
-    
-      <option value="airbed">Airbed</option>
-    
-      <option value="futon">Futon</option>
-    
-      <option value="pull_out_sofa">Pull-out Sofa</option>
-    
-      <option value="couch">Couch</option>
-    
-      <option selected="selected" value="real_bed">Real Bed</option>
-    <% end %>
-</div>
-</div>
-      </div>
-    
-  </div>
-  <div class="row row-space-2">
-    <div class="col-6">
-      <label class="label-large">Bathrooms</label>
-      <div id="bathrooms-select"><div class="select
-            select-large
-            select-block">
-  <select name="bathrooms" id="select-bathrooms">
-    
-      <option disabled="" selected="" value="Select...">Select...</option>
-    
-      <option value="0">0</option>
-    
-      <option value="0.5">0.5</option>
-    
-      <option selected="selected" value="1">1</option>
-    
-      <option value="1.5">1.5</option>
-    
-      <option value="2">2</option>
-    
-      <option value="2.5">2.5</option>
-    
-      <option value="3">3</option>
-    
-      <option value="3.5">3.5</option>
-    
-      <option value="4">4</option>
-    
-      <option value="4.5">4.5</option>
-    
-      <option value="5">5</option>
-    
-      <option value="5.5">5.5</option>
-    
-      <option value="6">6</option>
-    
-      <option value="6.5">6.5</option>
-    
-      <option value="7">7</option>
-    
-      <option value="7.5">7.5</option>
-    
-      <option value="8">8+</option>
-    
-  </select>
-</div>
-</div>
-    </div>
-  </div>
-
-  </div>
-</div>
-
-
-
-<hr class="section-divider">
-
-
-
-<div class="row js-section">
-  <div class="js-saving-progress saving-progress" style="display:none;">
-  <h5>Saving...</h5>
-</div>
-
-
-  <div class="col-4">
-    
-    <h3>Listing Info</h3>
-
-    
-    
-    <p class="text-muted">
-      Basic information about your listing.
-    </p>
-    
-
-    
-    
-  </div>
-  
-    <div class="col-8">
-    
-    
-    <!-- HTML for listing info subsection -->
-    <div class="row-space-2">
-      <label class="label-large">Home Type</label>
-      <div id="property-type-select"><div class="select
-              select-large
-              select-block">
-    <%= f.select(:home_style) do %>
-        <option selected="selected" value="1">Apartment</option>
-    
-        <option value="2">House</option>
-    
-        <option value="3">Bed &amp; Breakfast</option>
-    
-        <option value="35">Loft</option>
-    
-        <option value="4">Cabin</option>
-    
-        <option value="11">Villa</option>
-    
-        <option value="5">Castle</option>
-    
-        <option value="9">Dorm</option>
-    
-        <option value="6">Treehouse</option>
-    
-        <option value="8">Boat</option>
-    
-        <option value="28">Plane</option>
-    
-        <option value="32">Camper/RV</option>
-    
-        <option value="12">Igloo</option>
-    
-        <option value="10">Lighthouse</option>
-    
-        <option value="15">Yurt</option>
-    
-        <option value="16">Tipi</option>
-    
-        <option value="18">Cave</option>
-    
-        <option value="19">Island</option>
-    
-        <option value="22">Chalet</option>
-    
-        <option value="23">Earth House</option>
-    
-        <option value="24">Hut</option>
-    
-        <option value="25">Train</option>
-    
-        <option value="34">Tent</option>
-    
-        <option value="33">Other</option>
-    <% end %>
-  </div>
-  </div>
-    </div>
-    <div class="row-space-2">
-      <label class="label-large">Room Type</label>
-      <div id="room-type-select"><div class="select
-              select-large
-              select-block">
-              <%= f.select(:room_style) do %>
-              
-        <option selected="selected" value="entire_home">Entire home/apt</option>
-    
-        <option value="private_room">Private room</option>
-    
-        <option value="shared_room">Shared room</option>
-    <% end %>
-    </select>
-  </div>
-  </div>
-    </div>
-    <div class="row-space-2">
-      <label class="label-large">Accommodates</label>
-      <div id="person-capacity-select"><div class="select
-              select-large
-              select-block">
-              <%= f.select(:person_capacity) do %>
-              
-    
-        <option value="1">1</option>
-    
-        <option selected="selected" value="2">2</option>
-    
-        <option value="3">3</option>
-    
-        <option value="4">4</option>
-    
-        <option value="5">5</option>
-    
-        <option value="6">6</option>
-    
-        <option value="7">7</option>
-    
-        <option value="8">8</option>
-    
-        <option value="9">9</option>
-    
-        <option value="10">10</option>
-    
-        <option value="11">11</option>
-    
-        <option value="12">12</option>
-    
-        <option value="13">13</option>
-    
-        <option value="14">14</option>
-    
-        <option value="15">15</option>
-    
-        <option value="16">16+</option>
-    <% end %>
-  </div>
-  </div>
-    </div>
-
-    </div>
-  
-<% end %>
-<!-- -->
 <div class="manage-listing-content" id="js-manage-listing-content"><div>
 
 <div class="row js-section post-listed">
@@ -365,127 +48,38 @@
 
   <div class="col-4">
     
-    <h3>Rooms and Beds</h3>
-
-    
-    
-    <p class="text-muted">
-      The number of rooms and beds guests can access.
-    </p>
-    
-
-    
-    
-  </div>
-
-  <div class="col-8">
-    
-    
+<%= render layout: 'form' do |f| %>
   <!-- HTML for rooms and beds subsection -->
   <div class="row row-space-2">
     <div class="col-6">
+        
       <label class="label-large">Bedrooms</label>
       <div id="bedrooms-select"><div class="select
             select-large
             select-block">
-  <select name="bedrooms" id="select-bedrooms">
-    
-      <option disabled="" selected="" value="Select...">Select...</option>
-    
-      <option value="0">Studio</option>
-    
-      <option selected="selected" value="1">1</option>
-    
-      <option value="2">2</option>
-    
-      <option value="3">3</option>
-    
-      <option value="4">4</option>
-    
-      <option value="5">5</option>
-    
-      <option value="6">6</option>
-    
-      <option value="7">7</option>
-    
-      <option value="8">8</option>
-    
-      <option value="9">9</option>
-    
-      <option value="10">10</option>
-    
-  </select>
+            <%= f.select(:bedrooms, @listing.rooms_n_beds[:bedrooms]) %>
 </div>
 </div>
     </div>
   </div>
   <div class="row row-space-2">
     <div class="col-6">
-      <label class="label-large">Beds</label>
+      <%= f.label :beds %>
+      
       <div id="beds-select"><div class="select
             select-large
             select-block">
-  <select name="beds" id="select-beds">
-    
-      <option disabled="" selected="" value="Select...">Select...</option>
-    
-      <option selected="selected" value="1">1</option>
-    
-      <option value="2">2</option>
-    
-      <option value="3">3</option>
-    
-      <option value="4">4</option>
-    
-      <option value="5">5</option>
-    
-      <option value="6">6</option>
-    
-      <option value="7">7</option>
-    
-      <option value="8">8</option>
-    
-      <option value="9">9</option>
-    
-      <option value="10">10</option>
-    
-      <option value="11">11</option>
-    
-      <option value="12">12</option>
-    
-      <option value="13">13</option>
-    
-      <option value="14">14</option>
-    
-      <option value="15">15</option>
-    
-      <option value="16">16+</option>
-    
-  </select>
+            <%= f.select(:beds, @listing.rooms_n_beds[:bedrooms]) %>
 </div>
 </div>
     </div>
-    
+
       <div class="col-6">
         <label class="label-large">Bed Type</label>
         <div id="bedtype-select"><div class="select
             select-large
             select-block">
-  <select name="bed_type_category" id="select-bed_type_category">
-    
-      <option disabled="" selected="" value="Select...">Select...</option>
-    
-      <option value="airbed">Airbed</option>
-    
-      <option value="futon">Futon</option>
-    
-      <option value="pull_out_sofa">Pull-out Sofa</option>
-    
-      <option value="couch">Couch</option>
-    
-      <option selected="selected" value="real_bed">Real Bed</option>
-    
-  </select>
+            <%= f.select(:bed_style, @listing.rooms_n_beds[:bed_style]) %>
 </div>
 </div>
       </div>
@@ -497,45 +91,8 @@
       <div id="bathrooms-select"><div class="select
             select-large
             select-block">
-  <select name="bathrooms" id="select-bathrooms">
-    
-      <option disabled="" selected="" value="Select...">Select...</option>
-    
-      <option value="0">0</option>
-    
-      <option value="0.5">0.5</option>
-    
-      <option selected="selected" value="1">1</option>
-    
-      <option value="1.5">1.5</option>
-    
-      <option value="2">2</option>
-    
-      <option value="2.5">2.5</option>
-    
-      <option value="3">3</option>
-    
-      <option value="3.5">3.5</option>
-    
-      <option value="4">4</option>
-    
-      <option value="4.5">4.5</option>
-    
-      <option value="5">5</option>
-    
-      <option value="5.5">5.5</option>
-    
-      <option value="6">6</option>
-    
-      <option value="6.5">6.5</option>
-    
-      <option value="7">7</option>
-    
-      <option value="7.5">7.5</option>
-    
-      <option value="8">8+</option>
-    
-  </select>
+            <%= f.select(:bathrooms, @listing.rooms_n_beds[:bathrooms]) %>
+            
 </div>
 </div>
     </div>
@@ -570,127 +127,39 @@
     
     
   </div>
-
-  <div class="col-8">
+  
+    <div class="col-8">
     
     
-  <!-- HTML for listing info subsection -->
-  <div class="row-space-2">
-    <label class="label-large">Home Type</label>
-    <div id="property-type-select"><div class="select
-            select-large
-            select-block">
-  <select name="property_type_id" id="select-property_type_id">
-    
-      <option selected="selected" value="1">Apartment</option>
-    
-      <option value="2">House</option>
-    
-      <option value="3">Bed &amp; Breakfast</option>
-    
-      <option value="35">Loft</option>
-    
-      <option value="4">Cabin</option>
-    
-      <option value="11">Villa</option>
-    
-      <option value="5">Castle</option>
-    
-      <option value="9">Dorm</option>
-    
-      <option value="6">Treehouse</option>
-    
-      <option value="8">Boat</option>
-    
-      <option value="28">Plane</option>
-    
-      <option value="32">Camper/RV</option>
-    
-      <option value="12">Igloo</option>
-    
-      <option value="10">Lighthouse</option>
-    
-      <option value="15">Yurt</option>
-    
-      <option value="16">Tipi</option>
-    
-      <option value="18">Cave</option>
-    
-      <option value="19">Island</option>
-    
-      <option value="22">Chalet</option>
-    
-      <option value="23">Earth House</option>
-    
-      <option value="24">Hut</option>
-    
-      <option value="25">Train</option>
-    
-      <option value="34">Tent</option>
-    
-      <option value="33">Other</option>
-    
-  </select>
-</div>
-</div>
+    <!-- HTML for listing info subsection -->
+    <div class="row-space-2">
+      <label class="label-large">Home Type</label>
+      <div id="property-type-select"><div class="select
+              select-large
+              select-block">
+    <%= f.select(:home_style, @listing.listing_info[:home_styles]) %>
   </div>
-  <div class="row-space-2">
-    <label class="label-large">Room Type</label>
-    <div id="room-type-select"><div class="select
-            select-large
-            select-block">
-  <select name="room_type_category" id="select-room_type_category">
-    
-      <option selected="selected" value="entire_home">Entire home/apt</option>
-    
-      <option value="private_room">Private room</option>
-    
-      <option value="shared_room">Shared room</option>
-    
-  </select>
-</div>
-</div>
   </div>
-  <div class="row-space-2">
-    <label class="label-large">Accommodates</label>
-    <div id="person-capacity-select"><div class="select
-            select-large
-            select-block">
-  <select name="person_capacity" id="select-person_capacity">
-    
-      <option value="1">1</option>
-    
-      <option selected="selected" value="2">2</option>
-    
-      <option value="3">3</option>
-    
-      <option value="4">4</option>
-    
-      <option value="5">5</option>
-    
-      <option value="6">6</option>
-    
-      <option value="7">7</option>
-    
-      <option value="8">8</option>
-    
-      <option value="9">9</option>
-    
-      <option value="10">10</option>
-    
-      <option value="11">11</option>
-    
-      <option value="12">12</option>
-    
-      <option value="13">13</option>
-    
-      <option value="14">14</option>
-    
-      <option value="15">15</option>
-    
-      <option value="16">16+</option>
-    
-  </select>
+    </div>
+    <div class="row-space-2">
+      <label class="label-large">Room Type</label>
+      <div id="room-type-select"><div class="select
+              select-large
+              select-block">
+              <%= f.select(:room_style, @listing.listing_info[:room_styles]) %>
+    </select>
+  </div>
+  </div>
+    </div>
+    <div class="row-space-2">
+      <label class="label-large">Accommodates</label>
+      <div id="person-capacity-select"><div class="select
+              select-large
+              select-block">
+              <%= f.select(:person_capacity, @listing.listing_info[:guest_capacity])  %>
+  
+<% end %>
+<!-- -->
 </div>
 </div>
   </div>
