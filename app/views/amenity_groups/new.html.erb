@@ -1,0 +1,336 @@
+<h1>AmenityGroups#new</h1>
+<p>Find me in app/views/amenity_groups/new.html.erb</p>
+
+<%= form_for @amenity_group do |f| %>
+  <% if @amenity_group.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@amenity_group.errors.count, "error") %> prohibited this amenity_group from being saved:</h2>
+      <ul>
+      <% @amenity_group.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :essentials %><br />
+    <%= f.text_field :essentials %>
+  </div>
+  
+  <ul>
+      <% @aid.most_common.each do | amenity, description | %>
+      <li>
+        <label for='<%= "amenity_group_#{amenity}" %>' class="label-large label-inline amenity-label">
+          <%= check_box("amenity_group", amenity.to_s, {}, "true", "false") %>
+          <%= "#{amenity.to_s.titleize.sub(/Tv/, 'TV')}" %>
+        </label>
+        <% unless description.empty? %>
+        <span aria-label="<%= description.to_s %>" class="icon icon-question" data-behavior="tooltip"></span>
+        <% end %>
+      </li>
+      <% end %>
+      
+  </ul>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+<hr />
+
+<!-- -->
+<!-- -->
+
+<div class="manage-listing-content" id="js-manage-listing-content"><div>
+
+<div class="row js-section">
+  <div class="js-saving-progress saving-progress" style="display:none;">
+  <h5>Saving...</h5>
+</div>
+
+
+  <div class="col-4">
+    
+    <h3>Most Common</h3>
+
+    
+    
+    <p class="text-muted">
+      Common amenities at most listings.
+    </p>
+    
+
+    
+    
+  </div>
+
+  <div class="col-8">
+    
+    
+  <div class="amenities-common" id="js-amenities-common">
+      <%= form_for @amenity_group do |f| %>
+        <% if @amenity_group.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@amenity_group.errors.count, "error") %> prohibited this amenity_group from being saved:</h2>
+            <ul>
+            <% @amenity_group.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+  
+        <ul class="js-amenities-list
+                 list-unstyled
+           
+                 ">
+        
+            <% @aid.most_common.each do | amenity, description | %>
+            <li>
+              <label for='<%= "amenity_group_#{amenity}" %>' class="label-large label-inline amenity-label">
+                <%= check_box("amenity_group", amenity.to_s, {}, "true", "false") %>
+                <%= "#{amenity.to_s.titleize.sub(/Tv/, 'TV')}" %>
+              </label>
+              <% unless description.empty? %>
+              <span aria-label="<%= description.to_s %>" class="icon icon-question" data-behavior="tooltip"></span>
+              <% end %>
+            </li>
+            <% end %>
+      
+        </ul>
+        <div class="actions">
+          <%= f.submit %>
+        </div>
+      <% end %>
+      
+
+</div>
+
+
+  </div>
+</div>
+
+
+
+<hr class="section-divider">
+
+
+
+<div class="row js-section">
+  <div class="js-saving-progress saving-progress" style="display:none;">
+  <h5>Saving...</h5>
+</div>
+
+
+  <div class="col-4">
+    
+    <h3>Extras</h3>
+
+    
+    
+    <p class="text-muted">
+      Additional amenities your listing may offer.
+    </p>
+    
+
+    
+    
+  </div>
+
+  <div class="col-8">
+    
+    
+  <div class="amenities-extras" id="js-amenities-extras">
+      <%= form_for @amenity_group do |f| %>
+        <% if @amenity_group.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@amenity_group.errors.count, "error") %> prohibited this amenity_group from being saved:</h2>
+            <ul>
+            <% @amenity_group.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+  
+        <ul class="js-amenities-list
+                 list-unstyled
+           
+                 ">
+        
+            <% @aid.extras.each do | amenity, description | %>
+            <li>
+              <label for='<%= "amenity_group_#{amenity}" %>' class="label-large label-inline amenity-label">
+                <%= check_box("amenity_group", amenity.to_s, {}, "true", "false") %>
+                <%= "#{amenity.to_s.titleize.sub(/Tv/, 'TV')}" %>
+              </label>
+              <% unless description.empty? %>
+              <span aria-label="<%= description.to_s %>" class="icon icon-question" data-behavior="tooltip"></span>
+              <% end %>
+            </li>
+            <% end %>
+      
+        </ul>
+        <div class="actions">
+          <%= f.submit %>
+        </div>
+      <% end %>
+      
+
+</div>
+
+
+  </div>
+</div>
+
+
+
+<hr class="section-divider">
+
+
+
+<div class="row js-section">
+  <div class="js-saving-progress saving-progress" style="display:none;">
+  <h5>Saving...</h5>
+</div>
+
+
+  <div class="col-4">
+    
+    <h3>Special Features</h3>
+
+    
+    
+    <p class="text-muted">
+      Features of your listing for guests with specific needs.
+    </p>
+    
+
+    
+    
+  </div>
+
+  <div class="col-8">
+    
+    
+  <div class="amenities-special" id="js-amenities-special">
+      <%= form_for @amenity_group do |f| %>
+        <% if @amenity_group.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@amenity_group.errors.count, "error") %> prohibited this amenity_group from being saved:</h2>
+            <ul>
+            <% @amenity_group.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+  <ul class="js-amenities-list
+           list-unstyled
+           
+           ">
+            <% @aid.special_features.each do | amenity, description | %>
+            <li>
+              <label for='<%= "amenity_group_#{amenity}" %>' class="label-large label-inline amenity-label">
+                <%= check_box("amenity_group", amenity.to_s, {}, "true", "false") %>
+                <%= "#{amenity.to_s.titleize.sub(/Tv/, 'TV')}" %>
+              </label>
+              <% unless description.empty? %>
+              <span aria-label="<%= description.to_s %>" class="icon icon-question" data-behavior="tooltip"></span>
+              <% end %>
+            </li>
+            <% end %>
+      
+        </ul>
+        <div class="actions">
+          <%= f.submit %>
+        </div>
+      <% end %>
+      
+
+</div>
+
+
+  </div>
+</div>
+
+
+
+<hr class="section-divider">
+
+
+
+  
+<div class="row js-section" id="home_safety">
+  <div class="js-saving-progress saving-progress" style="display:none;">
+  <h5>Saving...</h5>
+</div>
+
+
+  <div class="col-4">
+    
+    <h3>Home Safety</h3>
+
+    
+    
+    <p class="text-muted">
+      Safety equipment for your home.
+    </p>
+    
+
+    
+    
+      <p class="text-muted">
+  Smoke and carbon monoxide detectors are strongly encouraged for all listings. Eligible hosts can get them free before December 31, 2014 <a href="/home-safety">on our Home Safety Page</a>. <a href="/home-safety/terms-and-conditions">Restrictions apply</a>.
+</p>
+
+    
+  </div>
+
+  <div class="col-8">
+    
+    
+    <div class="amenities-home_safety" id="js-amenities-home_safety">
+            <%= form_for @amenity_group do |f| %>
+              <% if @amenity_group.errors.any? %>
+                <div id="error_explanation">
+                  <h2><%= pluralize(@amenity_group.errors.count, "error") %> prohibited this amenity_group from being saved:</h2>
+                  <ul>
+                  <% @amenity_group.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                  <% end %>
+                  </ul>
+                </div>
+              <% end %>
+
+        <ul class="js-amenities-list
+                 list-unstyled
+           
+                 ">
+                  <% @aid.home_safety.each do | amenity, description | %>
+                  <li>
+                    <label for='<%= "amenity_group_#{amenity}" %>' class="label-large label-inline amenity-label">
+                      <%= check_box("amenity_group", amenity.to_s, {}, "true", "false") %>
+                      <%= "#{amenity.to_s.titleize.sub(/Tv/, 'TV')}" %>
+                    </label>
+                    <% unless description.empty? %>
+                    <span aria-label="<%= description.to_s %>" class="icon icon-question" data-behavior="tooltip"></span>
+                    <% end %>
+                  </li>
+                  <% end %>
+      
+              </ul>
+              <div class="actions">
+                <%= f.submit %>
+              </div>
+            <% end %>
+        
+
+</div>
+
+  
+  </div>
+</div>
+
+
+</div></div>

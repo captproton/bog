@@ -11,10 +11,50 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150309222857) do
+ActiveRecord::Schema.define(version: 20150313011933) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "amenity_groups", force: :cascade do |t|
+    t.integer  "space_id"
+    t.boolean  "essentials"
+    t.boolean  "tv"
+    t.boolean  "cable_tv"
+    t.boolean  "air_condition"
+    t.boolean  "heating"
+    t.boolean  "kitchen"
+    t.boolean  "internet"
+    t.boolean  "wireless_internet"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.boolean  "hot_tub"
+    t.boolean  "washer"
+    t.boolean  "pool"
+    t.boolean  "dryer"
+    t.boolean  "breakfast"
+    t.boolean  "free_parking_on_premisis"
+    t.boolean  "gym"
+    t.boolean  "elevator_in_building"
+    t.boolean  "indoor_fireplace"
+    t.boolean  "buzzer_wireless_intercom"
+    t.boolean  "doorman"
+    t.boolean  "shampoo"
+    t.boolean  "family_kid_friendly"
+    t.boolean  "smoking_allowed"
+    t.boolean  "suitable_for_events"
+    t.boolean  "pets_allowed"
+    t.boolean  "pets_live_on_property"
+    t.boolean  "dog"
+    t.boolean  "cat"
+    t.boolean  "other_pet"
+    t.boolean  "wheelchair_accessible"
+    t.boolean  "smoke_detector"
+    t.boolean  "carbon_monoxide_detector"
+    t.boolean  "first_aid_kit"
+    t.boolean  "safety_card"
+    t.boolean  "fire_extinguisher"
+  end
 
   create_table "photos", force: :cascade do |t|
     t.string   "title"

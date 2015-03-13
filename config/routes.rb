@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   end
   resources :rooms
   resources :photos
+  resources :amenity_groups, only: [:new, :edit, :create, :update]
   
   # mount RedisBrowser::Web => '/redis-browser'
   
