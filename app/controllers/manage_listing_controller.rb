@@ -17,16 +17,16 @@ class ManageListingController < ApplicationController
     # Listing Info
     # home_style is huge, so we break it down
     home_style_keys         = [*1..25]
-    home_style_description  = ["Apartment", "House", "Bed &amp; Breakfast", "Condo", "Loft", "Cabin", "Villa", "Castle",
+    home_style_description  = ["Apartment", "House", "Bed and Breakfast", "Condo", "Loft", "Cabin", "Villa", "Castle",
                               "Dorm", "Treehouse", "Boat", "Plane", "Camper/RV", "Igloo", "Lighthouse", "Yurt", "Tipi",
                               "Cave", "Island", "Chalet", "Earth House", "Hut", "Train", "Tent", "Other"
                             ]
-    home_style              = Hash[*keys.zip(home_styles).flatten]
+    home_styles              = Hash[*home_style_description.zip(home_style_keys).flatten]
     
     # roome_style and person capacity are simple
-    room_style  =  {"entire_home" => "Entire home/apt", "private_room" => "Private room", "shared_room" => "Shared room"}
-    person_capacity   = [*1..16]
-    listing_info      = {home_style: home_style, room_style: room_style, person_capacity: person_capacity}
+    room_styles  =  {"Entire home/apt" => "entire_home", "Private room" =>"private_room", "Shared room" => "shared_room"}
+    guest_capacity   = [*1..15]
+    listing_info      = {home_styles: home_styles, room_styles: room_styles, guest_capacity: guest_capacity}
     
     listing_params = {rooms_n_beds: rooms_n_beds, listing_info: listing_info}
     # OpenStruct for easy access
