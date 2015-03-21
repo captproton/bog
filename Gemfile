@@ -65,7 +65,8 @@ group :development, :test do
 end
 
 # App specfic gems
-gem 'geocoder'
+# Geocoding lat-lng
+gem 'geocoder', '~> 1.2.8'
 gem 'calendar_helper'
 # gem 'flickr_fu', '~> 0.3.2'
 gem 'figaro'

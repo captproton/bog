@@ -1,0 +1,127 @@
+<style type="text/css" media="screen">
+.list-markers a {
+  color: #fff;
+  font-size: 1.1em;
+}
+
+.list-markers li {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.map-container {
+  height: 300px;
+  width: 100%;
+  border-radius: 5px;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.marker-title {
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+</style>
+
+<p>hero Image here</p>
+<hr />
+<h1 id="main_info">main info</h1>
+<p>Host name and icon</p>
+    <h2>Room title</h2>
+<p>
+    Salt Lake City, UT, United States
+</p>
+<p>
+    <em>listing info</em><br />
+    room type: <br />
+    Accommodates: <br />
+    Bedrooms: <br />
+    Beds: <br />
+</p>
+
+<hr />
+
+ <h2>About This Listing</h2>
+
+<p>@space.summary</p>
+<%= link_to "Contact Host", "/" %>
+
+<hr />
+
+
+<h2>The Space</h2>
+Bed type: @space.bed_style <br />
+Property type: @space.home_style <br />
+Accommodates: @space.person_capacity <br />
+Bedrooms: @space.bedrooms <br />
+Bathrooms: @space.bathrooms <br />
+Beds: @space.beds <br />
+
+<hr />
+
+<h2>Amenities</h2>
+
+Amenites list goes here
+<hr />
+
+
+<h2>Prices</h2>
+
+Extra people: No Charge <br />
+Weekly Price: $@space.listing_weekly_price_native /week <br />
+Cancellation: Flexible <br />
+<hr />
+
+
+<h3>Availability</h3>
+<p>1 night minimum stay</p>
+<%= link_to "View Calendar", "#" %>
+<hr />
+
+<h2>Reviews</h2>
+<hr />
+
+<h2>About the Host</h2>
+<p>host logo</p>
+<p>host location</p>
+<p>Memeber since host.signup_date</p>
+<%= link_to "Contact Host", "#" %>
+<hr />
+
+<h2>Listing Location</h2>
+
+
+<div class="container col-md-offset-3 col-md-6">
+  <div class="page-header text-center">
+    <h2 class=" marker-title"><%= @room.title %></h2>
+  </div>
+  <div class="">
+  </div>
+  <div class="">
+    <p><%= "#{@room.summary}".html_safe %></p>
+  </div>
+  <div class="text-center">
+  </div>
+  <div class="map-container">
+    <div id="map">
+    </div>
+  </div>
+</div>
+
+<script>
+L.mapbox.accessToken = 'pk.eyJ1IjoiemFja3NocCIsImEiOiIzZ09nMDZZIn0.a_wcJpacq_Sojc5QO_4gww';
+  var map = L.mapbox.map('map', 'zackshp.k0bb3ic6')
+    .setView([<%= @room.latitude %>, <%= @room.longitude %>], 15);
+L.mapbox.featureLayer({
+  type: 'Feature',
+  geometry: {
+    type: 'Point',
+    coordinates: [<%= @room.longitude %>, <%= @room.latitude %>]
+  },
+  properties: {
+    'marker-size': 'large',
+    'marker-color': '#00607d',
+    'marker-symbol': 'circle'
+  }
+}).addTo(map);
+</script>

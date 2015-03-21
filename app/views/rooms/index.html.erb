@@ -2,5 +2,10 @@
 <p>Find me in app/views/rooms/index.html.erb</p>
 
 <%= @rooms.each do |room| %>
-   <p><%= room.title %> </p>
+<!--http://localhost:3048/spaces/14/manage_listing/calendar -->
+    <%= link_to room.title, room_path(room) %>
+    <%= link_to "edit #{room.title}", space_manage_listing_path(room.id, "calendar") %>
+   <hr />
 <% end %>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
