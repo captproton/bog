@@ -1,9 +1,15 @@
 <h1>MangageListing#photos</h1>
+
+
 <%= render layout: 'form' do |f| %>
 
 <% end %>
 <!-- -->
 <h1 id="new_photo">new photo</h1>
+<%= direct_upload_form_for @uploader do |f| %>
+  <p><%= f.file_field :image %></p>
+  <p><%= f.submit "Upload Photo" %></p>
+<% end %>
 <%# render 'photo_form' %>
 
 <!-- -->
