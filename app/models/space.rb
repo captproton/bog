@@ -5,6 +5,8 @@ class Space < ActiveRecord::Base
   validates :title,      :presence => true #, :if => :active_or_title?
   has_many :photos
   has_one :amenity_group
+  accepts_nested_attributes_for :amenity_group
+  
   attr_accessor :lodging
 
   # mount_uploaders :images, ImageUploader

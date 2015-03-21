@@ -24,7 +24,7 @@ class AmenityGroupsController < ApplicationController
 
     @aid = OpenStruct.new(params)
   end
-  
+  ########################################################
   def create
     @amenity_group = AmenityGroup.new(amenity_group_params)
     if @amenity_group.save
