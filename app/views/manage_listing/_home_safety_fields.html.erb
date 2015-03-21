@@ -1,0 +1,19 @@
+    home_safety    = {smoke_detector: "", carbon_monoxide_detector: "", first_aid_kit: "", safety_card: "", fire_extinguisher: ""}
+
+<fieldset>
+<li>  <%= f.check_box   :smoke_detector, {}, "true", "false" %>
+  <%= f.label       :smoke_detector, "Smoke Detector" %>
+</li><!-- -->
+  <li><%= f.check_box   :carbon_monoxide_detector, {}, "true", "false" %>
+    <%= f.label       :carbon_monoxide_detector, "Carbon Monoxide Detector" %></li>
+<!-- -->
+  <li><%= f.check_box   :first_aid_kit, {}, "true", "false" %>
+    <%= f.label       :first_aid_kit, "First Aid Kit" %></li>
+<!-- -->
+  <li><%= f.check_box   :safety_card, {}, "true", "false" %>
+    <%= f.label       :safety_card, "Safety Card" %></li>
+<!-- -->
+  <li><%= f.check_box   :fire_extinguisher, {}, "true", "false" %>
+    <%= f.label       :fire_extinguisher, " Fire Extinguisher" %></li>
+
+</fieldset>
