@@ -1,3 +1,7 @@
+   <div class="container">
+
+      <div class="row">
+        <div class="col-sm-3">
 
 <p>hero Image here</p>
 <hr />
@@ -67,20 +71,6 @@ Cancellation: Flexible <br />
 <h2>Listing Location</h2>
 <%# render "map_widget_new" %>
 <%= render "mapbox_widget" %>
-<script>
-L.mapbox.accessToken = 'pk.eyJ1IjoiemFja3NocCIsImEiOiIzZ09nMDZZIn0.a_wcJpacq_Sojc5QO_4gww';
-  var map = L.mapbox.map('map', 'zackshp.k0bb3ic6')
-    .setView([<%= @room.latitude %>, <%= @room.longitude %>], 15);
-L.mapbox.featureLayer({
-  type: 'Feature',
-  geometry: {
-    type: 'Point',
-    coordinates: [<%= @room.longitude %>, <%= @room.latitude %>]
-  },
-  properties: {
-    'marker-size': 'large',
-    'marker-color': '#00607d',
-    'marker-symbol': 'circle'
-  }
-}).addTo(map);
-</script>
+</div>
+</div>
+</div>
