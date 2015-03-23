@@ -175,7 +175,7 @@ GEM
     font-awesome-rails (4.3.0.0)
       railties (>= 3.2, < 5.0)
     formatador (0.2.5)
-    geocoder (1.2.7)
+    geocoder (1.2.8)
     gh (0.14.0)
       addressable
       backports
@@ -407,7 +407,7 @@ DEPENDENCIES
   faker
   figaro
   fog (~> 1.28.0)
-  geocoder
+  geocoder (~> 1.2.8)
   guard
   guard-bundler (~> 2.0.0)
   guard-minitest

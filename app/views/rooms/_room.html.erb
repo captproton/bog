@@ -1,0 +1,32 @@
+<li class="listing panel-body" data-hosting-id="5572421">
+  <div class="row row-table">
+    <div class="col-2 col-middle">
+        <%= link_to room_path(space) do %>
+        <div class="media-photo media-photo-block" style="height: 63px;">
+          <div class="media-cover text-center">
+            <img src="https://a1.muscache.com/pictures/69398447/small.jpg" style="display: inline;" class="lazy img-responsive-height" data-original="https://a1.muscache.com/pictures/69398447/small.jpg">
+          </div>
+        </div>
+        
+        <% end %>
+    </div>
+    <div class="col-6 col-middle">
+      <span class="h4">
+          <%= link_to space.title, room_path(space) %>
+      </span>
+      <div class="actions row-space-top-1">
+          <%= link_to "Manage Listing and Calendar", "/spaces/#{space.id}/manage_listing/calendar" %>
+      </div>
+    </div>
+
+    <div class="col-4 col-middle">
+      <div class="pull-right">
+          <div class="listing-criteria-header activation-notification">
+  <div class="listing-criteria-header-message">
+      <%= link_to "List Now", "/spaces/#{space.id}/manage_listing/",  class: "btn yellow btn-host btn-primary" %>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div></li>

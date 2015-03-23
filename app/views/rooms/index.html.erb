@@ -1,6 +1,57 @@
-<h1>Rooms#index</h1>
-<p>Find me in app/views/rooms/index.html.erb</p>
+<%= render "/shared/user_subnav" %>
 
-<%= @rooms.each do |room| %>
-   <p><%= room.title %> </p>
+   <div class="container">
+
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="sidebar-module sidebar-module-inset">
+          </div>
+          <div class="sidebar-module">
+                <ul class="sidenav-list">
+                  <li>
+                    <a href="/rooms" aria-selected="true" class="sidenav-item">Manage Listings</a>
+                  </li>
+                  <li>
+                    <a href="/my_reservations" aria-selected="false" class="sidenav-item">Your Reservations</a>
+                  </li>
+                  <li>
+                  <a href="/hosting/requirements" aria-selected="false" class="sidenav-item">Reservation Requirements</a>
+                  </li>
+                </ul>
+          </div>
+        </div><!-- /.blog-sidebar -->
+          
+        <div class="col-sm-9 brewster">
+            <p>
+                
+        <div class="panel">
+    <div class="panel-header">
+      <div class="row">
+        <div class="col-6">
+          <div class="select">
+            <form id="select-listings-filter" action="/rooms">
+              <select id="f" name="f"><option value="all">Show all listings</option>
+<option value="active">Show active</option>
+<option value="inactive">Show hidden</option></select>
+            </form>
+          </div>
+        </div>
+        <div class="col-6">
+        </div>
+      </div>
+    </div>
+    <div class="suspension-container">
+      <ul class="list-unstyled list-layout">
+          <%= render partial: "room", collection: @rooms, as: :space %>
+      </ul>
+    </div>
+  </div>
+
+            </p>
+        </div>
+
+      </div>
+    </div> <!-- /container -->
+
+<% @rooms.each do |room| %>
 <% end %>

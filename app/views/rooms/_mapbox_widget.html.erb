@@ -1,0 +1,24 @@
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.6/mapbox.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.6/mapbox.css' rel='stylesheet' />
+
+  <div class="map-container">
+    <div id="map">
+    </div>
+  </div>
+<script>
+    L.mapbox.accessToken = 'pk.eyJ1IjoiemFja3NocCIsImEiOiIzZ09nMDZZIn0.a_wcJpacq_Sojc5QO_4gww';
+      var map = L.mapbox.map('map', 'zackshp.k0bb3ic6')
+        .setView([<%= @room.latitude %>, <%= @room.longitude %>], 15);
+    L.mapbox.featureLayer({
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [<%= @room.longitude %>, <%= @room.latitude %>]
+      },
+      properties: {
+        'marker-size': 'large',
+        'marker-color': '#00607d',
+        'marker-symbol': 'circle'
+      }
+    }).addTo(map);
+</script>

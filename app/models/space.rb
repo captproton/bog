@@ -6,6 +6,8 @@ class Space < ActiveRecord::Base
   has_many :photos
   has_one :amenity_group
   accepts_nested_attributes_for :amenity_group
+  geocoded_by :address
+  after_validation :geocode, if: :street_address_changed?
   
   attr_accessor :lodging
 
@@ -21,6 +23,9 @@ class Space < ActiveRecord::Base
     status == 'active'
   end
 
+  def address
+    "#{street_address}, #{city}, #{state}"
+  end
   # def active_or_title?
   #   status.include?('title') || active?
   # end
