@@ -4,6 +4,9 @@ class RoomsController < ApplicationController
   end
   
   def show
-    @room = Space.find(params[:id])
+    @room       = Space.find(params[:id])
+    @photos     = @room.photos
+    
+    @hero_image = @photos.first    
   end
 end

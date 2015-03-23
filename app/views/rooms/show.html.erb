@@ -3,39 +3,39 @@
       <div class="row">
         <div class="col-sm-3">
 
-<p>hero Image here</p>
+<p><%= image_tag @hero_image.image_url %></p>
 <hr />
 <h1 id="main_info">main info</h1>
 <p>Host name and icon</p>
-    <h2>Room title</h2>
+    <h2><%= @room.title %></h2>
 <p>
-    Salt Lake City, UT, United States
+    <%= "#{@room.city}, #{@room.state}" %>
 </p>
 <p>
     <em>listing info</em><br />
-    room type: <br />
-    Accommodates: <br />
-    Bedrooms: <br />
-    Beds: <br />
+    room type: <%= @room.room_style %><br />
+    Accommodates: <%= @room.person_capacity %><br />
+    Bedrooms: <%= @room.bedrooms %><br />
+    Beds: <%= @room.beds %><br />
 </p>
 
 <hr />
 
  <h2>About This Listing</h2>
 
-<p>@space.summary</p>
+<p><%= @room.summary %></p>
 <%= link_to "Contact Host", "/" %>
 
 <hr />
 
 
 <h2>The Space</h2>
-Bed type: @space.bed_style <br />
-Property type: @space.home_style <br />
-Accommodates: @space.person_capacity <br />
-Bedrooms: @space.bedrooms <br />
-Bathrooms: @space.bathrooms <br />
-Beds: @space.beds <br />
+Bed type: <%= @room.bed_style %> <br />
+Property type: <%= @room.home_style %> <br />
+Accommodates: <%= @room.person_capacity %> <br />
+Bedrooms: <%= @room.bedrooms %> <br />
+Bathrooms: <%= @room.bathrooms %> <br />
+Beds: <%= @room.beds %> <br />
 
 <hr />
 
@@ -48,7 +48,7 @@ Amenites list goes here
 <h2>Prices</h2>
 
 Extra people: No Charge <br />
-Weekly Price: $@space.listing_weekly_price_native /week <br />
+Weekly Price: $@room.listing_weekly_price_native /week <br />
 Cancellation: Flexible <br />
 <hr />
 
