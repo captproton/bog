@@ -1,76 +1,185 @@
+<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.6/mapbox.css' rel='stylesheet' />
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.6/mapbox.js'></script>
+
    <div class="container">
 
-      <div class="row">
-        <div class="col-sm-3">
+        <div class="row">
+          <div id="hero_image" class="col-md-12">
+              <%= image_tag @hero_image.image_url %>
+              
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+              <img data-holder-rendered="true" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTkyIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDE5MiAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iMTkyIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjY5LjA0MTY2NjAzMDg4Mzc5IiB5PSIxMDAiIHN0eWxlPSJmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MTBwdDtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj4xOTJ4MjAwPC90ZXh0PjwvZz48L3N2Zz4=" style="height: 100px; width: 100px; display: block;" data-src="holder.js/100x100" alt="Host Icon">
+            <p>host.name</p>
+                
+            </div>
+            <div class="col-md-9">
+                <div class="row">
+                    <div class-"col-md-9">
+                        <h2><%= @room.title %></h2>
+            
+                        <p>
+                            <%= "#{@room.city}, #{@room.state}" %>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <%= @room.room_style.titleize %><br />
+                        Room Type
 
-<p>hero Image here</p>
-<hr />
-<h1 id="main_info">main info</h1>
-<p>Host name and icon</p>
-    <h2>Room title</h2>
-<p>
-    Salt Lake City, UT, United States
-</p>
-<p>
-    <em>listing info</em><br />
-    room type: <br />
-    Accommodates: <br />
-    Bedrooms: <br />
-    Beds: <br />
-</p>
+                    </div>
+                    <div class="col-md-2">
+                        <%= @room.person_capacity %><br />
+                        Guests
 
-<hr />
+                    </div>
+                    <div class="col-md-2">
+                        <%= @room.bedrooms %><br />
+                        Bedrooms
 
- <h2>About This Listing</h2>
+                    </div>
+                    <div class="col-md-2">
+                        <%= @room.beds %><br />
+                        Beds
 
-<p>@space.summary</p>
-<%= link_to "Contact Host", "/" %>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                 <h2>About This Listing</h2>
 
-<hr />
+                <p><%= @room.summary %></p>
+                <%= link_to "Contact Host", "/" %>
+            
+            </div>
+            <hr />
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <h2>The Space</h2>
+            </div>
+            <div class="col-md-4">
+                Bed type: <%= @room.bed_style.titleize %> <br />
+                Property type: <%= @room.home_style.titleize %> <br />
+                Accommodates: <%= @room.person_capacity %> <br />
+                
+            </div>
+            <div class="col-md-4">
+                Bedrooms: <%= @room.bedrooms %> <br />
+                Bathrooms: <%= @room.bathrooms %> <br />
+                Beds: <%= @room.beds %> <br />
+                
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Amenities</h2>
+            </div>
+            <div class="col-md-4">
 
+                <% @amenities.each_with_index  do |aid, index| %>
+                    
+                    <% if index == 16 %>
+                        </div>
+                        <div class="col-md-4">
+                    <% end %>
+                    
+                    <% if aid[1] == true %>
+                        <%=  render :partial => 'amenity_exists', locals: { feature: aid } %>
+                    <% else %>
+                    <%= render partial: "amenity_exists_false", locals: { feature: aid }%>
+                    <% end %>
+                <% end %>
 
-<h2>The Space</h2>
-Bed type: @space.bed_style <br />
-Property type: @space.home_style <br />
-Accommodates: @space.person_capacity <br />
-Bedrooms: @space.bedrooms <br />
-Bathrooms: @space.bathrooms <br />
-Beds: @space.beds <br />
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Prices</h2>
+            </div>
+            <div class="col-md-4">
 
-<hr />
+                <div>Extra people: <strong><span id="localized_people_pricing_description_string">No Charge</span></strong></div>
+                <div><a class="link-reset" href="/s/Salt-Lake-City--UT?sublets=monthly">Weekly Price:</a> <strong><span id="monthly_price_string">$<%= @room.listing_weekly_price_native %></span> /week</strong></div>
+            </div>
+            <div class="col-md-4">
 
-<h2>Amenities</h2>
+                <div>Cancellation: 
+                    <strong>
+                        <a href="/home/cancellation_policies#flexible" 
+                        data-popup="true" id="cancellation-policy">
+                        Flexible
+                        </a>
+                    </strong>
+                </div>
+                        </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Availability</h2>
+            </div>
+            <div class="col-md-4">
 
-Amenites list goes here
-<hr />
-
-
-<h2>Prices</h2>
-
-Extra people: No Charge <br />
-Weekly Price: $@space.listing_weekly_price_native /week <br />
-Cancellation: Flexible <br />
-<hr />
-
-
-<h3>Availability</h3>
-<p>1 night minimum stay</p>
-<%= link_to "View Calendar", "#" %>
-<hr />
-
-<h2>Reviews</h2>
-<hr />
-
-<h2>About the Host</h2>
-<p>host logo</p>
-<p>host location</p>
-<p>Memeber since host.signup_date</p>
-<%= link_to "Contact Host", "#" %>
-<hr />
-
-<h2>Listing Location</h2>
-<%# render "map_widget_new" %>
-<%= render "mapbox_widget" %>
-</div>
+                <strong>1 week</strong> minimum stay
+                
+                
+            </div>
+            <div class="col-md-4">
+                <a id="view-calendar" href="#"><strong>View Calendar</strong></a>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <!--photos go here -->
+            <div class="col-md-12">
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <h2>About the Host, (host.name)</h2>
+                host.logo
+            </div>
+            <div class="col-md-4">
+                host.city, host.state<br />
+                Member  since host.signup_date<br />
+                <%= link_to "Contact Host", "#" %>
+            </div>
+            <div class="col-md-4">
+                &nbsp;
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-md-12">
+                <%= render "mapbox_widget" %>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Similar Listings</h2>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 col-md-4">
+            <%= render :partial => 'similar_listing' %>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <%= render :partial => 'similar_listing' %>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <%= render :partial => 'similar_listing' %>
+          </div>
+        </div>
 </div>
 </div>
