@@ -84,16 +84,21 @@
                 <h2>Amenities</h2>
             </div>
             <div class="col-md-4">
-                Bed type: <%= @room.bed_style %> <br />
-                Property type: <%= @room.home_style %> <br />
-                Accommodates: <%= @room.person_capacity %> <br />
-                
-            </div>
-            <div class="col-md-4">
-                Bedrooms: <%= @room.bedrooms %> <br />
-                Bathrooms: <%= @room.bathrooms %> <br />
-                Beds: <%= @room.beds %> <br />
-                
+
+                <% @amenities.each_with_index  do |aid, index| %>
+                    
+                    <% if index == 16 %>
+                        </div>
+                        <div class="col-md-4">
+                    <% end %>
+                    
+                    <% if aid[1] == true %>
+                        <%=  render :partial => 'amenity_exists', locals: { feature: aid } %>
+                    <% else %>
+                    <%= render partial: "amenity_exists_false", locals: { feature: aid }%>
+                    <% end %>
+                <% end %>
+
             </div>
         </div>
         <hr />
@@ -102,17 +107,21 @@
                 <h2>Prices</h2>
             </div>
             <div class="col-md-4">
-                Bed type: <%= @room.bed_style %> <br />
-                Property type: <%= @room.home_style %> <br />
-                Accommodates: <%= @room.person_capacity %> <br />
-                
+
+                <div>Extra people: <strong><span id="localized_people_pricing_description_string">No Charge</span></strong></div>
+                <div><a class="link-reset" href="/s/Salt-Lake-City--UT?sublets=monthly">Weekly Price:</a> <strong><span id="monthly_price_string">$<%= @room.listing_weekly_price_native %></span> /week</strong></div>
             </div>
             <div class="col-md-4">
-                Bedrooms: <%= @room.bedrooms %> <br />
-                Bathrooms: <%= @room.bathrooms %> <br />
-                Beds: <%= @room.beds %> <br />
-                
-            </div>
+
+                <div>Cancellation: 
+                    <strong>
+                        <a href="/home/cancellation_policies#flexible" 
+                        data-popup="true" id="cancellation-policy">
+                        Flexible
+                        </a>
+                    </strong>
+                </div>
+                        </div>
         </div>
         <hr />
         <div class="row">
@@ -120,12 +129,13 @@
                 <h2>Availability</h2>
             </div>
             <div class="col-md-4">
-                minimum stay
+
+                <strong>1 week</strong> minimum stay
+                
                 
             </div>
             <div class="col-md-4">
-                <%= link_to "View Calendar", "#" %>
-                
+                <a id="view-calendar" href="#"><strong>View Calendar</strong></a>
             </div>
         </div>
         <hr />
@@ -146,8 +156,7 @@
                 <%= link_to "Contact Host", "#" %>
             </div>
             <div class="col-md-4">
-                <%= link_to "View Calendar", "#" %>
-                
+                &nbsp;
             </div>
         </div>
         <hr />
