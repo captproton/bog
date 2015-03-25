@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-7 sidebar">
+            <div class="search-results">
+                <div class="row listings-container">
+                    <% @search.each do |listing| %>
+                        <div class="col-sm-12 col-md-6 row-space-2">
+                            <div class="listing">
+                                <div class="panel-image listing-image">
+                                    <%= render partial: 'listing_image', locals: {listing: listing} %>
+                                </div>
+                                <div class="panel-body panel-card-section">
+                                    <%= render :partial => 'listing_body', locals: {listing: listing} %>
+                                </div>
+                            </div>
+                        </div>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-5">
+            <div id="map">
+                <h4>Col 3</h4>
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
