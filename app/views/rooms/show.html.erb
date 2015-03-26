@@ -1,5 +1,3 @@
-<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.6/mapbox.css' rel='stylesheet' />
-<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.6/mapbox.js'></script>
 
    <div class="container">
 
@@ -27,7 +25,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-2">
-                        <%= @room.room_style.titleize %><br />
+                        <%= @room.room_style.to_s.titleize %><br />
                         Room Type
 
                     </div>
@@ -66,8 +64,8 @@
                 <h2>The Space</h2>
             </div>
             <div class="col-md-4">
-                Bed type: <%= @room.bed_style.titleize %> <br />
-                Property type: <%= @room.home_style.titleize %> <br />
+                Bed type: <%= @room.bed_style.to_s.titleize %> <br />
+                Property type: <%= @room.home_style.to_s.titleize %> <br />
                 Accommodates: <%= @room.person_capacity %> <br />
                 
             </div>

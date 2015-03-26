@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'rooms/index'
+  resources :search, only: [:index]
   resources :spaces, only: [:new, :create]
   resources :manage_listing, only: [:show, :update]
   resources :user_steps, only: [:show, :update]

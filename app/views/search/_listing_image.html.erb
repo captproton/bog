@@ -1,0 +1,10 @@
+          <%= link_to room_path(listing) do %>
+            <div class="listing-img-container media-cover text-center">
+                <% if listing.photos.first %>
+                  <%= image_tag(listing.photos.first.image_url(:thumb)) if listing.photos.first.image?  %>
+                <% else %>
+                  <em>Processing...</em>
+                <% end %>
+                
+            </div>
+          <% end %>
