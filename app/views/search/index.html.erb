@@ -1,5 +1,3 @@
-<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.6/mapbox.js'></script>
-<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.6/mapbox.css' rel='stylesheet' />
 <div class="container">
     <div class="row">
         <div class="col-xs-7 sidebar">
@@ -26,23 +24,30 @@
     <div id="map">
     </div>
   </div>
-<script>
-    L.mapbox.accessToken = 'pk.eyJ1IjoiY2FwdHByb3RvbiIsImEiOiI3cDFLWWRnIn0.guU68dUaxKCX_MPrZHAesQ';
-      var map = L.mapbox.map('map', 'zackshp.k0bb3ic6')
-        .setView([41.242607, -111.934111], 15);
-    L.mapbox.featureLayer({
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
-        coordinates: [-111.934111, 41.242607]
-      },
-      properties: {
-        'marker-size': 'large',
-        'marker-color': '#00607d',
-        'marker-symbol': 'circle'
+  <!-- jQuery is required for this example. -->
+  <script>
+  L.mapbox.accessToken = 'pk.eyJ1IjoiY2FwdHByb3RvbiIsImEiOiI3cDFLWWRnIn0.guU68dUaxKCX_MPrZHAesQ';
+  var url = '/search.json';
+
+  var map = L.mapbox.map('map', 'examples.map-h67hf2ic')
+    .setView([41.22086, -111.879523], 11);
+
+  function load() {
+      // As with any other AJAX request, this technique is subject to the Same Origin Policy:
+    // http://en.wikipedia.org/wiki/Same_origin_policy the server delivering the request should support CORS.
+    $.ajax({
+      dataType: 'json',
+      url: url,
+      success: function(geojson) {
+          // On success add fetched data to the map.
+          L.mapbox.featureLayer(geojson).addTo(map);
       }
-    }).addTo(map);
-</script>
+    });
+  }
+
+  $(load);
+  </script>    
+    {"type":"Feature","geometry":{"type":"Point","coordinates":[-111.934111,41.242607]},"properties":{"name":"happy","address":"1670 S. 13th St.","marker-color":"#00607d","marker-symbol":"circle","marker-size":"medium"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-111.934937,41.242617]},"properties":{"name":"agreement","address":"1640 E 13th Street","marker-color":"#00607d","marker-symbol":"circle","marker-size":"medium"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-111.932658,41.242045]},"properties":{"name":"relationship","address":"1328 Maxfield Drive","marker-color":"#00607d","marker-symbol":"circle","marker-size":"medium"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-111.933219,41.241841]},"properties":{"name":"decade","address":"1335 MAXFIELD DR","marker-color":"#00607d","marker-symbol":"circle","marker-size":"medium"}}
 <!-- -->
         </div>
         

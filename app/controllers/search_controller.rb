@@ -12,11 +12,11 @@ class SearchController < ApplicationController
           coordinates: [room.longitude, room.latitude]
         },
         properties: {
-          name: room.title,
-          address: room.street_address,
-          :'marker-color' => '#00607d',
-          :'marker-symbol' => 'circle',
-          :'marker-size' => 'medium'
+          properties: {
+            'marker-size': 'large',
+            'marker-color': '#00607d',
+            'marker-symbol': 'circle'
+          }
         }
       }
     end
