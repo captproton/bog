@@ -176,6 +176,8 @@ GEM
       railties (>= 3.2, < 5.0)
     formatador (0.2.5)
     geocoder (1.2.8)
+    geocomplete_rails (1.6.4)
+      railties (>= 3.1)
     gh (0.14.0)
       addressable
       backports
@@ -410,6 +412,7 @@ DEPENDENCIES
   figaro
   fog (~> 1.28.0)
   geocoder (~> 1.2.8)
+  geocomplete_rails (~> 1.6.4)
   guard
   guard-bundler (~> 2.0.0)
   guard-minitest

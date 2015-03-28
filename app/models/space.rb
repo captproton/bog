@@ -23,6 +23,17 @@ class Space < ActiveRecord::Base
     status == 'active'
   end
 
+  def self.search(search)
+    if search
+      place_array = search.split(", ")
+      city_name = place_array[0]
+      state_name = place_array[-2]
+      Space.where('city LIKE ?', "%#{city_name}%").where('state LIKE ?', "%#{state_name}%")
+    else
+      Space.all
+    end
+  end
+  
   def address
     "#{street_address}, #{city}, #{state}"
   end

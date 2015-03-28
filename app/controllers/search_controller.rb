@@ -1,7 +1,8 @@
 class SearchController < ApplicationController
   respond_to :html, :xml, :json
   def index
-    @search = @lodging.entries    
+    
+    @search = Space.search(params[:place])
     @geojson = Array.new
 
     @search.each do |room|
