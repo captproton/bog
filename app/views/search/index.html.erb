@@ -3,6 +3,7 @@
         <div class="col-xs-7 sidebar">
             <div class="search-results">
                 <div class="row listings-container">
+                    
                     <% @search.each do |listing| %>
                         <div class="col-sm-12 col-md-6 row-space-2">
                             <div class="listing">
@@ -20,34 +21,11 @@
         </div>
         <div class="col-xs-5">
 <!-- -->
-  <div class="map-container location-panel">
-    <div id="map">
-    </div>
-  </div>
+            <div class="map-container location-panel">
+                <div id="map">
+                </div>
+            </div>
   <!-- jQuery is required for this example. -->
-  <script>
-  L.mapbox.accessToken = 'pk.eyJ1IjoiY2FwdHByb3RvbiIsImEiOiI3cDFLWWRnIn0.guU68dUaxKCX_MPrZHAesQ';
-  var url = '/search.json';
-
-  var map = L.mapbox.map('map', 'examples.map-h67hf2ic')
-    .setView([41.22086, -111.879523], 11);
-
-  function load() {
-      // As with any other AJAX request, this technique is subject to the Same Origin Policy:
-    // http://en.wikipedia.org/wiki/Same_origin_policy the server delivering the request should support CORS.
-    $.ajax({
-      dataType: 'json',
-      url: url,
-      success: function(geojson) {
-          // On success add fetched data to the map.
-          L.mapbox.featureLayer(geojson).addTo(map);
-      }
-    });
-  }
-
-  $(load);
-  </script>    
-    {"type":"Feature","geometry":{"type":"Point","coordinates":[-111.934111,41.242607]},"properties":{"name":"happy","address":"1670 S. 13th St.","marker-color":"#00607d","marker-symbol":"circle","marker-size":"medium"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-111.934937,41.242617]},"properties":{"name":"agreement","address":"1640 E 13th Street","marker-color":"#00607d","marker-symbol":"circle","marker-size":"medium"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-111.932658,41.242045]},"properties":{"name":"relationship","address":"1328 Maxfield Drive","marker-color":"#00607d","marker-symbol":"circle","marker-size":"medium"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-111.933219,41.241841]},"properties":{"name":"decade","address":"1335 MAXFIELD DR","marker-color":"#00607d","marker-symbol":"circle","marker-size":"medium"}}
 <!-- -->
         </div>
         

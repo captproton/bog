@@ -17,6 +17,7 @@
 
 # Ignore files that are useds for testing locally
 /public/uploads/
+public/assets/
 
 ##
 *.rbc
