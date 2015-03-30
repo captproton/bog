@@ -2,6 +2,7 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
+alert(gon.city_state)
 
 L.mapbox.accessToken = 'pk.eyJ1IjoiY2FwdHByb3RvbiIsImEiOiI3cDFLWWRnIn0.guU68dUaxKCX_MPrZHAesQ'
 
@@ -15,7 +16,7 @@ showMap = (err, data) ->
     map.setView [
       data.latlng[0]
       data.latlng[1]
-    ], 15
+    ], 13
   return
 
 geocoder = L.mapbox.geocoder('mapbox.places')
