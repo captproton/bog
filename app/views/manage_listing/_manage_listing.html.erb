@@ -1,0 +1,390 @@
+<div class="manage-listing row" id="js-manage-listing">
+
+  
+  <div class="manage-listing-header col-med-12 col-sm-12" id="js-manage-listing-header">
+      <div class="subnav ml-header-subnav">
+          <ul class="subnav-list">
+            <li>
+              <a href="/rooms" class="subnav-item icon icon-arrow-left" id="all-listings" title="View all your listings."></a>
+            </li>
+                <%= content_tag :li, class: "subnav-text"  do -%>
+                    <%= @space.title %>
+                <% end %>
+            <li>
+                <%# link_to @space.title, "/" %>
+                <%= link_to(room_path(@space), preview: true, title: "Preview your listing as it will appear when active.", target: "_blank", :'data-track' => 'preview', class: "subnav-item pull-right", id: "preview-btn") do %>
+                    <i class="icon icon-eye"></i>
+                    Preview
+                <% end %>
+            </li>
+          </ul>
+      </div>
+    </div>
+
+    <div class="manage-listing-row-container container">
+        <div class="manage-listing-nav col-med-3" id="js-manage-listing-nav">
+            <div style="height: 0px; margin-bottom: 114px;" class="nav-sections">
+  <!-- Basics -->
+              <div class="h6 section-header row-space-1 pre-listed">
+                Basics
+              </div>
+              <ul class="list-unstyled">
+    
+                  <li class="nav-item nav-calendar pre-listed complete nav-active" data-track="calendar">
+                      <%= link_to(space_manage_listing_path(@space, "calendar")) do %>
+                        <div class="row row-condensed nav-item">
+                          <div class="col-9">Calendar</div>
+                          <div class="col-3 text-center">
+      
+                            <div class="js-new-section-icon not-post-listed">
+                              <i class="nav-icon icon icon-add icon-rausch"></i>
+                            </div>
+      
+
+      
+                          <i class="nav-icon icon icon-ok-alt icon-lima nav-icon-checked not-post-listed visible transition"></i>
+
+                          <i class="icon icon-bolt icon-beach hide"></i>
+                          <i class="dot dot-success hide"></i>
+                          </div>
+                        </div>
+                      <% end %>
+          
+                  </li>
+
+    
+                  <li class="nav-item nav-pricing pre-listed complete" data-track="pricing">
+                      <%= link_to(space_manage_listing_path(@space, "pricing")) do %>
+                        <div class="row row-condensed nav-item">
+                          <div class="col-9">Pricing</div>
+                          <div class="col-3 text-center">
+      
+                            <div class="js-new-section-icon not-post-listed">
+                              <i class="nav-icon icon icon-add icon-rausch"></i>
+                            </div>
+      
+
+      
+                          <i class="nav-icon icon icon-ok-alt icon-lima nav-icon-checked not-post-listed visible transition"></i>
+
+                          <i class="icon icon-bolt icon-beach hide"></i>
+                          <i class="dot dot-success hide"></i>
+                          </div>
+                        </div>
+                      <% end %>
+                  </li>
+
+    
+              </ul>
+
+  <!-- Description -->
+              <div class="h6 section-header row-space-1 row-space-top-5 ">
+                Description
+              </div>
+              <ul class="list-unstyled">
+    
+                  <li class="nav-item nav-overview pre-listed complete" data-track="overview">
+                      <%= link_to(space_manage_listing_path(@space, "overview")) do %>
+                        <div class="row row-condensed nav-item">
+                          <div class="col-9">Overview</div>
+                          <div class="col-3 text-center">
+      
+                            <div class="js-new-section-icon not-post-listed">
+                              <i class="nav-icon icon icon-add icon-rausch"></i>
+                            </div>
+      
+
+      
+                          <i class="nav-icon icon icon-ok-alt icon-lima nav-icon-checked not-post-listed visible transition"></i>
+
+                          <i class="icon icon-bolt icon-beach hide"></i>
+                          <i class="dot dot-success hide"></i>
+                          </div>
+                        </div>
+                      <% end %>
+                  </li>
+
+    
+                  <li class="nav-item nav-details post-listed" data-track="details">
+                      <%= link_to(space_manage_listing_path(@space, "details")) do %>
+                        <div class="row row-condensed nav-item">
+                          <div class="col-9">Details</div>
+                          <div class="col-3 text-center">
+      
+
+      
+                            <div class="js-new-section-icon">
+                              <i class="nav-icon icon icon-add icon-rausch"></i>
+                            </div>
+      
+                          <i class="nav-icon icon icon-ok-alt icon-lima nav-icon-checked not-post-listed"></i>
+
+                          <i class="icon icon-bolt icon-beach hide"></i>
+                          <i class="dot dot-success hide"></i>
+                          </div>
+                        </div>
+                      <% end %>
+                  </li>
+
+    
+                  <li class="nav-item nav-photos pre-listed complete" data-track="photos">
+                      <%= link_to(space_manage_listing_path(@space, "photos")) do %>
+
+                    <div class="row row-condensed nav-item">
+                      <div class="col-9">Photos</div>
+                      <div class="col-3 text-center">
+      
+                        <div class="js-new-section-icon not-post-listed">
+                          <i class="nav-icon icon icon-add icon-rausch"></i>
+                        </div>
+      
+
+      
+                      <i class="nav-icon icon icon-ok-alt icon-lima nav-icon-checked not-post-listed visible transition"></i>
+
+                      <i class="icon icon-bolt icon-beach hide"></i>
+                      <i class="dot dot-success hide"></i>
+                      </div>
+                    </div>
+                <% end %>
+            </li>
+
+    
+              <li class="nav-item nav-guidebook post-listed" data-track="guidebook">
+              <%= link_to(space_manage_listing_path(@space, "guidebook")) do %>
+
+                <div class="row row-condensed nav-item">
+                  <div class="col-9">Guidebook</div>
+                  <div class="col-3 text-center">
+
+
+
+                    <div class="js-new-section-icon">
+                      <i class="nav-icon icon icon-add icon-rausch"></i>
+                    </div>
+
+                  <i class="nav-icon icon icon-ok-alt icon-lima nav-icon-checked not-post-listed"></i>
+
+                  <i class="icon icon-bolt icon-beach hide"></i>
+                  <i class="dot dot-success hide"></i>
+                  </div>
+                </div>
+              <% end %>
+                  </li>
+
+    
+      
+
+    
+              </ul>
+
+  <!-- Settings -->
+              <div class="h6 section-header row-space-1 row-space-top-5 ">
+                Settings
+              </div>
+              <ul class="list-unstyled">
+    
+                  <li class="nav-item nav-amenities pre-listed" data-track="amenities">
+                  <%= link_to(space_manage_listing_path(@space, "amenities")) do %>
+                    <div class="row row-condensed nav-item">
+                      <div class="col-9">Amenities</div>
+                      <div class="col-3 text-center">
+      
+
+      
+                      <i class="nav-icon icon icon-ok-alt icon-lima nav-icon-checked not-post-listed"></i>
+
+                      <i class="icon icon-bolt icon-beach hide"></i>
+                      <i class="dot dot-success hide"></i>
+                      </div>
+                    </div>
+                <% end %>
+            </li>
+
+    
+                  <li class="nav-item nav-listing pre-listed complete" data-track="listing">
+                  <%= link_to(space_manage_listing_path(@space, "listing")) do %>
+
+                    <div class="row row-condensed nav-item">
+                      <div class="col-9">Listing</div>
+                      <div class="col-3 text-center">
+      
+                        <div class="js-new-section-icon not-post-listed">
+                          <i class="nav-icon icon icon-add icon-rausch"></i>
+                        </div>
+      
+
+      
+                      <i class="nav-icon icon icon-ok-alt icon-lima nav-icon-checked not-post-listed visible transition"></i>
+
+                      <i class="icon icon-bolt icon-beach hide"></i>
+                      <i class="dot dot-success hide"></i>
+                      </div>
+                    </div>
+                  <% end %>
+                </li>
+
+    
+                  <li class="nav-item nav-address pre-listed complete" data-track="address">
+                  <%= link_to(space_manage_listing_path(@space, "location")) do %>
+                    <div class="row row-condensed nav-item">
+                      <div class="col-9">Location</div>
+                      <div class="col-3 text-center">
+      
+                        <div class="js-new-section-icon not-post-listed">
+                          <i class="nav-icon icon icon-add icon-rausch"></i>
+                        </div>
+      
+
+      
+                      <i class="nav-icon icon icon-ok-alt icon-lima nav-icon-checked not-post-listed visible transition"></i>
+
+                      <i class="icon icon-bolt icon-beach hide"></i>
+                      <i class="dot dot-success hide"></i>
+                      </div>
+                    </div>
+                  <% end %>
+                </li>
+
+    
+                  <li class="nav-item nav-terms post-listed" data-track="terms">
+                      <%= link_to(space_manage_listing_path(@space, "terms")) do %>
+                        <div class="row row-condensed nav-item">
+                          <div class="col-9">Terms</div>
+                          <div class="col-3 text-center">
+      
+
+      
+                            <div class="js-new-section-icon">
+                              <i class="nav-icon icon icon-add icon-rausch"></i>
+                            </div>
+      
+                          <i class="nav-icon icon icon-ok-alt icon-lima nav-icon-checked not-post-listed"></i>
+
+                          <i class="icon icon-bolt icon-beach hide"></i>
+                          <i class="dot dot-success hide"></i>
+                          </div>
+                        </div>
+                    <% end %>
+                </li>
+
+    
+              </ul>
+
+  <!-- Cleaning -->
+             </div>
+
+            <div style="bottom: 71px;" class="publish-actions text-center publish-actions-overflow">
+              <div id="user-suspended"></div>
+              <div id="availability-dropdown">
+            </div>
+            <div id="js-publish-button"><div class="not-post-listed text-center">
+                <div style="display: none;" class="animated text-lead text-muted steps-remaining js-steps-remaining anim-fade-out-scale-down"></div>
+                <button style="opacity: 0; display: inline-block;" data-href="complete" class="animated btn btn-large btn-host btn-primary anim-flip-in-Y" id="js-list-space-button" data-track="list_space_button_left_nav">
+                    List Space
+                </button>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<div class="manage-listing-content col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main"
+ id="js-manage-listing-content">
+    <%= yield %>
+</div>
+</div>
+
+  <div class="manage-listing-footer" id="js-manage-listing-footer">
+    <div class="container-brand-dark footer-panel">
+      <div class="row row-table">
+        <div class="col-2 col-middle"><span class="text-muted">&copy; here</span></div>
+        <div class="col-8 col-middle text-center text-muted">
+          <a href="/about" class="text-muted">
+            About
+          </a> |
+          <a href="/help" class="text-muted">
+            Help
+          </a> |
+          <a href="/trust" class="text-muted">
+            Safety
+          </a> |
+          <a href="/help/hosting101/responsible-hosting" class="text-muted">
+            Responsible Hosting
+          </a> |
+          <a href="#" id="local-laws-trigger-footer" class="text-muted local-laws-trigger">
+            Local Laws
+          </a> |
+          <a href="/policies" class="text-muted">
+            Policies
+          </a> |
+          <a href="/terms" class="text-muted">
+            Terms &amp; Privacy
+          </a>
+        </div>
+        <div class="col-2 col-middle">
+          <div class="language-curr-picker pull-right">
+            <div class="select select-large select-block row-space-2">
+  <select class="language-selector">
+    
+      <option value="id">Bahasa Indonesia</option>
+    
+      <option value="ms">Bahasa Melayu</option>
+    
+      <option value="ca">Català</option>
+    
+      <option value="da">Dansk</option>
+    
+      <option value="de">Deutsch</option>
+    
+      <option value="en" selected="">English</option>
+    
+      <option value="es">Español</option>
+    
+      <option value="el">Eλληνικά</option>
+    
+      <option value="fr">Français</option>
+    
+      <option value="it">Italiano</option>
+    
+      <option value="hu">Magyar</option>
+    
+      <option value="nl">Nederlands</option>
+    
+      <option value="no">Norsk</option>
+    
+      <option value="pl">Polski</option>
+    
+      <option value="pt">Português</option>
+    
+      <option value="fi">Suomi</option>
+    
+      <option value="sv">Svenska</option>
+    
+      <option value="tr">Türkçe</option>
+    
+      <option value="is">Íslenska</option>
+    
+      <option value="cs">Čeština</option>
+    
+      <option value="ru">Русский</option>
+    
+      <option value="th">ภาษาไทย</option>
+    
+      <option value="zh">中文 (简体)</option>
+    
+      <option value="zh-TW">中文 (繁體)</option>
+    
+      <option value="ja">日本語</option>
+    
+      <option value="ko">한국어</option>
+    
+  </select>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

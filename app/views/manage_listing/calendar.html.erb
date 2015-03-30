@@ -1,14 +1,15 @@
-<h1>MangageListing#calendar</h1>
-<p>Space Title: <%= @space.title %></p>
-<%= render layout: 'form' do |f| %>
-    <%= f.radio_button(:calendar_frequency, "always") %>
-    <%= f.label(:age_child, "Always - List all dates available") %>
-    <%= f.radio_button(:calendar_frequency, "sometimes") %>
-    <%= f.label(:age_adult, "Sometimes - List some dates available") %>
-    <%= f.radio_button(:calendar_frequency, "onetime") %>
-    <%= f.label(:age_adult, "One Time - List only one time available") %>
-<% end %>
+<%= render layout: "manage_listing" do %>
 
+    <h1>MangageListing#calendar</h1>
+    <p>Space Title: <%= @space.title %></p>
+    <%= render layout: 'form' do |f| %>
+        <%= f.radio_button(:calendar_frequency, "always") %>
+        <%= f.label(:age_child, "Always - List all dates available") %>
+        <%= f.radio_button(:calendar_frequency, "sometimes") %>
+        <%= f.label(:age_adult, "Sometimes - List some dates available") %>
+        <%= f.radio_button(:calendar_frequency, "onetime") %>
+        <%= f.label(:age_adult, "One Time - List only one time available") %>
+    <% end %>
 
 <!-- -->
 <h1>Tell us a little about yourself.</h1>
@@ -51,3 +52,4 @@
 </div>
 </div>
 </div>
+<% end %>
