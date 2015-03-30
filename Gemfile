@@ -69,6 +69,10 @@ end
 # App specfic gems
 # Geocoding lat-lng
 gem 'geocoder', '~> 1.2.8'
+# Place autocomplete
+gem 'geocomplete_rails', '~> 1.6.4'
+# pass variables from the controller to js
+gem 'gon', '~> 5.2.3'
 gem 'calendar_helper'
 # gem 'flickr_fu', '~> 0.3.2'
 gem 'figaro'
