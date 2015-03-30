@@ -23,12 +23,28 @@ class Space < ActiveRecord::Base
     status == 'active'
   end
 
+  def self.place_array_from_params(place_params)
+    place_array = place_params.to_s.split(", ")
+  end
+
+  def self.city_state_array(place_params)
+    pa = self.place_array_from_params(place_params)
+    city_name = pa[0]
+    state_name = pa[-2]
+    city_state = Array.new
+    city_state = [city_name, state_name]
+  end
+  
+  def self.city_state_string(place_params)
+    csa = self.city_state_array(place_params)
+    csa << "United States"
+    city_state = csa.join(", ")
+  end
+  
   def self.search(search)
     if search
-      place_array = search.split(", ")
-      city_name = place_array[0]
-      state_name = place_array[-2]
-      Space.where('city LIKE ?', "%#{city_name}%").where('state LIKE ?', "%#{state_name}%")
+      csa = self.city_state_array(search)
+      Space.where('city LIKE ?', "%#{csa[0]}%").where('state LIKE ?', "%#{csa[1]}%")
     else
       Space.all
     end

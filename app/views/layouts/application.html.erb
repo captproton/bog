@@ -10,6 +10,11 @@
     
   <title>BeOurGuest</title>
 <!--mapbox script and style -->
+  <%= Gon::Base.render_data({}) %>
+  <script type="text/javascript">
+alert(gon.city_state)
+      
+  </script>
 <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.6/mapbox.css' rel='stylesheet' />
 <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.6/mapbox.js'></script>
 

@@ -15,12 +15,12 @@ showMap = (err, data) ->
     map.setView [
       data.latlng[0]
       data.latlng[1]
-    ], 13
+    ], 15
   return
 
 geocoder = L.mapbox.geocoder('mapbox.places')
 map = L.mapbox.map('map', 'captproton.lj0nb69m')
-geocoder.query 'Ogden, UT', showMap
+geocoder.query gon.city_state, showMap
 
 url = '/search.json'
 
