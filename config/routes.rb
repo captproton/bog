@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   resources :search, only: [:index]
   resources :spaces, only: [:new, :create]
   resources :manage_listing, only: [:show, :update]
@@ -18,7 +19,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'search#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

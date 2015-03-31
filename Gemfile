@@ -85,6 +85,8 @@ gem 'high_voltage', '~> 2.2.1' # static pages
 gem 'rails_admin', '~> 0.6.6'
 # Wicked is a Rails engine for producing easy wizard controllers
 gem 'wicked'
+# User Authorization
+gem 'devise', '~> 3.4.1'
 
 ## Image uploading to S3
 # Carrierwave enables image upload
