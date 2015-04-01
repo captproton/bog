@@ -18,15 +18,15 @@ describe Lodging do
       subject.space_maker = ->{ new_space }
     end
 
-    it 'should return a new space' do
+    it 'returns a new space' do
       subject.new_space.must_equal new_space
     end
 
-    it "should set the space's lodging reference to itself" do
+    it "sets the space's lodging reference to itself" do
       subject.new_space.lodging.must_equal(subject)
     end
     
-    it 'should accept an attribute hash on behalf of the space maker' do
+    it 'accepts an attribute hash on behalf of the space maker' do
       space_maker = MiniTest::Mock.new
       space_maker.expect(:call, new_space, [{:x => 42, :y => 'z'}])
       subject.space_maker = space_maker
@@ -35,11 +35,11 @@ describe Lodging do
     end
   end
   
-  # describe '#add_entry' do
-  #   it 'should add an entry to lodging' do
-  #     entry = stub!
-  #     mock(entry).save!
-  #     @it.add_entry(entry)
-  #   end
-  # end
+  describe '#add_entry' do
+    it 'adds an entry to lodging' do
+      entry = stub!
+      mock(entry).save!
+      subject.add_entry(entry)
+    end
+  end
 end
