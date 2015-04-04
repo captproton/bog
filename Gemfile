@@ -87,6 +87,9 @@ gem 'rails_admin', '~> 0.6.6'
 gem 'wicked'
 # User Authorization
 gem 'devise', '~> 3.4.1'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+
 
 ## Image uploading to S3
 # Carrierwave enables image upload
