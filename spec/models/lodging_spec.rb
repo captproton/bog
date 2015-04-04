@@ -2,46 +2,44 @@ require_relative '../spec_helper_lite'
 require_relative '../../app/models/lodging'
 require 'ostruct'
 describe Lodging do
-  before do
-    @entries  = []
-    @it       = Lodging.new(->{@entries})
-  end
+  subject       { Lodging.new(->{entries}) }
   let(:entries) { [] }
-  subject { Lodging.new(->{entries}) }
   
-  it 'should have no entries' do
-    @it.entries.must_be_empty
+
+  
+  it 'has no entries' do
+    subject.entries.must_be_empty
   end
   
   describe '#new_entry' do
+    let(:new_space) { OpenStruct.new }
+    
     before do
-      @new_space = OpenStruct.new
-      @it.space_maker = ->{ @new_space }
+      subject.space_maker = ->{ new_space }
     end
 
+    it 'returns a new space' do
+      subject.new_space.must_equal new_space
+    end
 
-    it 'should return a new space' do
-      @it.new_space.must_equal @new_space
+    it "sets the space's lodging reference to itself" do
+      subject.new_space.lodging.must_equal(subject)
     end
     
-    it 'should set the space lodging reference to itself' do
-      @it.new_space.lodging.must_equal(@it)
-    end
-    
-    it 'should accept an attribute hash on behalf of the space maker' do
+    it 'accepts an attribute hash on behalf of the space maker' do
       space_maker = MiniTest::Mock.new
-      space_maker.expect(:call, @new_space, [{:x => 42, :y => 'z'}])
-      @it.space_maker = space_maker
-      @it.new_space(x: 42, y: 'z')
+      space_maker.expect(:call, new_space, [{:x => 42, :y => 'z'}])
+      subject.space_maker = space_maker
+      subject.new_space(x: 42, y: 'z')
       space_maker.verify
     end
   end
   
   describe '#add_entry' do
-    it 'should add an entry to lodging' do
+    it 'adds an entry to lodging' do
       entry = stub!
       mock(entry).save!
-      @it.add_entry(entry)
+      subject.add_entry(entry)
     end
   end
 end

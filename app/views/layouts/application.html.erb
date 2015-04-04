@@ -34,6 +34,10 @@
 <body>
     <%= render "/shared/default_navigation" %>
     
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, id: "flash_#{name}" %>
+    <% end %>
+    
     <%= yield %>
 
     <footer class="blog-footer" role="contentinfo">
