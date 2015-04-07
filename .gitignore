@@ -20,7 +20,7 @@
 public/assets/
 
 # Ignore the files passenger makes in development
-app/passen
+app/passen*
 
 ##
 *.rbc
