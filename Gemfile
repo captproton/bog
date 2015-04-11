@@ -85,7 +85,7 @@ gem 'high_voltage', '~> 2.2.1' # static pages
 gem 'rails_admin', '~> 0.6.6'
 # Wicked is a Rails engine for producing easy wizard controllers
 gem 'wicked'
-# User Authorization
+# User Authentication
 gem 'devise', '~> 3.4.1'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
