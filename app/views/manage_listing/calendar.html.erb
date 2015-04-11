@@ -1,55 +1,22 @@
 <%= render layout: "manage_listing" do %>
 
-    <h1>MangageListing#calendar</h1>
-    <p>Space Title: <%= @space.title %></p>
+    <h1>When is your listing available?</h1>
+
     <%= render layout: 'form' do |f| %>
-        <%= f.radio_button(:calendar_frequency, "always") %>
-        <%= f.label(:age_child, "Always - List all dates available") %>
-        <%= f.radio_button(:calendar_frequency, "sometimes") %>
-        <%= f.label(:age_adult, "Sometimes - List some dates available") %>
-        <%= f.radio_button(:calendar_frequency, "onetime") %>
-        <%= f.label(:age_adult, "One Time - List only one time available") %>
-    <% end %>
-
-<!-- -->
-<h1>Tell us a little about yourself.</h1>
-
-<div id="calendar"><div class="panel">
-  <div class="section-onetime-dates row-space-top-2"><div class="js-saving-progress saving-progress" style="display:none;">
-  <h5>Saving...</h5>
-</div>
-</div>
-  <div id="wizard-container"><div class="wizard-pane row row-table text-center">
-  <div class="col-10 col-middle">
-    <h2 class="row-space-5">When is your listing available?</h2>
-<%= render layout: 'form' do |f| %>
-
     <ul class="list-unstyled row">
-    
-      <li class="availability-option col-4">
-        <div class="calendar-image available-always " data-slug="always"></div>
-        <div class="h3">Always</div>
-        <p class="choice-description">List all dates as available</p>
-      </li>
-    
-      <li class="availability-option col-4">
-        <div class="calendar-image available-sometimes selected" data-slug="sometimes"></div>
-        <div class="h3">Sometimes</div>
-        <p class="choice-description">List some dates as available</p>
-      </li>
-    
-      <li class="availability-option col-4">
-        <div class="calendar-image available-onetime " data-slug="onetime"></div>
-        <div class="h3">One Time</div>
-        <p class="choice-description">List only one time period as available</p>
-      </li>
-    
+        <li>
+            <%= f.radio_button(:calendar_frequency, "always") %>
+            <%= f.label(:calendar_frequency_always, "Always - List all dates available") %><br />
+        </li>
+        <li>
+            <%= f.radio_button(:calendar_frequency, "sometimes") %>
+            <%= f.label(:calendar_frequency_sometimes, "Sometimes - List some dates available") %><br />
+        </li>
+        <li>
+            <%= f.radio_button(:calendar_frequency, "onetime") %>
+            <%= f.label(:calendar_frequency_onetime, "One Time - List only one time available") %>
+        </li>
     </ul>
     <% end %>
-    
-  </div>
-</div>
-</div>
-</div>
-</div>
+
 <% end %>
