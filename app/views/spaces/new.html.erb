@@ -1,5 +1,5 @@
-<h1>Spaces#new for  <%= @lodging %></h1>
-
+<h1>List Your Space</h1>
+<p>HOme type, room type, accommodates, city</p>
 <%= form_for @space do |f| %>
   <% if @space.errors.any? %>
     <div class="error_messages">
@@ -13,15 +13,70 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
+      <br/>
+    <%= f.label :home_style %><br />
+      <select name="space[home_style]">
+        <option value="">Please select</option>
+        <option value="apartment">Apartment</option>
+        <option value="house">House</option>
+        <option value="bed_and_breakfast">Bed &amp; Breakfast</option>
+        <option value="other">Other</option>
+      </select>
+    <%# commented out for now %>
+     <%# radio_button("spaces", "home_style", "apartment") %>&nbsp;&nbsp;<%# f.label :apartment %>
+     <%# radio_button("spaces", "home_style", "house") %>&nbsp;&nbsp;<%# f.label :house %>
+     <%# radio_button("spaces", "home_style", "bed_and_breakfast") %>&nbsp;&nbsp;<%# f.label :bed_and_breakfast %>
   </div>
   <div class="field">
-    <%= f.label :summary %><br />
-    <%= f.text_field :summary %>
+    <%= f.label :room_style %><br />
+    <select name="space[room_style]">
+      <option value="">Please select</option>
+      <option value="entire_home">Entire home/apartment</option>
+      <option value="private_room">Private Room</option>
+      <option value="shared_room">Shared room</option>
+    </select>
+    
+  </div>
+  <div class="field">
+    <%= f.label :accommodates %><br />
+    <select name="space[person_capacity]">
+      <option value="">Please select</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      <option value="11">10+</option>
+    </select>
+    
   </div>
 
   <div class="actions">
-    <%= f.submit "Make a space" %>
+    <%= f.submit "continue" %>
   </div>
 <% end %>
+
+<script type="text/javascript">
+jQuery(function($) {
+  $('div.btn-group[data-toggle-name=*]').each(function() {
+    var group   = $(this);
+    var form    = group.parents('form').eq(0);
+    var name    = group.attr('data-toggle-name');
+    var hidden  = $('input[name="' + name + '"]', form);
+    $('button', group).each(function(){
+      var button = $(this);
+      button.on('click', function(){
+        hidden.val($(this).val());
+      });
+      if(button.val() == hidden.val()) {
+        button.addClass('active');
+      }
+    });
+  });
+});
+</script>

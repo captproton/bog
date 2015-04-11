@@ -20,7 +20,8 @@ class SpacesController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def space_params
-    params.require(:space).permit(:title, :summary, :calendar_frequency)
+    params.require(:space).permit(:title, :summary, :calendar_frequency, :home_style, :room_style, 
+    :person_capacity)
   end
   
 end
