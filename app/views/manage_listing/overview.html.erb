@@ -1,22 +1,16 @@
 <%= render layout: "manage_listing" do %>
-
-<h1>MangageListing#overview</h1>
-<%= render layout: 'form' do |f| %>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-<hr />
-    <%= f.label :summary %>
-    <%= f.text_area :summary %>
-
-<% end %>
-<!-- -->
-
-<div class="manage-listing-content" id="js-manage-listing-content"><div>
-
-
-
-
-
+<div>
+    <%= form_for @space, url: wizard_path do |f| %>
+      <% if @space.errors.any? %>
+        <div class="error_messages">
+          <h2><%= pluralize(@space.errors.count, "error") %> prohibited this space from being saved:</h2>
+          <ul>
+          <% @space.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
 
 <div class="row js-section">
   <div class="js-saving-progress saving-progress" style="display:none;">
@@ -44,25 +38,30 @@
     
 <div class="row-space-2" id="tooltip-help-name">
   <label class="label-large">Title</label>
-  <input maxlength="35" name="name" value="Corporate Housing in Salt Lake City" class="overview-title input-large" placeholder="Write a title" type="text">
+  <%= f.text_field :title, maxlength: "35", class:"overview-title input-large", placeholder: "Write a title" %>
+  
   <p class="hide icon-rausch error-too-long row-space-top-1">Please shorten to save changes</p>
 
   <p class="hide icon-rausch error-value-required row-space-top-1">A value is required to save changes</p>
 
 
   <div id="js-name-count" class="row-space-top-1 h6 text-right">
-    <span class="ml-error">0</span> characters left
+    <span class="ml-error">2</span> characters left
   </div>
 </div>
 <div id="tooltip-help-summary">
   <label class="label-large">Summary</label>
-  <textarea maxlength="250" class="overview-summary input-large" name="summary" rows="6" placeholder="Write a summary in 250 characters or less">On assignment away?  This is a great place for you.</textarea>
+  <%# f.text_area :summary,  maxlength: "250", class: "overview-summary input-large", name: "summary", rows: "6", placeholder: "Write a summary in 250 characters or less" %>
+  <%= f.text_area :summary, maxlength: "250", class: "overview-summary input-large", rows: "6", placeholder: "Write a summary in 250 characters or less" %>
+  
+  
+  
   <p class="hide icon-rausch error-too-long row-space-top-1">Please shorten to save changes</p>
 
   <p class="hide icon-rausch error-value-required row-space-top-1">A value is required to save changes</p>
 
   <div id="js-summary-count" class="row-space-top-1 h6 text-right">
-    <span>199</span> characters left
+    <span>24</span> characters left
   </div>
 </div>
 
@@ -74,17 +73,7 @@
 
 
 
-
-
-
-<hr class="section-divider not-post-listed">
-
-<p class="text-center not-post-listed">
-  Want to write even more? You can also <a href="#" id="js-write-more">add a detailed description</a> to your listing.
-</p>
-
-
-<div style="display: none;" class="tooltip help-tooltip" data-trigger="#tooltip-help-name" data-event="none">
+<div style="display: none; top: 48.5167px; left: 650px; opacity: 1;" class="tooltip help-tooltip" data-trigger="#tooltip-help-name" data-event="none">
   <div class="media">
     <i class="pull-left icon icon-light-bulb icon-beach icon-size-2"></i>
     <div class="media-body text-lead text-muted help-tooltip-body">
@@ -107,7 +96,7 @@
 </div>
 
 
-<div style="display: block; top: 158.167px; left: 650px; opacity: 1;" class="tooltip help-tooltip" data-trigger="#tooltip-help-summary" data-event="none">
+<div style="display: block; top: 162.167px; left: 650px; opacity: 1;" class="tooltip help-tooltip" data-trigger="#tooltip-help-summary" data-event="none">
   <div class="media">
     <i class="pull-left icon icon-light-bulb icon-beach icon-size-2"></i>
     <div class="media-body text-lead text-muted help-tooltip-body">
@@ -123,6 +112,11 @@
 </div>
 
 
-</div></div>
+      <div class="actions">
+        <%= f.submit "Continue" %>
+        or <%= link_to "skip this step", next_wizard_path %>
+      </div>
+    <% end %>
+</div>
 
 <% end %>
