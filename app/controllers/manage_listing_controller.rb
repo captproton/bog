@@ -109,7 +109,7 @@ class ManageListingController < ApplicationController
   # Never trust parameters from the scary internet, only allow the white list through.
   def space_params
     params.require(:space).permit(:calendar_frequency, 
-      :listing_weekly_price_native, 
+      :listing_weekly_price_native, :listing_nightly_price, :listing_monthly_price, :cleaning_fee, :security_deposit, :addl_guest_fee,
       :title, :summary,
       :bedrooms, :beds, :bed_style, :bathrooms, :home_style, :room_style, :person_capacity,
       :directions, :country_code, :street_address, :apt_ste_bld, :city, :state, :postal_code,
