@@ -52,8 +52,10 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="/assets/javascripts/ie10-viewport-bug-workaround.js" type="text/javascript" charset="utf-8"></script>
-  <%= javascript_include_tag 'application', params[:controller], 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application',  params[:controller], 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag params[:controller] %>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>    
+  <%= javascript_include_tag "photos" %>
   
 <!--place autocomplete  -->
     <script src="http://ubilabs.github.io/geocomplete/jquery.geocomplete.js" type="text/javascript"></script>

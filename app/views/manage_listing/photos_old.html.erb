@@ -1,0 +1,90 @@
+<%= render layout: "manage_listing" do %>
+
+<h1>MangageListing#photos</h1>
+
+
+<%= render layout: 'form' do |f| %>
+
+<% end %>
+<!-- -->
+<h1 id="new_photo">new photo</h1>
+<%= direct_upload_form_for @uploader do |f| %>
+  <p><%= f.file_field :image %></p>
+  <p><%= f.submit "Upload Photo" %></p>
+<% end %>
+<%# render 'photo_form' %>
+
+<!-- -->
+<div class="manage-listing-content" id="js-manage-listing-content"><div id="photos"><div class="panel row-space-2 add-photos-header" id="js-add-photos-header">
+  <div class="panel-body panel-dark">
+    <div class="row row-table">
+      <div class="col-6 col-middle">
+        <div class="add-photos-button">
+  <input multiple="multiple" name="photos" class="hide" type="file">
+  <button style="position: relative; z-index: 0;" class="btn btn-primary row-space-2" id="photo-uploader">
+    <i class="icon icon-upload"></i> Add Photos
+  </button>
+</div>
+
+      </div>
+      <div class="col-6 col-middle js-photo-status"><div class="h3 text-right text-muted">1 photos</div>
+
+</div>
+    </div>
+  </div>
+</div>
+
+<div class="row js-section section-photos">
+  <div class="js-saving-progress saving-progress" style="display:none;">
+  <h5>Saving...</h5>
+</div>
+
+</div>
+
+<div class="row">
+  <div class="col-4 row-space-2 h5 text-center invisible" id="js-first-photo-text">
+    Your first photo appears in search results!
+  </div>
+</div>
+
+<ul class="row list-unstyled sortable" id="js-photo-grid">
+  
+    
+   
+  <%= render @photos %>
+    
+
+
+    
+  
+</ul>
+
+
+  <hr class="section-divider">
+  <p class="text-center">
+    This listing qualifies for free professional photography.
+    <a href="/info/photography" target="_blank" id="js-pro-photo-link">
+      Apply Now
+    </a>
+  </p>
+
+
+
+
+<div style="display: block; top: 144.233px; left: 734px; opacity: 1;" class="tooltip help-tooltip" data-trigger="#js-photo-grid" data-event="none">
+  <div class="media">
+    <i class="pull-left icon icon-light-bulb icon-beach icon-size-2"></i>
+    <div class="media-body text-lead text-muted help-tooltip-body">
+      
+  <strong>Adding Photos</strong>
+  <p> Guests browse photos to quickly get a feel for your space. Be sure to put your best photo first and add descriptive captions. </p>
+
+    </div>
+  </div>
+</div>
+
+
+<div id="cancel-pro-photography-container"></div>
+</div></div>
+
+<% end %>

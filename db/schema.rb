@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150412003643) do
+ActiveRecord::Schema.define(version: 20150413230039) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,6 +54,13 @@ ActiveRecord::Schema.define(version: 20150412003643) do
     t.boolean  "first_aid_kit"
     t.boolean  "safety_card"
     t.boolean  "fire_extinguisher"
+  end
+
+  create_table "paintings", force: :cascade do |t|
+    t.string   "name"
+    t.string   "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "photos", force: :cascade do |t|

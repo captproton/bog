@@ -12,8 +12,8 @@ class ManageListingController < ApplicationController
     
     ## Photos
     @photos   = @space.photos
-    @uploader = Photo.new.image
-    @uploader.success_action_redirect = new_photo_url
+    @uploader = @space.photos.new.image
+    # @uploader.success_action_redirect = new_photo_url
     
     ## Amenities
     @amenity_group      = AmenityGroup.find_or_create_by(space_id: params[:space_id])
