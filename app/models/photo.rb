@@ -1,9 +1,17 @@
 class Photo < ActiveRecord::Base
   belongs_to :location
   belongs_to :space
+  #validations
+  # validates :space, presence: true
   mount_uploader :image, ImageUploader
 
-  after_save :enqueue_image
+  before_create :default_name
+
+  def default_name
+    self.title ||= File.basename(image.filename, '.*').titleize if image
+  end
+
+  # after_save :enqueue_image
   
   def image_name
     File.basename(image.path || image.filename) if image
@@ -28,5 +36,6 @@ class Photo < ActiveRecord::Base
       photo.update_column(:image_processed, true)
     end
   end
+  
   
 end

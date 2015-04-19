@@ -1,14 +1,21 @@
-<h1>Photo Gallery</h1>
+<h1 id="photo_gallery">Photo Gallery</h1>
 
-<%= direct_upload_form_for @uploader do |f| %>
-  <p><%= f.file_field :image %></p>
-  <p><%= f.submit "Upload Photo" %></p>
+<%= form_for Photo.new do |f| %>
+  <%= f.label :image, "Upload photos:" %>
+  <%= f.file_field :image, multiple: true, name: "photo[image]" %>
 <% end %>
 
+
+<script id="template-upload" type="text/x-tmpl">
+<div class="upload">
+  {%=o.name%}
+  <div class="progress"><div class="bar" style="width: 0%"></div></div>
+</div>
+</script>
+
+histranger
+<div class="clear"></div>
 <div id="photos">
   <%= render @photos %>
-  <%# render :partial => "photo", :collection => @photos %>
 </div>
-
 <div class="clear"></div>
-<%# render "direct_upload_form" %>

@@ -94,11 +94,12 @@ gem 'omniauth-twitter'
 ## Image uploading to S3
 # Carrierwave enables image upload
 gem 'carrierwave', '~> 0.10.0'
-gem 'carrierwave_direct'
+# gem 'carrierwave_direct'
 gem 'fog', '~> 1.28.0'
 # gem "fog-aws"
 gem 'sidekiq'
 gem 'rmagick', '~> 2.13.4'
+gem 'jquery-fileupload-rails', '~> 0.4.5'
 
 # better Heroku
 gem 'rails_12factor', '~> 0.0.3'
