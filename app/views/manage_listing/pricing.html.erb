@@ -1,15 +1,17 @@
 <%= render layout: "manage_listing" do %>
+<div>
+    <%= form_for @space, url: wizard_path do |f| %>
+      <% if @space.errors.any? %>
+        <div class="error_messages">
+          <h2><%= pluralize(@space.errors.count, "error") %> prohibited this space from being saved:</h2>
+          <ul>
+          <% @space.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
 
-<h1>MangageListing#pricing</h1>
-<p>Space Title: <%= @space.title %></p>
-<%= render layout: 'form' do |f| %>
-    <%= f.label :listing_weekly_price_native %>
-    <%= f.text_field :listing_weekly_price_native %>
-    <%# f.text_field :listing_monthly_price_native) %>
-
-<% end %>
-<!-- -->
-<div class="manage-listing-content" id="js-manage-listing-content"><div>
 <div class="row js-section js-tooltip-trigger" id="js-standard-price">
   <div class="js-saving-progress saving-progress" style="display:none;">
   <h5>Saving...</h5>
@@ -23,7 +25,7 @@
     
     
     <p class="text-muted">
-      The base nightly price and default currency for your listing.
+      Set the default nightly price guests will see for your listing.
     </p>
     
 
@@ -39,20 +41,8 @@
   <div class="col-4 col-middle">
     <div class="input-addon">
       <span class="input-prefix">$</span>
-      <input class="input-stem input-large autosubmit-text" name="listing_price_native" value="2222" id="listing_price_native" data-suggested="$104" type="text">
+      <%= f.text_field :listing_nightly_price %>
     </div>
-  </div>
-  <div class="col-8 col-middle">
-    
-      
-        <span class="text-highlight">
-          <strong>Price Tip: $104</strong> 
-        </span>
-        <span <i="" class="icon icon-question grey" id="suggestion_disclaimer_daily"></span>
-          
-        
-      
-    
   </div>
 </div>
 
@@ -60,101 +50,12 @@
 
 
   <p class="text-muted">
-    You can also edit custom prices for individual days in the <a href="/manage-listing/5572421/calendar">Calendar</a>.
+    You can also set custom prices for specific nights from your <a href="/manage-listing/5572421/calendar">calendar</a>.
   </p>
 
 
 
 
-<div class="row row-space-top-3">
-  <div class="col-6">
-    <label class="label-large">Currency</label>
-    <div id="currency-picker"><div class="select
-            select-large
-            select-block">
-  <select name="listing_native_currency" id="select-listing_native_currency">
-    
-      <option value="AED">AED</option>
-    
-      <option value="ARS">ARS</option>
-    
-      <option value="AUD">AUD</option>
-    
-      <option value="BRL">BRL</option>
-    
-      <option value="CAD">CAD</option>
-    
-      <option value="CHF">CHF</option>
-    
-      <option value="CNY">CNY</option>
-    
-      <option value="CRC">CRC</option>
-    
-      <option value="CZK">CZK</option>
-    
-      <option value="DKK">DKK</option>
-    
-      <option value="EUR">EUR</option>
-    
-      <option value="GBP">GBP</option>
-    
-      <option value="HKD">HKD</option>
-    
-      <option value="HRK">HRK</option>
-    
-      <option value="HUF">HUF</option>
-    
-      <option value="IDR">IDR</option>
-    
-      <option value="ILS">ILS</option>
-    
-      <option value="INR">INR</option>
-    
-      <option value="JPY">JPY</option>
-    
-      <option value="KRW">KRW</option>
-    
-      <option value="MAD">MAD</option>
-    
-      <option value="MYR">MYR</option>
-    
-      <option value="MXN">MXN</option>
-    
-      <option value="NOK">NOK</option>
-    
-      <option value="NZD">NZD</option>
-    
-      <option value="PEN">PEN</option>
-    
-      <option value="PHP">PHP</option>
-    
-      <option value="PLN">PLN</option>
-    
-      <option value="RON">RON</option>
-    
-      <option value="RUB">RUB</option>
-    
-      <option value="SEK">SEK</option>
-    
-      <option value="SGD">SGD</option>
-    
-      <option value="THB">THB</option>
-    
-      <option value="TRY">TRY</option>
-    
-      <option value="TWD">TWD</option>
-    
-      <option selected="selected" value="USD">USD</option>
-    
-      <option value="VND">VND</option>
-    
-      <option value="ZAR">ZAR</option>
-    
-  </select>
-</div>
-</div>
-  </div>
-</div>
 
   </div>
 </div>
@@ -184,9 +85,9 @@
     <h3>Long-Term Prices</h3>
 
     
-    
+
     <p class="text-muted">
-      Offer discounted prices for stays one week or longer.
+      Set discounted prices for reservations that are 7 nights or longer.
     </p>
     
 
@@ -205,7 +106,7 @@
         <div class="col-4 col-middle">
           <div class="input-addon">
             <span class="input-prefix">$</span>
-            <input name="listing_weekly_price_native" value="" class="input-stem input-large autosubmit-text" id="listing_weekly_price_native" data-suggested="" type="text">
+            <%= f.text_field :listing_weekly_price_native, class: "input-stem input-large autosubmit-text" %>
           </div>
         </div>
         <div class="col-8 col-middle text-highlight">
@@ -225,7 +126,7 @@
         <div class="col-4 col-middle">
           <div class="input-addon">
             <span class="input-prefix">$</span>
-            <input name="listing_monthly_price_native" value="1953" class="autosubmit-text input-stem input-large" id="listing_monthly_price_native" data-suggested="" type="text">
+            <%= f.text_field :listing_monthly_price, class: "autosubmit-text input-stem input-large" %>
           </div>
         </div>
         <div class="col-8 col-middle text-highlight">
@@ -254,12 +155,12 @@
 
   <div class="col-4">
     
-    <h3>Additional Charges</h3>
+    <h3>Additional Pricing Options</h3>
 
     
     
     <p class="text-muted">
-      These charges are added to the reservation total.
+       
     </p>
     
 
@@ -268,16 +169,12 @@
   </div>
 
   <div class="col-8">
-    
-    
-
-
   
 <div class="row-space-3 js-tooltip-trigger" id="js-cleaning-fee">
+    
   <label class="label-large label-inline" for="listing_cleaning_fee_native_checkbox">
-    <input id="listing_cleaning_fee_native_checkbox" data-extras="true" type="checkbox">
-    Cleaning Fee
-  </label>
+      <%= f.check_box   :cleaning_fee, {}, "true", "false" %>
+            <%= f.label       :cleaning_fee, " Cleaning Fee " %>
 
   <div class="hide" data-checkbox-id="listing_cleaning_fee_native_checkbox">
     <div class="row row-table row-space-1">
@@ -292,42 +189,18 @@
       </div>
     </div>
     
+      <p class="text-muted">
+        This fee will apply to every reservation at your listing.
+      </p>
+    
     <p class="ml-error" data-error="extras_price"></p>
   </div>
 </div>
 
   
-<div class="row-space-3 js-tooltip-trigger" id="js-weekend-pricing">
-  <label class="label-large label-inline" for="listing_weekend_price_native_checkbox">
-    <input id="listing_weekend_price_native_checkbox" data-extras="true" type="checkbox">
-    Weekend Pricing
-  </label>
-
-  <div class="hide" data-checkbox-id="listing_weekend_price_native_checkbox">
-    <div class="row row-table row-space-1">
-      <div class="col-4 col-middle">
-        <div class="input-addon">
-          <span class="input-prefix">$</span>
-          <input class="autosubmit-text input-stem input-large" name="listing_weekend_price_native" value="" data-extras="true" type="text">
-        </div>
-      </div>
-      <div class="col-8 col-middle">
-        
-      </div>
-    </div>
-
-    <p class="text-muted">
-      Price is <strong>per night</strong> and applied to every Friday and Saturday in your calendar.
-    </p>
-  </div>
-</div>
-
-  
 <div class="row-space-3 js-tooltip-trigger" id="js-additional-guests">
-  <label class="label-large label-inline" for="price_for_extra_person_checkbox">
-    <input id="price_for_extra_person_checkbox" data-extras="true" type="checkbox">
-    Additional Guests
-  </label>
+      <%= f.check_box   :addl_guest_fee, {}, "true", "false" %>
+            <%= f.label       :addl_guest_fee, " Additional Guests " %>
 
   <div class="hide" data-checkbox-id="price_for_extra_person_checkbox">
     <div class="row row-space-1 row-condensed">
@@ -387,17 +260,15 @@
       
     </p>
     <p class="text-muted">
-      per person per night
+      This fee will apply for each additional guest, for each night of the reservation.
     </p>
   </div>
 </div>
 
   
 <div class="row-space-3 js-tooltip-trigger" id="js-security-deposit">
-  <label class="label-large label-inline" for="listing_security_deposit_native_checkbox">
-    <input id="listing_security_deposit_native_checkbox" data-extras="true" type="checkbox">
-    Security Deposit
-  </label>
+      <%= f.check_box   :security_deposit, {}, "true", "false" %>
+            <%= f.label       :security_deposit, " Security Deposit " %>
 
   <div class="hide" data-checkbox-id="listing_security_deposit_native_checkbox">
     <div class="row row-space-1">
@@ -410,11 +281,13 @@
     </div>
     <p class="ml-error" data-error="security_deposit"></p>
     <p class="text-muted">
-      This deposit is held by Airbnb and refunded to the guest unless you make claim within 48 hours of guest checkout.
+      Any guest who confirms a reservation at your listing will be responsible for damages up to this amount. No charges or authorizations will be made unless you make a claim within 48 hours after check out.
     </p>
   </div>
 </div>
 
+  
+
 
 
 
@@ -422,20 +295,13 @@
 </div>
 
 
-<div style="display: block; top: 54px; left: 650px; opacity: 1;" class="tooltip help-tooltip" data-trigger="#js-standard-price" data-event="none">
+<div style="display: block; top: 47.0167px; left: 650px; opacity: 1;" class="tooltip help-tooltip" data-trigger="#js-standard-price" data-event="none">
   <div class="media">
     <i class="pull-left icon icon-light-bulb icon-beach icon-size-2"></i>
     <div class="media-body text-lead text-muted help-tooltip-body">
       
   <strong>Setting a price</strong>
-  <p>For new listings with no reviews, it's important to set a competitive price. Once you get your first booking and review, you can raise your price!</p>
-  
-    <p>The suggested nightly price tip is based on:</p>
-    <ol>
-      <li>Seasonal travel demand in your area.</li>
-      <li>The median nightly price of recent Airbnb bookings in your city.</li>
-      <li>The details of your listing.</li>
-    </ol>
+  <p>If you haven’t received many reviews, choose a price that’s below average for your area to help attract guests. Once your listing has received a few positive reviews, you can always raise the price.<br><br>When we suggests a nightly price, it’s based on pricing and travel trends in your area, in addition to the details of your listing.</p>
   
 
     </div>
@@ -443,13 +309,13 @@
 </div>
 
 
-<div style="display: none; top: 362.783px; left: 650px; opacity: 1;" class="tooltip help-tooltip" data-trigger="#js-long-term-prices" data-event="none">
+<div style="display: none; top: 355.483px; left: 650px; opacity: 1;" class="tooltip help-tooltip" data-trigger="#js-long-term-prices" data-event="none">
   <div class="media">
     <i class="pull-left icon icon-light-bulb icon-beach icon-size-2"></i>
     <div class="media-body text-lead text-muted help-tooltip-body">
       
-  <strong>Offer a discount</strong>
-  <p>Most hosts offer a discount for longer stays of a week or more.</p>
+  <strong>Discount longer trips</strong>
+  <p>Encourage travelers to book longer reservations at your listing by making a stay more affordable.</p>
 
     </div>
   </div>
@@ -461,7 +327,7 @@
     <i class="pull-left icon icon-light-bulb icon-beach icon-size-2"></i>
     <div class="media-body text-lead text-muted help-tooltip-body">
       
-  <p>The cleaning fee is added to the total cost of every reservation at your listing.</p>
+  <p>The cleaning fee will be included in the total cost of each reservation.</p>
 
     </div>
   </div>
@@ -473,7 +339,7 @@
     <i class="pull-left icon icon-light-bulb icon-beach icon-size-2"></i>
     <div class="media-body text-lead text-muted help-tooltip-body">
       
-  <p>Enable weekend pricing to change the nightly price of <strong>every Friday and Saturday</strong> in your calendar.</p>
+  <p>Make extra money on weekends, or attract more requests by making weekend trips more affordable.</p>
 
     </div>
   </div>
@@ -485,7 +351,7 @@
     <i class="pull-left icon icon-light-bulb icon-beach icon-size-2"></i>
     <div class="media-body text-lead text-muted help-tooltip-body">
       
-  <p>The additional guest charge is added to the nightly price of your listing (for each guest over the number you specify).</p>
+  <p>Set the number of guests you’d like to host before charging for additional guests.</p>
 
     </div>
   </div>
@@ -493,8 +359,26 @@
 
 
 
+  <div style="display: none;" class="tooltip help-tooltip" data-trigger="#js-security-deposit" data-event="none">
+  <div class="media">
+    <i class="pull-left icon icon-light-bulb icon-beach icon-size-2"></i>
+    <div class="media-body text-lead text-muted help-tooltip-body">
+      
+    <p>Guests will see the amount of your security deposit on your listing page.</p>
+  
+    </div>
+  </div>
+</div>
+
+
 
 <div id="js-donation-tool-placeholder"></div>
-</div></div>
+
+      <div class="actions">
+        <%= f.submit "Continue" %>
+        or <%= link_to "skip this step", next_wizard_path %>
+      </div>
+    <% end %>
+</div>
 
 <% end %>

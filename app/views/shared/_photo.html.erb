@@ -1,0 +1,24 @@
+<li draggable="true" data-index="0" data-id="<%= photo.id %>" data-picture-url= "<%= photo.image_url %>" class="col-4 row-space-4" >
+    
+  <div class="panel photo-item">
+    <div class="first-photo-ribbon"><i class="icon icon-star text-center"></i></div>
+    
+    <div id="photo-<%= photo.id %>" class="photo-drag-target js-photo-link"></div>
+    <% if photo.image? %>
+      <%= link_to image_tag(photo.image_url(:thumb)), photo if photo.image?  %>
+    <button class="delete-photo-btn overlay-btn js-delete-photo-btn" data-photo-id="<%= photo.id %>">
+      <i class="icon icon-trash"></i>
+    </button>
+
+    <div class="panel-body panel-condensed">
+      <textarea tabindex="1" class="input-large highlights" 
+      placeholder="What are the highlights of this photo?" rows="3" 
+      name="<%= photo.id %>">
+          <%= photo.title %>
+      </textarea>
+    </div>
+    <% else %>
+      <em><%= link_to "Processing...", photo if photo.image?  %></em>
+    <% end %>
+  </div>
+</li>

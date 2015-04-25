@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :paintings
   get 'welcome/index'
 
   get 'home/dashboard'
@@ -15,8 +16,8 @@ Rails.application.routes.draw do
   resources :spaces  do
     resources :manage_listing, only: [:show, :update]
   end
-  resources :rooms
   resources :photos
+  resources :rooms
   resources :amenity_groups, only: [:new, :edit, :create, :update]
   
   # mount RedisBrowser::Web => '/redis-browser'
