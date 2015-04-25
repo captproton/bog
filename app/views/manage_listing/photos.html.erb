@@ -1,11 +1,16 @@
 <link rel="stylesheet" media="all" href="/assets/photos-10e3f5b6bf98ce062b7e6b0e80ce3e0f.css?body=1" data-turbolinks-track="true" />
-
+<%= stylesheet_link_tag :photo, :cache => true %>
 <%= render layout: "manage_listing" do %>
 <hr />
-<%= form_for Photo.new do |f| %>
+<div class="clear"></div>
+
+<h1 id="photo_gallery">Photo Gallery</h1>
+<%= form_for @space.photos.new do |f| %>
   <%= f.label :image, "Upload photos:" %>
+  <%= f.hidden_field :space_id %>
   <%= f.file_field :image, multiple: true, name: "photo[image]" %>
-  <%= hidden_field_tag 'photo_space_id', params[:space_id], name: "photo[space_id]"  %>
+  
+  <%= link_to "skip this step", next_wizard_path %>
   
 <% end %>
 
@@ -27,4 +32,4 @@
 </div>
 <div class="clear"></div>
 <hr />
-<% end %>
+    <% end %>

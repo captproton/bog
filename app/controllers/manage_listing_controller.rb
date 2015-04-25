@@ -12,7 +12,7 @@ class ManageListingController < ApplicationController
     
     ## Photos
     @photos   = @space.photos
-    @uploader = @space.photos.new.image
+    # @uploader = @space.photos.new.image
     # @uploader.success_action_redirect = new_photo_url
     
     ## Amenities
