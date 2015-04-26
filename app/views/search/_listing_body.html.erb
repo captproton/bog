@@ -1,4 +1,3 @@
-
           <div class="media">
               <%= link_to room_path(listing) do %>
                   <div title="<%= listing.title %>" class="h5 listing-name text-truncate row-space-top-1">
@@ -7,9 +6,7 @@
               <% end %>
             <div class="text-muted listing-location text-truncate">
                 <%= link_to room_path(listing), class: "text-normal link-reset" do %>
-                    <%= "#{listing.room_style} · #{listing.city}, #{listing.state}" %>
+                    <%= "#{listing.room_style.titleize} · #{listing.city}, #{listing.state}" %>
                 <% end %>
             </div>
           </div>
-      
-        
