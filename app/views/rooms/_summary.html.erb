@@ -13,7 +13,7 @@
     <div class="col-md-9">
 
       <h1 itemprop="name" class="overflow h3 row-space-1 text-center-sm" id="listing_name">
-        2 Blocks to Beach, Re-modelled,WiFi
+        <%= @room.title.to_s %>
       </h1>
 
       <span class="hide" itemprop="breadcrumb">
@@ -30,7 +30,7 @@
 
       <div id="display-address" class="row-space-2 text-muted hide-sm" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating" data-location="South Lake Tahoe, CA, United States">
 
-        <a href="#neighborhood" class="link-reset">South Lake Tahoe, CA, United States</a>
+        <a href="#neighborhood" class="link-reset"><%= "#{@room.city}, #{@room.state}, #{@room.country_code}" %></a>
 
           &nbsp;
           <a href="#reviews" class="link-reset">      <div class="star-rating">
