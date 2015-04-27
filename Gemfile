@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'bundler', '>= 1.8.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
@@ -67,6 +68,13 @@ group :development, :test do
 end
 
 # App specfic gems
+# icons
+gem 'fontawesome-rails', '~> 4.0.3.0'
+# front-end resources
+source 'https://rails-assets.org' do
+  gem 'rails-assets-normalize-css'
+  gem 'rails-assets-bootstrap'
+end
 # Geocoding lat-lng
 gem 'geocoder', '~> 1.2.8'
 # Place autocomplete
