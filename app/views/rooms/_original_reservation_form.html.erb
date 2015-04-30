@@ -1,19 +1,4 @@
-<%# form_for(@reservation) do |f| %>
-<%= form_tag  payments_book_path, method: "post" do %>
-  <% if @reservation.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@reservation.errors.count, "error") %> prohibited this reservation from being saved:</h2>
-
-      <ul>
-      <% @reservation.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-<form accept-charset="UTF-8" action="https://www.airbnb.com/payments/book?hosting_id=4644829" class="info new-o2-form-inline" id="book_it_form" method="post">
-    <div style="margin:0;padding:0;display:inline"><input name="utf8" value="✓" type="hidden"><input name="authenticity_token" value="V4$.airbnb.com$gEleKwJZr2c$goiQ00ppif5ypGzlpy3MAsz_zHJyFd_xV8_NiLMKQiw=" type="hidden"></div>
+<form accept-charset="UTF-8" action="https://www.airbnb.com/payments/book?hosting_id=4644829" class="info new-o2-form-inline" id="book_it_form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" value="✓" type="hidden"><input name="authenticity_token" value="V4$.airbnb.com$gEleKwJZr2c$goiQ00ppif5ypGzlpy3MAsz_zHJyFd_xV8_NiLMKQiw=" type="hidden"></div>
   <div id="pricing" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
     <div id="price_amount" itemprop="price" class="price-amount pull-left h3 text-special">$150</div>
 
@@ -144,8 +129,87 @@ Service fee
   </div>
 </div>
 
+<div id="book-it-urgency-commitment" data-host-name="Su">
+  <div data-hook="urgency-tooltip" class="tooltip tooltip-layout tooltip-top-middle tooltip-no-border tooltip-light-beach row-space-top-4">
+    <div class="panel-body">
+      <div class="media">
+        <i class="icon icon-hourglass-color pull-left"></i>
+        <div class="media-body" data-hook="urgency-tooltip-content">See yourself here? Book soon. <b>97 people</b> viewed Su's place this week.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wishlist-wrapper hide-sm">
+  <div class="rich-toggle wish_list_button row-space-top-3 not_saved" data-hosting_id="4644829" data-img="https://a1.muscache.com/ic/pictures/62320740/84e33c2c_original.jpg?interpolation=lanczos-none&amp;size=large&amp;output-format=jpg&amp;output-quality=70" data-name="2 Blocks to Beach, Re-modelled,WiFi" data-address="Toiyabe National Forest, Eldorado National Forest, 3337 Treehaven Drive, South Lake Tahoe (South Lake Tahoe)" title="Saved 108 times">
+  <input name="wishlist-button" id="wishlist-button" type="checkbox">
+  <label for="wishlist-button" class="btn btn-block btn-large">
+    <span class="rich-toggle-checked">
+      <i class="icon icon-heart icon-rausch"></i>
+      Saved to Wish List
+    </span>
+    <span class="rich-toggle-unchecked">
+      <i class="icon icon-heart-alt icon-light-gray"></i>
+      Save to Wish List
+    </span>
+  </label>
+</div>
+
+</div>
+
+<div class="other-actions hide-sm text-center">
+  <div class="social-share-widget row-space-top-3">
+  <span class="share-title">
+    Share:
+  </span>
+  <span class="share-triggers">
+
+      <a class="share-btn link-icon" data-email-share-link="/rooms/4644829/email_listing" data-network="email" rel="nofollow" title="Email" href="#">
+<i class="icon icon-envelope social-icon-size"></i>
+      </a>
 
 
+
+
+      <a class="share-btn link-icon" data-network="facebook" rel="nofollow" title="Facebook" href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.airbnb.com%2Frooms%2F4644829%3Fs%3D3" target="_blank">
+ <i class="icon icon-facebook social-icon-size"></i>
+      </a>
+
+      <a class="share-btn link-icon" data-network="twitter" rel="nofollow" title="Twitter" href="https://twitter.com/intent/tweet?source=tweetbutton&amp;text=Love+this%21+%222+Blocks+to+Beach%2C+Re-modelled%2CWiFi+in+South+Lake+Tahoe%22+%40airbnb+%23Travel&amp;url=https%3A%2F%2Fwww.airbnb.com%2Frooms%2F4644829%3Fs%3D4&amp;related=airbnb" target="_blank">
+<i class="icon icon-twitter social-icon-size"></i>
+      </a>
+
+      <a class="share-btn embedly-btn link-icon" data-network="embedly" data-embedly-locale="en" rel="nofollow" title="Embed This Listing" href="#">
+<i class="icon icon-code social-icon-size"></i>
+      </a>
+
+      
+
+      
+
+    <span class="more-btn">
+      ···
+    </span>
+  </span>
+  
+</div>
+
+  <div class="flag-trigger row-space-top-1">
+    <a href="#" id="flag-for-listing-4644829" class="link-icon">
+      <i class="icon icon-flag h4"></i>
+      <span class="link-icon__text">
+        Report this listing
+      </span>
+    </a>
+    <div class="already-flagged text-muted row-space-top-2 hide">
+  You have reported this listing.
+      <a href="#" class="undo_flag">
+Undo?
+      </a>
+</div>
+
+  </div>
+</div>
       </div>
     </div>
 
@@ -163,4 +227,3 @@ Service fee
 
   <input id="hosting_id" name="hosting_id" value="4644829" type="hidden">
 </form>
-<% end %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Checkin:</strong>
+  <%= @reservation.checkin %>
+</p>
+
+<p>
+  <strong>Checkout:</strong>
+  <%= @reservation.checkout %>
+</p>
+
+<p>
+  <strong>Number of guests:</strong>
+  <%= @reservation.number_of_guests %>
+</p>
+
+<p>
+  <strong>Space:</strong>
+  <%= @reservation.space_id %>
+</p>
+
+<p>
+  <strong>Traveler:</strong>
+  <%= @reservation.traveler_id %>
+</p>
+
+<%= link_to 'Edit', edit_reservation_path(@reservation) %> |
+<%= link_to 'Back', reservations_path %>

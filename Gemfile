@@ -74,6 +74,7 @@ gem 'fontawesome-rails', '~> 4.0.3.0'
 source 'https://rails-assets.org' do
   gem 'rails-assets-normalize-css'
   gem 'rails-assets-bootstrap'
+  gem 'rails-assets-jquery-ui'
 end
 # Geocoding lat-lng
 gem 'geocoder', '~> 1.2.8'

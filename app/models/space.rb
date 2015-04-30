@@ -6,6 +6,8 @@ class Space < ActiveRecord::Base
   validates :room_style,      :presence => true #, :if => :active_or_title?
   has_many :photos
   has_many :photos, :inverse_of => :space, :dependent => :destroy
+  has_many :reservations
+  
   # enable nested attributes for photos through space class
   accepts_nested_attributes_for :photos, allow_destroy: true
   has_one :amenity_group

@@ -10,5 +10,6 @@ class RoomsController < ApplicationController
 
     @hero_image_url = "" << @photos.first.image_url.to_s if @photos.first
     # @hero_image = @photos.first
+    @reservation = @room.reservations.new
   end
 end
