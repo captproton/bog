@@ -1,2 +1,1839 @@
 <h1>Payments#book</h1>
 <p>Find me in app/views/payments/book.html.erb</p>
+<div id="main-view" class="main-view page-container-responsive row-space-top-6 row-space-6">
+
+  <form action="https://www.airbnb.com/payments/create_booking_v2" method="post" id="checkout-form" data-acculynk-tokenizer-url="https://secure1.payleap.com/AjaxTransactServices.svc" data-acculynk-merchantscript-domain="mws.acculynk.net" data-acculynk-pinpad-domain="paysecure.acculynk.net" data-acculynk-pinpad-alt-domain="paysecure2.acculynk.net">
+    <input name="code" value="CC9ZQ3" type="hidden">
+    <input name="hosting_id" value="5748105" type="hidden">
+    <input name="date" value="2015-06-12" type="hidden">
+    <input name="nights" value="9" type="hidden">
+    <input name="number_of_guests" value="1" type="hidden">
+    <input name="special_offer_id" value="" type="hidden">
+    <input name="sig" value="" type="hidden">
+    <input name="ref" value="" type="hidden">
+
+
+    <div class="row">
+      <div class="col-md-5 col-md-push-7 col-lg-4 col-lg-push-8 row-space-2">
+        <div class="panel payments-listing">
+          <div class="media-photo media-photo-block text-center payments-listing-image">
+            <img src="https://a1.muscache.com/ic/pictures/72859938/b8d80888_original.jpg?interpolation=lanczos-none&amp;size=medium&amp;output-format=jpg&amp;output-quality=70" class="img-responsive-height" alt="Sunny Home Quick Walk From Downtown">
+          </div>
+          <div class="panel-body">
+            <section id="your-trip" class="your-trip">
+              <div class="hosting-info">
+                <div class="payments-listing-name h4 row-space-1">Sunny Home Quick Walk From Downtown</div>
+                <div class="hide-sm">
+                  <p>Chicago Street, Salt Lake City, UT 84116, United States</p>
+                  <hr>
+                  <div class="row-space-1">
+                    <strong>Private room</strong> for <strong>1 guest</strong>
+                  </div>
+                  <div>
+                    <strong>Fri, Jun 12, 2015</strong> to <strong>Sun, Jun 21, 2015</strong>
+                  </div>
+                </div>
+                <hr>
+                <table class="reso-info-table">
+                  <tbody>
+                    <tr>
+                      <td>Cancellation Policy</td>
+                      <td>
+                        <a href="https://www.airbnb.com/home/cancellation_policies#moderate" class="cancel-policy-link" target="_blank">Moderate</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>House Rules</td>
+                      <td>
+                        <a href="#house-rules-modal" class="house-rules-link">Read policy</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Nights
+                      </td>
+                      <td>
+                        9
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <hr>
+                <section id="billing-summary" class="billing-summary">
+                    <div class="tooltip tooltip-top-middle taxes-breakdown" role="tooltip" data-sticky="true" data-trigger="#tax-tooltip" aria-hidden="true">
+    <div class="panel-body">
+      <table>
+        <tbody><tr>
+          <td colspan="2"><a href="/help/question/318" target="_blank">Learn more</a></td>
+        </tr>
+      </tbody></table>
+    </div>  </div>
+  <div class="tooltip tooltip-top-middle gift-credit-breakdown" role="tooltip" data-sticky="true" data-trigger="#gift-credit-tooltip" aria-hidden="true">
+    <div class="panel-body">
+      <table class="table gift-credit-breakdown">
+      </table>
+    </div>
+  </div>
+  <table id="billing-table" class="reso-info-table billing-table
+                                   ">
+    <tbody>
+  
+      <tr class="base-price">
+        <td class="name">$36 x 9 nights
+            <i aria-label="Average nightly rate is rounded" class="icon icon-question rounding-error" data-behavior="tooltip">
+            </i>
+        </td>
+        <td class="val">
+          $321
+        </td>
+      </tr>
+  
+        <tr class="cleaning-fee">
+          <td class="name">Cleaning fee</td>
+          <td class="val">$5</td>
+        </tr>
+  
+      <tr class="service-fee">
+        <td class="name">
+          Service fee
+          <i aria-label="This is the fee charged by Airbnb" class="icon icon-question" data-behavior="tooltip"></i>
+        </td>
+        <td class="val">$39</td>
+      </tr>
+  
+  
+  
+      <tr class="coupon">
+        <td class="name">
+          <span class="with-applied-coupon">
+            <a href="#" class="open-coupon-section-link">Coupon</a>
+          </span>
+          <span class="without-applied-coupon">
+            <a href="#" class="open-coupon-section-link">Coupon code</a>
+          </span>
+        </td>
+        <td class="val">
+          <div class="uneditable-fields">
+             $0
+          </div>
+        </td>
+      </tr>
+  
+      <tr class="editable-fields">
+        <td colspan="2">
+          <div class="row-condensed clearfix row-space-1">
+            <div class="col-sm-7">
+              <input autocomplete="off" class="coupon-code-field" name="coupon_code" value="" type="text">
+            </div>
+            <div class="col-sm-5">
+              <a href="#" class="btn btn-block apply-coupon">Apply</a>
+            </div>
+          </div>
+          <a href="#" class="cancel-coupon">Cancel</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <hr>
+  
+  <table id="payment-total-table" class="reso-info-table billing-table">
+    <tbody>
+      <tr class="total">
+        <td class="name"><span class="h3">Total</span></td>
+        <td class="text-special icon-dark-gray"><span class="h3">$365</span></td>
+      </tr>
+  
+    </tbody>
+  </table>
+
+<div class="panel-total-charge hide">
+  <hr>
+
+  <small><div>
+    <span id="currency-total-charge" class="hide">
+      You are paying in
+      <strong><span id="payment-currency"></span></strong>.
+      Your total charge is
+      <strong><span id="payment-total-charge"></span></strong>.
+    </span>
+    <span id="fx-messaging"></span>
+  </div></small>
+</div>
+
+                </section>
+              </div>
+            </section>
+          </div>
+        </div>
+
+          <div class="space-top-1 hide-sm">
+            <div class="panel-body">
+              <div class="media va-container">
+                <i class="pull-left icon icon-cancellation-policy va-top"></i>
+                <div class="media-body va-middle">
+                  With 24 hour support, Airbnb is here to help every step of the way.
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div id="content-container" class="col-md-7 col-md-pull-5 col-lg-pull-4">
+<div class="alert alert-with-icon alert-error alert-block hide row-space-2" id="form-errors">
+  <i class="icon alert-icon icon-alert-alt"></i>
+            <div class="h5 row-space-1 error-header">
+            Almost done!
+          </div>
+          <ul></ul>
+
+</div>
+<div class="alert alert-with-icon alert-error alert-block hide row-space-2" id="server-error">
+  <i class="icon alert-icon icon-alert-alt"></i>
+            Unfortunately, a server error prevented your request from being completed. Airbnb may be undergoing maintenance or your connection may have timed out. Please try again.
+
+</div>
+<div class="alert alert-with-icon alert-error alert-block hide row-space-2" id="verification-error">
+  <i class="icon alert-icon icon-alert-alt"></i>
+            Your card could not be verified. Please try another card. Your card was not charged.
+
+</div>
+        <section id="payment" class="payment row-space-3">
+            <h2 class="section-title">Payment</h2>
+
+<div class="payment-section">
+    <div class="row">
+      <div class="col-lg-6">
+        <label for="country-select">
+          Country
+        </label>
+        
+        <div class="select select-block">
+          <select id="country-select" name="payment_country">
+              <option value="AF">
+                Afghanistan
+              </option>
+              <option value="AX">
+                Åland Islands
+              </option>
+              <option value="AL">
+                Albania
+              </option>
+              <option value="DZ">
+                Algeria
+              </option>
+              <option value="AS">
+                American Samoa
+              </option>
+              <option value="AD">
+                Andorra
+              </option>
+              <option value="AO">
+                Angola
+              </option>
+              <option value="AI">
+                Anguilla
+              </option>
+              <option value="AQ">
+                Antarctica
+              </option>
+              <option value="AG">
+                Antigua and Barbuda
+              </option>
+              <option value="AR">
+                Argentina
+              </option>
+              <option value="AM">
+                Armenia
+              </option>
+              <option value="AW">
+                Aruba
+              </option>
+              <option value="AU">
+                Australia
+              </option>
+              <option value="AT">
+                Austria
+              </option>
+              <option value="AZ">
+                Azerbaijan
+              </option>
+              <option value="BS">
+                Bahamas
+              </option>
+              <option value="BH">
+                Bahrain
+              </option>
+              <option value="BD">
+                Bangladesh
+              </option>
+              <option value="BB">
+                Barbados
+              </option>
+              <option value="BY">
+                Belarus
+              </option>
+              <option value="BE">
+                Belgium
+              </option>
+              <option value="BZ">
+                Belize
+              </option>
+              <option value="BJ">
+                Benin
+              </option>
+              <option value="BM">
+                Bermuda
+              </option>
+              <option value="BT">
+                Bhutan
+              </option>
+              <option value="BO">
+                Bolivia
+              </option>
+              <option value="BA">
+                Bosnia and Herzegovina
+              </option>
+              <option value="BW">
+                Botswana
+              </option>
+              <option value="BV">
+                Bouvet Island
+              </option>
+              <option value="BR">
+                Brazil
+              </option>
+              <option value="IO">
+                British Indian Ocean Territory
+              </option>
+              <option value="VG">
+                British Virgin Islands
+              </option>
+              <option value="BN">
+                Brunei
+              </option>
+              <option value="BG">
+                Bulgaria
+              </option>
+              <option value="BF">
+                Burkina Faso
+              </option>
+              <option value="BI">
+                Burundi
+              </option>
+              <option value="KH">
+                Cambodia
+              </option>
+              <option value="CM">
+                Cameroon
+              </option>
+              <option value="CA">
+                Canada
+              </option>
+              <option value="CV">
+                Cape Verde
+              </option>
+              <option value="BQ">
+                Caribbean Netherlands
+              </option>
+              <option value="KY">
+                Cayman Islands
+              </option>
+              <option value="CF">
+                Central African Republic
+              </option>
+              <option value="TD">
+                Chad
+              </option>
+              <option value="CL">
+                Chile
+              </option>
+              <option value="CN">
+                China
+              </option>
+              <option value="CX">
+                Christmas Island
+              </option>
+              <option value="CC">
+                Cocos [Keeling] Islands
+              </option>
+              <option value="CO">
+                Colombia
+              </option>
+              <option value="KM">
+                Comoros
+              </option>
+              <option value="CG">
+                Congo
+              </option>
+              <option value="CK">
+                Cook Islands
+              </option>
+              <option value="CR">
+                Costa Rica
+              </option>
+              <option value="HR">
+                Croatia
+              </option>
+              <option value="CW">
+                Curaçao
+              </option>
+              <option value="CY">
+                Cyprus
+              </option>
+              <option value="CZ">
+                Czech Republic
+              </option>
+              <option value="CD">
+                Democratic Republic of the Congo
+              </option>
+              <option value="DK">
+                Denmark
+              </option>
+              <option value="DJ">
+                Djibouti
+              </option>
+              <option value="DM">
+                Dominica
+              </option>
+              <option value="DO">
+                Dominican Republic
+              </option>
+              <option value="TL">
+                East Timor
+              </option>
+              <option value="EC">
+                Ecuador
+              </option>
+              <option value="EG">
+                Egypt
+              </option>
+              <option value="SV">
+                El Salvador
+              </option>
+              <option value="GQ">
+                Equatorial Guinea
+              </option>
+              <option value="ER">
+                Eritrea
+              </option>
+              <option value="EE">
+                Estonia
+              </option>
+              <option value="ET">
+                Ethiopia
+              </option>
+              <option value="FK">
+                Falkland Islands [Islas Malvinas]
+              </option>
+              <option value="FO">
+                Faroe Islands
+              </option>
+              <option value="FJ">
+                Fiji
+              </option>
+              <option value="FI">
+                Finland
+              </option>
+              <option value="FR">
+                France
+              </option>
+              <option value="GF">
+                French Guiana
+              </option>
+              <option value="PF">
+                French Polynesia
+              </option>
+              <option value="TF">
+                French Southern Territories
+              </option>
+              <option value="GA">
+                Gabon
+              </option>
+              <option value="GM">
+                Gambia
+              </option>
+              <option value="GE">
+                Georgia
+              </option>
+              <option value="DE">
+                Germany
+              </option>
+              <option value="GH">
+                Ghana
+              </option>
+              <option value="GI">
+                Gibraltar
+              </option>
+              <option value="GR">
+                Greece
+              </option>
+              <option value="GL">
+                Greenland
+              </option>
+              <option value="GD">
+                Grenada
+              </option>
+              <option value="GP">
+                Guadeloupe
+              </option>
+              <option value="GU">
+                Guam
+              </option>
+              <option value="GT">
+                Guatemala
+              </option>
+              <option value="GG">
+                Guernsey
+              </option>
+              <option value="GN">
+                Guinea
+              </option>
+              <option value="GW">
+                Guinea-Bissau
+              </option>
+              <option value="GY">
+                Guyana
+              </option>
+              <option value="HT">
+                Haiti
+              </option>
+              <option value="HM">
+                Heard Island and McDonald Islands
+              </option>
+              <option value="HN">
+                Honduras
+              </option>
+              <option value="HK">
+                Hong Kong
+              </option>
+              <option value="HU">
+                Hungary
+              </option>
+              <option value="IS">
+                Iceland
+              </option>
+              <option value="IN">
+                India
+              </option>
+              <option value="ID">
+                Indonesia
+              </option>
+              <option value="IQ">
+                Iraq
+              </option>
+              <option value="IE">
+                Ireland
+              </option>
+              <option value="IM">
+                Isle of Man
+              </option>
+              <option value="IL">
+                Israel
+              </option>
+              <option value="IT">
+                Italy
+              </option>
+              <option value="CI">
+                Ivory Coast
+              </option>
+              <option value="JM">
+                Jamaica
+              </option>
+              <option value="JP">
+                Japan
+              </option>
+              <option value="JE">
+                Jersey
+              </option>
+              <option value="JO">
+                Jordan
+              </option>
+              <option value="KZ">
+                Kazakhstan
+              </option>
+              <option value="KE">
+                Kenya
+              </option>
+              <option value="KI">
+                Kiribati
+              </option>
+              <option value="XK">
+                Kosovo
+              </option>
+              <option value="KW">
+                Kuwait
+              </option>
+              <option value="KG">
+                Kyrgyzstan
+              </option>
+              <option value="LA">
+                Laos
+              </option>
+              <option value="LV">
+                Latvia
+              </option>
+              <option value="LB">
+                Lebanon
+              </option>
+              <option value="LS">
+                Lesotho
+              </option>
+              <option value="LR">
+                Liberia
+              </option>
+              <option value="LY">
+                Libya
+              </option>
+              <option value="LI">
+                Liechtenstein
+              </option>
+              <option value="LT">
+                Lithuania
+              </option>
+              <option value="LU">
+                Luxembourg
+              </option>
+              <option value="MO">
+                Macau
+              </option>
+              <option value="MK">
+                Macedonia
+              </option>
+              <option value="MG">
+                Madagascar
+              </option>
+              <option value="MW">
+                Malawi
+              </option>
+              <option value="MY">
+                Malaysia
+              </option>
+              <option value="MV">
+                Maldives
+              </option>
+              <option value="ML">
+                Mali
+              </option>
+              <option value="MT">
+                Malta
+              </option>
+              <option value="MH">
+                Marshall Islands
+              </option>
+              <option value="MQ">
+                Martinique
+              </option>
+              <option value="MR">
+                Mauritania
+              </option>
+              <option value="MU">
+                Mauritius
+              </option>
+              <option value="YT">
+                Mayotte
+              </option>
+              <option value="MX">
+                Mexico
+              </option>
+              <option value="FM">
+                Micronesia
+              </option>
+              <option value="MD">
+                Moldova
+              </option>
+              <option value="MC">
+                Monaco
+              </option>
+              <option value="MN">
+                Mongolia
+              </option>
+              <option value="ME">
+                Montenegro
+              </option>
+              <option value="MS">
+                Montserrat
+              </option>
+              <option value="MA">
+                Morocco
+              </option>
+              <option value="MZ">
+                Mozambique
+              </option>
+              <option value="MM">
+                Myanmar [Burma]
+              </option>
+              <option value="NA">
+                Namibia
+              </option>
+              <option value="NR">
+                Nauru
+              </option>
+              <option value="NP">
+                Nepal
+              </option>
+              <option value="NL">
+                Netherlands
+              </option>
+              <option value="NC">
+                New Caledonia
+              </option>
+              <option value="NZ">
+                New Zealand
+              </option>
+              <option value="NI">
+                Nicaragua
+              </option>
+              <option value="NE">
+                Niger
+              </option>
+              <option value="NG">
+                Nigeria
+              </option>
+              <option value="NU">
+                Niue
+              </option>
+              <option value="NF">
+                Norfolk Island
+              </option>
+              <option value="MP">
+                Northern Mariana Islands
+              </option>
+              <option value="NO">
+                Norway
+              </option>
+              <option value="OM">
+                Oman
+              </option>
+              <option value="PK">
+                Pakistan
+              </option>
+              <option value="PW">
+                Palau
+              </option>
+              <option value="PS">
+                Palestinian Territories
+              </option>
+              <option value="PA">
+                Panama
+              </option>
+              <option value="PG">
+                Papua New Guinea
+              </option>
+              <option value="PY">
+                Paraguay
+              </option>
+              <option value="PE">
+                Peru
+              </option>
+              <option value="PH">
+                Philippines
+              </option>
+              <option value="PN">
+                Pitcairn Islands
+              </option>
+              <option value="PL">
+                Poland
+              </option>
+              <option value="PT">
+                Portugal
+              </option>
+              <option value="PR">
+                Puerto Rico
+              </option>
+              <option value="QA">
+                Qatar
+              </option>
+              <option value="RE">
+                Réunion
+              </option>
+              <option value="RO">
+                Romania
+              </option>
+              <option value="RU">
+                Russia
+              </option>
+              <option value="RW">
+                Rwanda
+              </option>
+              <option value="BL">
+                Saint Barthélemy
+              </option>
+              <option value="SH">
+                Saint Helena
+              </option>
+              <option value="KN">
+                Saint Kitts and Nevis
+              </option>
+              <option value="LC">
+                Saint Lucia
+              </option>
+              <option value="MF">
+                Saint Martin
+              </option>
+              <option value="PM">
+                Saint Pierre and Miquelon
+              </option>
+              <option value="VC">
+                Saint Vincent and the Grenadines
+              </option>
+              <option value="WS">
+                Samoa
+              </option>
+              <option value="SM">
+                San Marino
+              </option>
+              <option value="ST">
+                São Tomé and Príncipe
+              </option>
+              <option value="SA">
+                Saudi Arabia
+              </option>
+              <option value="SN">
+                Senegal
+              </option>
+              <option value="RS">
+                Serbia
+              </option>
+              <option value="SC">
+                Seychelles
+              </option>
+              <option value="SL">
+                Sierra Leone
+              </option>
+              <option value="SG">
+                Singapore
+              </option>
+              <option value="SX">
+                Sint Maarten
+              </option>
+              <option value="SK">
+                Slovakia
+              </option>
+              <option value="SI">
+                Slovenia
+              </option>
+              <option value="SB">
+                Solomon Islands
+              </option>
+              <option value="SO">
+                Somalia
+              </option>
+              <option value="ZA">
+                South Africa
+              </option>
+              <option value="GS">
+                South Georgia and the South Sandwich Islands
+              </option>
+              <option value="KR">
+                South Korea
+              </option>
+              <option value="SS">
+                South Sudan
+              </option>
+              <option value="ES">
+                Spain
+              </option>
+              <option value="LK">
+                Sri Lanka
+              </option>
+              <option value="SR">
+                Suriname
+              </option>
+              <option value="SJ">
+                Svalbard and Jan Mayen
+              </option>
+              <option value="SZ">
+                Swaziland
+              </option>
+              <option value="SE">
+                Sweden
+              </option>
+              <option value="CH">
+                Switzerland
+              </option>
+              <option value="TW">
+                Taiwan
+              </option>
+              <option value="TJ">
+                Tajikistan
+              </option>
+              <option value="TZ">
+                Tanzania
+              </option>
+              <option value="TH">
+                Thailand
+              </option>
+              <option value="TG">
+                Togo
+              </option>
+              <option value="TK">
+                Tokelau
+              </option>
+              <option value="TO">
+                Tonga
+              </option>
+              <option value="TT">
+                Trinidad and Tobago
+              </option>
+              <option value="TN">
+                Tunisia
+              </option>
+              <option value="TR">
+                Turkey
+              </option>
+              <option value="TM">
+                Turkmenistan
+              </option>
+              <option value="TC">
+                Turks and Caicos Islands
+              </option>
+              <option value="TV">
+                Tuvalu
+              </option>
+              <option value="UM">
+                U.S. Outlying Islands
+              </option>
+              <option value="VI">
+                U.S. Virgin Islands
+              </option>
+              <option value="UG">
+                Uganda
+              </option>
+              <option value="UA">
+                Ukraine
+              </option>
+              <option value="AE">
+                United Arab Emirates
+              </option>
+              <option value="GB">
+                United Kingdom
+              </option>
+              <option value="US" selected="selected">
+                United States
+              </option>
+              <option value="UY">
+                Uruguay
+              </option>
+              <option value="UZ">
+                Uzbekistan
+              </option>
+              <option value="VU">
+                Vanuatu
+              </option>
+              <option value="VA">
+                Vatican City
+              </option>
+              <option value="VE">
+                Venezuela
+              </option>
+              <option value="VN">
+                Vietnam
+              </option>
+              <option value="WF">
+                Wallis and Futuna
+              </option>
+              <option value="EH">
+                Western Sahara
+              </option>
+              <option value="YE">
+                Yemen
+              </option>
+              <option value="ZM">
+                Zambia
+              </option>
+              <option value="ZW">
+                Zimbabwe
+              </option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="payment-controls">
+        <div class="row">
+          <div class="col-sm-12">
+            <label for="payment_type">
+              Payment type
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 row-space-2">
+            <div class="select select-block">
+              <select name="payment_type" class="grouped-field" id="payment-method-select">
+                  <option value="cc" data-payment-type="payment-method" data-cc-type="visa" data-cc-name="" data-cc-expire="">
+                    Credit Card
+                  </option>
+                  <option value="paypal" data-payment-type="payment-method" data-cc-type="visa" data-cc-name="" data-cc-expire="">
+                    PayPal
+                  </option>
+              </select>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="payment-method grouped-field cc active">
+              <div class="payment-logo unionpay hide"></div>
+              <div class="payment-logo visa">Credit Card</div>
+              <div class="payment-logo master"></div>
+              <div class="payment-logo american_express"></div>
+              <div class="payment-logo discover"></div>
+              <div class="payment-logo jcb hide"></div>
+              <div class="payment-logo postepay hide"></div>
+              <i class="icon icon-lock icon-light-gray h3"></i>
+                <div class="cc-data hide">
+                  <div class="cc-info">
+                    Name: <span id="selected-cc-name"></span>
+                  </div>
+                  <div class="cc-info">
+                    Expires: <span id="selected-cc-expires"></span>
+                  </div>
+                </div>
+            </div>
+              <div class="payment-method grouped-field paypal active">
+                <div class="payment-logo paypal active">PayPal</div>
+              </div>
+              <div class="payment-method grouped-field sofort">
+                <div class="payment-logo sofort inactive">Sofortüberweisung</div>
+              </div>
+              <div class="payment-method grouped-field ideal">
+                <div class="payment-logo ideal inactive">iDEAL</div>
+              </div>
+              <div class="payment-method grouped-field alipay">
+                <div class="payment-logo alipay inactive">Alipay</div>
+              </div>
+              <div class="payment-method grouped-field business_travel_invoice">
+                <div class="payment-logo business-travel-invoice icon icon-suitcase icon-babu icon-size-2"></div>
+              </div>
+          </div>
+        </div>
+
+
+        <div id="brazil-cc-message" class="hide">IOF 6.38% applicable for all Brazilian International Credit Cards</div>
+    </div>
+
+  <div id="payment-methods-content">
+    <div class="payment-method cc active" id="payment-method-cc">
+      <div class="payment-method-container">
+    
+        <input name="acculynk[sessionId]" id="acculynk-session-id" type="hidden">
+        <input name="acculynk[pnref]" id="acculynk-pnref" type="hidden">
+        <input name="acculynk[accountToken]" id="acculynk-account-token" type="hidden">
+        <input name="acculynk[lastFour]" id="acculynk-last-four" type="hidden">
+        <input name="acculynk[firstSix]" id="acculynk-first-six" type="hidden">
+    
+        <input name="payment_method_nonce" id="payment_method_nonce" type="hidden">
+    
+        <div class="new-card">
+          <div class="cc-details row">
+            <div class="control-group cc-type col-md-6">
+              <label class="control-label" for="credit-card-type">
+                Card type
+              </label>
+                <div class="select select-block">
+                  <select id="credit-card-type" class="cc-med" name="credit_card[cc_type]">
+                      <option value="visa" selected="selected">
+                        Visa
+                      </option>
+                      <option value="master">
+                        MasterCard
+                      </option>
+                      <option value="american_express">
+                        American Express
+                      </option>
+                      <option value="discover">
+                        Discover
+                      </option>
+                  </select>
+                </div>
+              </div>
+            <div class="control-group cc-number col-md-6">
+              <label for="credit-card-number">
+                Card number
+              </label>
+                <input autocomplete="off" class="cc-med" name="credit_card[cc_number]" id="credit-card-number" type="text">
+              <div class="label label-warning inline-error hide"></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="control-group cc-expiration col-md-6">
+                <label for="credit-card-expire">
+                  Expires on
+                </label>
+                <div class="row row-condensed">
+                  <div class="col-sm-6">
+                    <div class="select select-block">
+                      <select id="credit-card-expire-month" class="cc-short" name="credit_card[cc_expire_month]">
+                           <option value="">mm</option>
+                           <option value="1">1</option>
+                           <option value="2">2</option>
+                           <option value="3">3</option>
+                           <option value="4">4</option>
+                           <option value="5">5</option>
+                           <option value="6">6</option>
+                           <option value="7">7</option>
+                           <option value="8">8</option>
+                           <option value="9">9</option>
+                           <option value="10">10</option>
+                           <option value="11">11</option>
+                           <option value="12">12</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="select select-block">
+                      <select id="credit-card-expire-year" class="cc-short" name="credit_card[cc_expire_year]">
+                           <option value="">yyyy</option>
+                           <option value="2015">2015</option>
+                           <option value="2016">2016</option>
+                           <option value="2017">2017</option>
+                           <option value="2018">2018</option>
+                           <option value="2019">2019</option>
+                           <option value="2020">2020</option>
+                           <option value="2021">2021</option>
+                           <option value="2022">2022</option>
+                           <option value="2023">2023</option>
+                           <option value="2024">2024</option>
+                           <option value="2025">2025</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="label label-warning inline-error hide"></div>
+              </div>
+              <div class="control-group cc-security-code col-md-4">
+                <label class="control-label" for="credit-card-security-code">
+                  Security code
+                </label>
+                <div class="row">
+                  <div class="col-sm-6 col-md-8">
+                    <input pattern="[0-9]*" autocomplete="off" class="cc-short" name="credit_card[cc_security_code]" id="credit-card-security-code" type="text">
+                  </div>
+                  <a href="#" id="tooltip-cvv" class="tooltip-link link-reset" tabindex="-1">
+                    <i class="icon icon-question icon-light-gray h4"></i>
+                  </a>
+                </div>
+                <div class="label label-warning inline-error hide"></div>
+              </div>
+            </div>
+    
+    
+          <hr>
+          <div class="row">
+            <div class="col-sm-12">
+              <h2>Billing Information</h2><p></p>
+            </div>
+          </div>
+    
+    
+          <div class="row">
+            <div class="control-group cc-first-name col-md-6">
+              <label class="control-label" for="credit-card-first-name">
+                First name
+              </label>
+    
+              <input name="credit_card[first_name]" id="credit-card-first-name" type="text">
+              <div class="label label-warning inline-error hide"></div>
+            </div>
+    
+            <div class="control-group cc-last-name col-md-6">
+              <label class="control-label" for="credit-card-last-name">
+                Last name
+              </label>
+    
+              <input name="credit_card[last_name]" id="credit-card-last-name" type="text">
+              <div class="label label-warning inline-error hide"></div>
+            </div>
+          </div>
+          <div class="row hide">
+            <div class="control-group cc-address1 col-md-6">
+              <label class="control-label" for="credit-card-address1">
+                Street address
+              </label>
+    
+              <input name="credit_card[address1]" id="credit-card-address1" disabled="" type="text">
+              <div class="label label-warning inline-error hide"></div>
+            </div>
+    
+            <div class="col-md-2">
+              <label for="credit-card-address2">
+                Apt #
+              </label>
+    
+              <input class="cc-short" name="credit_card[address2]" id="credit-card-address2" disabled="" type="text">
+            </div>
+          </div>
+    
+          <div class="row">
+            <div class="control-group cc-city
+                       
+                        col-md-6 col-lg-5 
+                        hide ">
+              <label for="credit-card-city">
+                City
+              </label>
+    
+              <input name="credit_card[city]" id="credit-card-city" disabled="" type="text">
+              <div class="label label-warning inline-error hide"></div>
+            </div>
+            <div class="cc-state col-md-2
+                       hide">
+              <label for="credit-card-state">
+                State
+              </label>
+    
+              <input class="cc-short" name="credit_card[state]" id="credit-card-state" disabled="" type="text">
+            </div>
+    
+            <div class="control-group cc-zip
+                        
+                         col-md-6 col-lg-3">
+              <label for="credit-card-zip">
+                Postal code
+              </label>
+    
+              <input class="cc-short" name="credit_card[zip]" id="credit-card-zip" type="text">
+              <div class="label label-warning inline-error hide"></div>
+            </div>
+    
+            <div class="col-md-6 col-lg-3">
+              <label>&nbsp;</label>
+              <div class="help-inline credit-card-country-name">
+                <strong id="billing-country">United States</strong>
+              </div>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <div class="payment-method paypal" id="payment-method-paypal">
+        <div class="paypal-instructions row-space-top-2">
+          <p>
+            You will be redirected to PayPal.
+            <strong>You must complete the process or the transaction will not occur.</strong>
+          </p>
+        </div>
+      </div>
+      <div class="payment-method alipay" id="payment-method-alipay">
+        <div class="alipay-instructions row-space-top-2">
+          <p>
+            You will be redirected to Alipay.
+            <strong>You must complete the process or the transaction will not occur.</strong>
+          </p>
+        </div>
+      </div>
+      <div class="payment-method ideal" id="payment-method-ideal">
+        <div class="ideal-instructions row-space-top-2">
+          <p>
+            If the host approves your request, you’ll receive a notification to complete payment within 24 hours so that the reservation can be confirmed.
+          </p>
+        </div>
+      </div>
+      <div class="payment-method sofort" id="payment-method-sofort">
+        <div class="sofort-instructions row-space-top-2">
+          <p>
+            If the host approves your request, you’ll receive a notification to complete payment within 24 hours so that the reservation can be confirmed.
+          </p>
+        </div>
+      </div>
+      <div class="payment-method business_travel_invoice" id="payment-method-business-travel-invoice">
+        <input value="" name="business_travel[business_instrument_id]" id="business-entity-id" type="hidden">
+        <div class="row-space-top-2">
+          <p>
+            <strong>Your company will be billed for this trip and sent a copy of your itinerary. Please make sure to follow your company's travel policies.</strong>
+          </p>
+        </div>
+      </div>
+      <div class="payment-method digital_river_cc" id="payment-method-digital-river-cc">
+        <div class="payment-method-container">
+      
+          <div>
+            <div class="row">
+              <div class="col-sm-12">
+                <h2>Billing Information</h2><p></p>
+              </div>
+            </div>
+      
+            <div class="row">
+              <div class="control-group digital-river-first-name col-md-6">
+                <label class="control-label" for="digital-river-first-name">
+                  First name
+                </label>
+                <input name="digital_river[first_name]" id="digital-river-first-name" type="text">
+              </div>
+      
+              <div class="control-group digital-river-last-name col-md-6">
+                <label class="control-label" for="digital-river-last-name">
+                  Last name
+                </label>
+                <input name="digital_river[last_name]" id="digital-river-last-name" type="text">
+              </div>
+            </div>
+            <div class="row">
+              <div class="control-group digital-river-address1 col-md-6">
+                <label class="control-label" for="digital-river-address1">
+                  Street address
+                </label>
+      
+                <input name="digital_river[address1]" id="digital-river-address1" type="text">
+              </div>
+      
+              <div class="col-md-6">
+                <label for="digital-river-address2">
+                  Street address 2 (UNTRANSLATED)
+                </label>
+                <input name="digital_river[address2]" id="digital-river-address2" type="text">
+              </div>
+            </div>
+      
+            <div class="row">
+              <div class="col-md-6">
+                <label for="digital-river-address3">
+                  Street address 3 (UNTRANSLATED)
+                </label>
+                <input name="digital_river[address3]" id="digital-river-address3" type="text">
+              </div>
+      
+              <div class="control-group digital-river-city col-md-6">
+                <label for="digital-river-city">
+                  City
+                </label>
+                <input name="digital_river[city]" id="digital-river-city" type="text">
+              </div>
+            </div>
+      
+            <div class="row">
+              <div class="digital-river-state col-md-6">
+                <label for="digital-river-state">
+                  State
+                </label>
+                <input class="digital-river-short" name="digital_river[state]" id="digital-river-state" type="text">
+              </div>
+      
+              <div class="control-group digital-river-zip col-md-3">
+                <label for="digital-river-zip">
+                  CEP
+                </label>
+                <input class="digital-river-short" name="digital_river[zip]" id="digital-river-zip" type="text">
+              </div>
+      
+              <div class="col-md-3">
+                <label>&nbsp;</label>
+                <div class="help-inline digital-river-country-name">
+                  <strong id="billing-country">United States</strong>
+                </div>
+              </div>
+            </div>
+      
+            <div class="row">
+              <div class="col-md-6">
+                <label for="digital-river-birthdate">
+                  Birthdate (UNTRANSLATED)
+                </label>
+                <input name="digital_river[birthdate]" id="digital-river-birthdate" type="text">
+              </div>
+              <div class="col-md-6">
+                <label for="digital-river-brazil-cpf">
+                  CPF
+                </label>
+                <input name="digital_river[brazil_cpf]" id="digital-river-brazil-cpf" type="text">
+              </div>
+            </div>
+      
+            <div class="row">
+              <div class="col-md-6">
+                <label for="digital-river-mobile-phone-number">
+                  Mobile phone number (UNTRANSLATED)
+                </label>
+                <input name="digital_river[mobile_phone_number]" id="digital-river-mobile-phone-number" type="text">
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+  </div>
+</div>
+
+<input name="payment_method" value="cc" type="hidden">
+<input name="credit_card[country]" value="US" type="hidden">
+<input name="digital_river[country]" value="US" type="hidden">
+
+        </section>
+
+        <hr>
+
+          <section id="house-rules-agreement" class="row-space-3">
+            <h2 class="section-title">
+              House Rules
+            </h2>
+            <p>
+              By booking this space you’re agreeing to follow Amanda’s House Rules.
+            </p>
+            <div class="row-space-2">
+              <div class="expandable expandable-trigger-more house-rules-panel-body">
+                <div class="expandable-content">
+                  <p>* We live in a respectful and inclusive home that welcomes everyone. 
+<br>* We have day jobs so we are up and about around 8AM and ask for guests to respect quiet hours starting at 11PM. 
+<br>* Guests may use the kitchen but please clean up any mess (dishes, counter, stove, etc.).
+<br>* No smoking
+<br>* No pets
+<br>* No overnight guests that aren't part of the advance reservation
+<br>* Be mindful of the shared bathroom 
+<br>*Shoes off in the house, please 
+<br>*Use on street parking for any guest vehicles (backyard space is available for compact or pod cars)
+<br>* When using outside spaces, please be respectful of the neighbors</p>
+                  <div class="expandable-indicator"></div>
+                </div>
+                <a class="expandable-trigger-more text-muted" href="#">
+                  <strong>+ More</strong>
+                </a>
+              </div>
+            </div>
+          </section>
+          <hr>
+
+
+            <section id="message-to-host" class="message-to-host row-space-3 control-group">
+              <h2 class="section-title">
+                Introduce Yourself to Amanda
+              </h2>
+              <p>
+                Giving your host more information will make them more likely to confirm your booking request:
+              </p>
+              <ul>
+                <li>
+                  Tell Amanda a little about yourself
+                </li>
+                <li>
+                  What brings you to Salt Lake City? Who’s joining you?
+                </li>
+                <li>
+                  What do you love about this listing? Mention it!
+                </li>
+              </ul>
+              <div class="row">
+                <div class="col-sm-3">
+                  <div class="media-photo media-round">
+                    <img src="https://a1.muscache.com/ic/users/15312028/profile_pic/1403755391/original.jpg?interpolation=lanczos-none&amp;crop=w:w;*,*&amp;crop=h:h;*,*&amp;resize=225:*&amp;output-format=jpg&amp;output-quality=70" class="img-responsive" alt="Amanda" width="75" height="75">
+                  </div>
+                </div>
+                <div class="col-sm-9">
+                  <textarea id="message-to-host-input" name="message_to_host" rows="3" placeholder="Message your host..."></textarea>
+                  <div class="label label-warning inline-error"></div>
+                </div>
+              </div>
+            </section>
+          
+
+          <hr>
+        
+
+
+          <h2>
+            Verify Your Phone Number
+          </h2>
+
+          <p>
+            It looks like you're a new traveler. If your request is accepted, Amanda will need your contact information. Make sure your phone is nearby before continuing.
+          </p>
+
+          <section class="phone-verification-widget phone-verification-phone-input">
+  <div data-phone-verification-role="form" class="phone-input clearfix">
+    <div class="input-group">
+      <div class="custom-select-container">
+        <select class="small" data-phone-verification-role="countryCode">
+            <option value="AF" data-val="+93">Afghanistan</option>
+            <option value="AX" data-val="+358">Åland Islands</option>
+            <option value="AL" data-val="+355">Albania</option>
+            <option value="DZ" data-val="+213">Algeria</option>
+            <option value="AS" data-val="+1">American Samoa</option>
+            <option value="AD" data-val="+376">Andorra</option>
+            <option value="AO" data-val="+244">Angola</option>
+            <option value="AI" data-val="+1">Anguilla</option>
+            <option value="AG" data-val="+1">Antigua and Barbuda</option>
+            <option value="AR" data-val="+54">Argentina</option>
+            <option value="AM" data-val="+374">Armenia</option>
+            <option value="AW" data-val="+297">Aruba</option>
+            <option value="AU" data-val="+61">Australia</option>
+            <option value="AT" data-val="+43">Austria</option>
+            <option value="AZ" data-val="+994">Azerbaijan</option>
+            <option value="BS" data-val="+1">Bahamas</option>
+            <option value="BH" data-val="+973">Bahrain</option>
+            <option value="BD" data-val="+880">Bangladesh</option>
+            <option value="BB" data-val="+1">Barbados</option>
+            <option value="BY" data-val="+375">Belarus</option>
+            <option value="BE" data-val="+32">Belgium</option>
+            <option value="BZ" data-val="+501">Belize</option>
+            <option value="BJ" data-val="+229">Benin</option>
+            <option value="BM" data-val="+1">Bermuda</option>
+            <option value="BT" data-val="+975">Bhutan</option>
+            <option value="BO" data-val="+591">Bolivia</option>
+            <option value="BA" data-val="+387">Bosnia and Herzegovina</option>
+            <option value="BW" data-val="+267">Botswana</option>
+            <option value="BR" data-val="+55">Brazil</option>
+            <option value="IO" data-val="+246">British Indian Ocean Territory</option>
+            <option value="VG" data-val="+1">British Virgin Islands</option>
+            <option value="BN" data-val="+673">Brunei</option>
+            <option value="BG" data-val="+359">Bulgaria</option>
+            <option value="BF" data-val="+226">Burkina Faso</option>
+            <option value="BI" data-val="+257">Burundi</option>
+            <option value="KH" data-val="+855">Cambodia</option>
+            <option value="CM" data-val="+237">Cameroon</option>
+            <option value="CA" data-val="+1">Canada</option>
+            <option value="CV" data-val="+238">Cape Verde</option>
+            <option value="BQ" data-val="+599">Caribbean Netherlands</option>
+            <option value="KY" data-val="+1">Cayman Islands</option>
+            <option value="CF" data-val="+236">Central African Republic</option>
+            <option value="TD" data-val="+235">Chad</option>
+            <option value="CL" data-val="+56">Chile</option>
+            <option value="CN" data-val="+86">China</option>
+            <option value="CX" data-val="+61">Christmas Island</option>
+            <option value="CC" data-val="+61">Cocos [Keeling] Islands</option>
+            <option value="CO" data-val="+57">Colombia</option>
+            <option value="KM" data-val="+269">Comoros</option>
+            <option value="CG" data-val="+242">Congo</option>
+            <option value="CK" data-val="+682">Cook Islands</option>
+            <option value="CR" data-val="+506">Costa Rica</option>
+            <option value="HR" data-val="+385">Croatia</option>
+            <option value="CW" data-val="+599">Curaçao</option>
+            <option value="CY" data-val="+357">Cyprus</option>
+            <option value="CZ" data-val="+420">Czech Republic</option>
+            <option value="CD" data-val="+243">Democratic Republic of the Congo</option>
+            <option value="DK" data-val="+45">Denmark</option>
+            <option value="DJ" data-val="+253">Djibouti</option>
+            <option value="DM" data-val="+1">Dominica</option>
+            <option value="DO" data-val="+1">Dominican Republic</option>
+            <option value="TL" data-val="+670">East Timor</option>
+            <option value="EC" data-val="+593">Ecuador</option>
+            <option value="EG" data-val="+20">Egypt</option>
+            <option value="SV" data-val="+503">El Salvador</option>
+            <option value="GQ" data-val="+240">Equatorial Guinea</option>
+            <option value="ER" data-val="+291">Eritrea</option>
+            <option value="EE" data-val="+372">Estonia</option>
+            <option value="ET" data-val="+251">Ethiopia</option>
+            <option value="FK" data-val="+500">Falkland Islands [Islas Malvinas]</option>
+            <option value="FO" data-val="+298">Faroe Islands</option>
+            <option value="FJ" data-val="+679">Fiji</option>
+            <option value="FI" data-val="+358">Finland</option>
+            <option value="FR" data-val="+33">France</option>
+            <option value="GF" data-val="+594">French Guiana</option>
+            <option value="PF" data-val="+689">French Polynesia</option>
+            <option value="GA" data-val="+241">Gabon</option>
+            <option value="GM" data-val="+220">Gambia</option>
+            <option value="GE" data-val="+995">Georgia</option>
+            <option value="DE" data-val="+49">Germany</option>
+            <option value="GH" data-val="+233">Ghana</option>
+            <option value="GI" data-val="+350">Gibraltar</option>
+            <option value="GR" data-val="+30">Greece</option>
+            <option value="GL" data-val="+299">Greenland</option>
+            <option value="GD" data-val="+1">Grenada</option>
+            <option value="GP" data-val="+590">Guadeloupe</option>
+            <option value="GU" data-val="+1">Guam</option>
+            <option value="GT" data-val="+502">Guatemala</option>
+            <option value="GG" data-val="+44">Guernsey</option>
+            <option value="GN" data-val="+224">Guinea</option>
+            <option value="GW" data-val="+245">Guinea-Bissau</option>
+            <option value="GY" data-val="+592">Guyana</option>
+            <option value="HT" data-val="+509">Haiti</option>
+            <option value="HN" data-val="+504">Honduras</option>
+            <option value="HK" data-val="+852">Hong Kong</option>
+            <option value="HU" data-val="+36">Hungary</option>
+            <option value="IS" data-val="+354">Iceland</option>
+            <option value="IN" data-val="+91">India</option>
+            <option value="ID" data-val="+62">Indonesia</option>
+            <option value="IQ" data-val="+964">Iraq</option>
+            <option value="IE" data-val="+353">Ireland</option>
+            <option value="IM" data-val="+44">Isle of Man</option>
+            <option value="IL" data-val="+972">Israel</option>
+            <option value="IT" data-val="+39">Italy</option>
+            <option value="CI" data-val="+225">Ivory Coast</option>
+            <option value="JM" data-val="+1">Jamaica</option>
+            <option value="JP" data-val="+81">Japan</option>
+            <option value="JE" data-val="+44">Jersey</option>
+            <option value="JO" data-val="+962">Jordan</option>
+            <option value="KZ" data-val="+7">Kazakhstan</option>
+            <option value="KE" data-val="+254">Kenya</option>
+            <option value="KI" data-val="+686">Kiribati</option>
+            <option value="KW" data-val="+965">Kuwait</option>
+            <option value="KG" data-val="+996">Kyrgyzstan</option>
+            <option value="LA" data-val="+856">Laos</option>
+            <option value="LV" data-val="+371">Latvia</option>
+            <option value="LB" data-val="+961">Lebanon</option>
+            <option value="LS" data-val="+266">Lesotho</option>
+            <option value="LR" data-val="+231">Liberia</option>
+            <option value="LY" data-val="+218">Libya</option>
+            <option value="LI" data-val="+423">Liechtenstein</option>
+            <option value="LT" data-val="+370">Lithuania</option>
+            <option value="LU" data-val="+352">Luxembourg</option>
+            <option value="MO" data-val="+853">Macau</option>
+            <option value="MK" data-val="+389">Macedonia</option>
+            <option value="MG" data-val="+261">Madagascar</option>
+            <option value="MW" data-val="+265">Malawi</option>
+            <option value="MY" data-val="+60">Malaysia</option>
+            <option value="MV" data-val="+960">Maldives</option>
+            <option value="ML" data-val="+223">Mali</option>
+            <option value="MT" data-val="+356">Malta</option>
+            <option value="MH" data-val="+692">Marshall Islands</option>
+            <option value="MQ" data-val="+596">Martinique</option>
+            <option value="MR" data-val="+222">Mauritania</option>
+            <option value="MU" data-val="+230">Mauritius</option>
+            <option value="YT" data-val="+262">Mayotte</option>
+            <option value="MX" data-val="+52">Mexico</option>
+            <option value="FM" data-val="+691">Micronesia</option>
+            <option value="MD" data-val="+373">Moldova</option>
+            <option value="MC" data-val="+377">Monaco</option>
+            <option value="MN" data-val="+976">Mongolia</option>
+            <option value="ME" data-val="+382">Montenegro</option>
+            <option value="MS" data-val="+1">Montserrat</option>
+            <option value="MA" data-val="+212">Morocco</option>
+            <option value="MZ" data-val="+258">Mozambique</option>
+            <option value="MM" data-val="+95">Myanmar [Burma]</option>
+            <option value="NA" data-val="+264">Namibia</option>
+            <option value="NR" data-val="+674">Nauru</option>
+            <option value="NP" data-val="+977">Nepal</option>
+            <option value="NL" data-val="+31">Netherlands</option>
+            <option value="NC" data-val="+687">New Caledonia</option>
+            <option value="NZ" data-val="+64">New Zealand</option>
+            <option value="NI" data-val="+505">Nicaragua</option>
+            <option value="NE" data-val="+227">Niger</option>
+            <option value="NG" data-val="+234">Nigeria</option>
+            <option value="NU" data-val="+683">Niue</option>
+            <option value="NF" data-val="+672">Norfolk Island</option>
+            <option value="MP" data-val="+1">Northern Mariana Islands</option>
+            <option value="NO" data-val="+47">Norway</option>
+            <option value="OM" data-val="+968">Oman</option>
+            <option value="PK" data-val="+92">Pakistan</option>
+            <option value="PW" data-val="+680">Palau</option>
+            <option value="PS" data-val="+970">Palestinian Territories</option>
+            <option value="PA" data-val="+507">Panama</option>
+            <option value="PG" data-val="+675">Papua New Guinea</option>
+            <option value="PY" data-val="+595">Paraguay</option>
+            <option value="PE" data-val="+51">Peru</option>
+            <option value="PH" data-val="+63">Philippines</option>
+            <option value="PN" data-val="+64">Pitcairn Islands</option>
+            <option value="PL" data-val="+48">Poland</option>
+            <option value="PT" data-val="+351">Portugal</option>
+            <option value="PR" data-val="+1">Puerto Rico</option>
+            <option value="QA" data-val="+974">Qatar</option>
+            <option value="RE" data-val="+262">Réunion</option>
+            <option value="RO" data-val="+40">Romania</option>
+            <option value="RU" data-val="+7">Russia</option>
+            <option value="RW" data-val="+250">Rwanda</option>
+            <option value="BL" data-val="+590">Saint Barthélemy</option>
+            <option value="SH" data-val="+290">Saint Helena</option>
+            <option value="KN" data-val="+1">Saint Kitts and Nevis</option>
+            <option value="LC" data-val="+1">Saint Lucia</option>
+            <option value="MF" data-val="+590">Saint Martin</option>
+            <option value="PM" data-val="+508">Saint Pierre and Miquelon</option>
+            <option value="VC" data-val="+1">Saint Vincent and the Grenadines</option>
+            <option value="WS" data-val="+685">Samoa</option>
+            <option value="SM" data-val="+378">San Marino</option>
+            <option value="ST" data-val="+239">São Tomé and Príncipe</option>
+            <option value="SA" data-val="+966">Saudi Arabia</option>
+            <option value="SN" data-val="+221">Senegal</option>
+            <option value="RS" data-val="+381">Serbia</option>
+            <option value="SC" data-val="+248">Seychelles</option>
+            <option value="SL" data-val="+232">Sierra Leone</option>
+            <option value="SG" data-val="+65">Singapore</option>
+            <option value="SX" data-val="+1">Sint Maarten</option>
+            <option value="SK" data-val="+421">Slovakia</option>
+            <option value="SI" data-val="+386">Slovenia</option>
+            <option value="SB" data-val="+677">Solomon Islands</option>
+            <option value="SO" data-val="+252">Somalia</option>
+            <option value="ZA" data-val="+27">South Africa</option>
+            <option value="GS" data-val="+500">South Georgia and the South Sandwich Islands</option>
+            <option value="KR" data-val="+82">South Korea</option>
+            <option value="SS" data-val="+211">South Sudan</option>
+            <option value="ES" data-val="+34">Spain</option>
+            <option value="LK" data-val="+94">Sri Lanka</option>
+            <option value="SR" data-val="+597">Suriname</option>
+            <option value="SJ" data-val="+47">Svalbard and Jan Mayen</option>
+            <option value="SZ" data-val="+268">Swaziland</option>
+            <option value="SE" data-val="+46">Sweden</option>
+            <option value="CH" data-val="+41">Switzerland</option>
+            <option value="TW" data-val="+886">Taiwan</option>
+            <option value="TJ" data-val="+992">Tajikistan</option>
+            <option value="TZ" data-val="+255">Tanzania</option>
+            <option value="TH" data-val="+66">Thailand</option>
+            <option value="TG" data-val="+228">Togo</option>
+            <option value="TK" data-val="+690">Tokelau</option>
+            <option value="TO" data-val="+676">Tonga</option>
+            <option value="TT" data-val="+1">Trinidad and Tobago</option>
+            <option value="TN" data-val="+216">Tunisia</option>
+            <option value="TR" data-val="+90">Turkey</option>
+            <option value="TM" data-val="+993">Turkmenistan</option>
+            <option value="TC" data-val="+1">Turks and Caicos Islands</option>
+            <option value="TV" data-val="+688">Tuvalu</option>
+            <option value="VI" data-val="+1">U.S. Virgin Islands</option>
+            <option value="UG" data-val="+256">Uganda</option>
+            <option value="UA" data-val="+380">Ukraine</option>
+            <option value="AE" data-val="+971">United Arab Emirates</option>
+            <option value="GB" data-val="+44">United Kingdom</option>
+            <option value="US" data-val="+1" selected="">United States</option>
+            <option value="UY" data-val="+598">Uruguay</option>
+            <option value="UZ" data-val="+998">Uzbekistan</option>
+            <option value="VU" data-val="+678">Vanuatu</option>
+            <option value="VA" data-val="+379">Vatican City</option>
+            <option value="VE" data-val="+58">Venezuela</option>
+            <option value="VN" data-val="+84">Vietnam</option>
+            <option value="WF" data-val="+681">Wallis and Futuna</option>
+            <option value="EH" data-val="+212">Western Sahara</option>
+            <option value="YE" data-val="+967">Yemen</option>
+            <option value="ZM" data-val="+260">Zambia</option>
+            <option value="ZW" data-val="+263">Zimbabwe</option>
+        </select>
+
+        <div class="btn dropdown-toggle input-contrast input-first" aria-hidden="true">
+          <span class="value current">+1</span>
+          <i class="icon icon-caret-down icon-gray"></i>
+        </div>
+      </div>
+
+      <div class="col-7">
+        <input class="input-last" data-phone-verification-role="phoneNumber" value="">
+      </div>
+    </div>
+
+    <button class="btn" data-phone-verification-role="submitPhoneNumber">Verify via SMS</button>
+    <a href="#" data-phone-verification-role="noSMS">Don't have SMS?</a>
+  </div>
+
+  <div class="phone-entered clearfix">
+    <div class="clearfix">
+      <div class="text-striped">
+        <span data-phone-verification-role="phoneNumberDisplay"></span>
+        <a href="#" data-phone-verification-role="removePhoneNumber" class="no-color"><i class="icon icon-remove"></i></a>
+      </div>
+      <div class="phone-verified-container">
+        <span class="label-success phone-verified">
+          <i class="icon icon-ok"></i> Verified
+        </span>
+      </div>
+    </div>
+
+    <div class="phone-verify">
+      <p>
+        <strong data-phone-verification-role="checkPhoneMessage"></strong>
+      </p>
+
+      <p class="text-condensed">
+        <label for="confirmationCode">
+          The confirmation code is:
+        </label>
+      </p>
+
+      <div>
+        <div class="input-group">
+          <input class="input-length-4" name="confirmationCode" placeholder="XXXX" data-phone-verification-role="verificationCode">
+        </div>
+
+        <div class="col-1 loading-container hide" data-phone-verification-role="loadingIndicator">
+          <div class="loading"></div>
+        </div>
+
+        <div class="col-9">
+          <p data-phone-verification-role="statusMessage" class="form-description"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <p class="error" data-phone-verification-role="errorMessage"></p>
+  </div>
+</section>
+
+
+
+          <hr>
+
+
+        <section id="policies" class="policies row-space-3">
+          <div class="terms media">
+            
+            <div class="media-body">
+              <label for="agrees-to-terms">
+                By clicking on "Request to Book", you agree to pay the total amount shown, which includes Service Fees, on the right and to the <a href="https://www.airbnb.com/terms" class="terms_link" target="_blank">Terms of Service</a>, <a href="#house-rules-modal" class="house-rules-link">House Rules</a>, <a href="https://www.airbnb.com/home/cancellation_policies#moderate" class="cancel-policy-link" target="_blank">Cancellation Policy</a> and <a href="/terms/guest_refund_policy" class="refund_policy_link" target="_blank">Guest Refund Policy</a>.
+              </label>
+            </div>
+          </div>
+        </section>
+
+
+        <p>
+          <button id="payment-form-submit" type="submit" class="btn btn-large btn-primary">
+            Request to Book
+          </button>
+        </p>
+
+        <p class="book-now-explanation default">
+            You will only be charged if the host accepts your request. They’ll have 24 hours to reply. If the host declines or does not respond, no charge is made.
+        </p>
+        <p class="book-now-explanation immediate_charge hide">
+          Clicking <strong>Request to Book</strong> will charge your payment method, but you'll get an automatic refund if the host declines or doesn't respond within 24 hours.
+        </p>
+        <p class="book-now-explanation deferred_payment hide">
+          The host will have 24 hours to reply. If they accept your request, you'll be asked to complete your payment and confirm the reservation. If the host declines or does not respond, you won't be charged.
+        </p>
+
+          <div class="show-sm">
+            <hr>
+            <div class="media va-container">
+              <i class="pull-left icon icon-cancellation-policy va-top"></i>
+              <div class="media-body va-middle">
+                With 24 hour support, Airbnb is here to help every step of the way.
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </form>
+
+  <div style="" aria-hidden="true" id="house-rules-modal" class="modal" role="dialog">
+    <div class="modal-table">
+      <div class="modal-cell">
+        <div class="modal-content">
+          <div class="panel-header">
+            <a href="#" class="panel-close" data-behavior="modal-close"></a>
+            House Rules
+          </div>
+          <div class="panel-body"><p>* We live in a respectful and inclusive home that welcomes everyone. 
+<br>* We have day jobs so we are up and about around 8AM and ask for guests to respect quiet hours starting at 11PM. 
+<br>* Guests may use the kitchen but please clean up any mess (dishes, counter, stove, etc.).
+<br>* No smoking
+<br>* No pets
+<br>* No overnight guests that aren't part of the advance reservation
+<br>* Be mindful of the shared bathroom 
+<br>*Shoes off in the house, please 
+<br>*Use on street parking for any guest vehicles (backyard space is available for compact or pod cars)
+<br>* When using outside spaces, please be respectful of the neighbors</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="" aria-hidden="true" id="security-deposit-modal" class="modal" role="dialog" data-trigger="#security-deposit-modal-trigger">
+    <div class="modal-table">
+      <div class="modal-cell">
+        <div class="modal-content">
+          <div class="panel-header">
+            <a href="#" class="panel-close" data-behavior="modal-close"></a>
+            Security Deposit
+          </div>
+          <div class="panel-body">
+            <p>
+              The security deposit will be collected by Airbnb the day before arrival by authorizing your credit card for the listed amount. The authorization will be voided within 48 hours of checkout so long as the host does not report any problems.
+            </p>
+            <p>
+              If the host reports a problem, we will capture the entire authorized amount while we gather additional information from both parties. If a compromise is reached, we will refund the agreed upon amount. Although it is primarily up to the host to determine the extent of the damage, Airbnb tracks every claim that is made, and if a host develops a trend of claiming damages in order to keep the security deposit, the host may be removed from Airbnb.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
