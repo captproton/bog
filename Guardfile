@@ -27,15 +27,13 @@ guard :minitest do
   # watch(%r{^app/models/(.*)\.rb$})      { |m| "test/unit/#{m[1]}_test.rb" }
 end
 
-# guard :passenger do ## bug in current code for this gem
-#   # watch(%|lib/.*\.rb|)
-#   watch(%r{^lib/.*\.rb$})
-#   watch(%r{^config/.*\.rb$})
-#   # watch(%|config/.*\.rb|)
-# end
-
 guard :bundler do
   watch('Gemfile')
   # Uncomment next line if your Gemfile contains the `gemspec' command.
   # watch(/^.+\.gemspec/)
+end
+
+guard 'passenger',:cli => '--daemonize --port 3048', :notification => true do
+  watch(%r{^lib/(.*)\.rb$})
+  watch(%r{^config/(.*)\.rb$})
 end

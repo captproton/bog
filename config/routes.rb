@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'payments/book'
+
+  resources :reservations
   resources :paintings
   get 'welcome/index'
 

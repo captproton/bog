@@ -1,0 +1,144 @@
+<div id="summary" class="panel room-section">
+    <div class="page-container-responsive">
+      <div class="row">
+        <div class="col-lg-8">
+          
+<div class="row-space-4 row-space-top-4">
+  <div class="row">
+
+    <div class="col-md-3 text-center">
+      <a href="#host-profile" class="media-photo media-round"><img alt="Su" class="host-profile-image" nopin="nopin" src="https://a1.muscache.com/ic/users/24047188/profile_pic/1416702545/original.jpg?interpolation=lanczos-none&amp;crop=w:w;*,*&amp;crop=h:h;*,*&amp;resize=225:*&amp;output-format=jpg&amp;output-quality=70" title="Su" width="90" height="90"></a>
+    </div>
+
+    <div class="col-md-9">
+
+      <h1 itemprop="name" class="overflow h3 row-space-1 text-center-sm" id="listing_name">
+        <%= @room.title.to_s %>
+      </h1>
+
+      <span class="hide" itemprop="breadcrumb">
+          <span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+            <a href="/s/United-States" itemprop="url"><span itemprop="title">United States</span>,</a>
+          </span>
+          <span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+            <a href="/s/California--United-States" itemprop="url"><span itemprop="title">California</span>,</a>
+          </span>
+          <span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+            <a href="/s/South-Lake-Tahoe--CA" itemprop="url"><span itemprop="title">South Lake Tahoe</span></a>
+          </span>
+      </span>
+
+      <div id="display-address" class="row-space-2 text-muted hide-sm" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating" data-location="South Lake Tahoe, CA, United States">
+
+        <a href="#neighborhood" class="link-reset"><%= "#{@room.city}, #{@room.state}, #{@room.country_code}" %></a>
+
+          &nbsp;
+          <a href="#reviews" class="link-reset">      <div class="star-rating">
+        <div class="foreground">
+                  <i class="icon icon-beach icon-star"></i>
+        <i class="icon icon-beach icon-star"></i>
+        <i class="icon icon-beach icon-star"></i>
+        <i class="icon icon-beach icon-star"></i>
+        <i class="icon icon-beach icon-star"></i>
+        <meta itemprop="ratingValue" content="5.0">
+
+        </div>
+        <div class="background">
+          <i class="icon icon-star icon-light-gray"></i>
+          <i class="icon icon-star icon-light-gray"></i>
+          <i class="icon icon-star icon-light-gray"></i>
+          <i class="icon icon-star icon-light-gray"></i>
+          <i class="icon icon-star icon-light-gray"></i>
+        </div>
+      </div>
+(<span itemprop="reviewCount">10</span>)</a>
+      </div>
+
+      <div class="row row-condensed text-muted text-center">
+          <div class="col-sm-3">
+            <i class="icon icon-entire-place icon-size-2"></i>
+          </div>
+          <div class="col-sm-3">
+            <i class="icon icon-group icon-size-2"></i>
+          </div>
+          <div class="col-sm-3">
+            <i class="icon icon-rooms icon-size-2"></i>
+          </div>
+          <div class="col-sm-3">
+            <i class="icon icon-double-bed icon-size-2"></i>
+          </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="col-md-3 text-muted text-center hide-sm">
+      <a href="#host-profile" class="link-reset text-wrap">Su</a>
+    </div>
+
+    <div class="col-md-9">
+      <div class="row row-condensed text-muted text-center">
+          <div class="col-sm-3">
+            Entire home/apt
+          </div>
+          <div class="col-sm-3">
+            6 Guests
+          </div>
+          <div class="col-sm-3">
+            2 Bedrooms
+          </div>
+          <div class="col-sm-3">
+            3 Beds
+          </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+        </div>
+        <div class="col-lg-4">
+          
+
+<div class="mobile-bookit-btn-container panel-btn-sm panel-btn-fixed-sm book-it-btn-container">
+  <button id="book-it-sm-trigger" class="btn btn-primary btn-block btn-large">
+    <span class="book-it">
+      Request to Book
+    </span>
+
+    <span class="instant-book">
+      <i class="icon icon-bolt icon-beach h4"></i>
+      Instant Book
+    </span>
+  </button>
+</div>
+
+
+
+
+
+<div id="tax-descriptions-tip" class="tooltip tooltip-top-middle" role="tooltip" data-sticky="true" data-trigger="#tax-descriptions-tooltip">
+</div>
+
+<div style="" class="modal" role="dialog" aria-hidden="true" id="book-it-sm-modal">
+  <div class="modal-table">
+    <div class="modal-cell">
+      <div class="modal-content">
+        <div class="panel-header">
+          <a href="#" class="modal-close" data-behavior="modal-close"></a>
+          Request to Book
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <%# render :partial => 'original_reservation_form' %>
+        <%= render "reservation_form", object: @room %>
+</div>
+      </div>
+    </div>
+  </div>

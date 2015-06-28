@@ -11,7 +11,9 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-ui
 //= require jquery_ujs
 //= require turbolinks
 //= require jquery-fileupload/basic-plus
 //= require jquery-fileupload/vendor/tmpl
+//= require bootstrap-datepicker

@@ -1,0 +1,166 @@
+<%# form_for(@reservation) do |f| %>
+<%= form_tag  payments_book_path, method: "post" do %>
+  <% if @reservation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@reservation.errors.count, "error") %> prohibited this reservation from being saved:</h2>
+
+      <ul>
+      <% @reservation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<form accept-charset="UTF-8" action="https://www.airbnb.com/payments/book?hosting_id=4644829" class="info new-o2-form-inline" id="book_it_form" method="post">
+    <div style="margin:0;padding:0;display:inline"><input name="utf8" value="✓" type="hidden"><input name="authenticity_token" value="V4$.airbnb.com$gEleKwJZr2c$goiQ00ppif5ypGzlpy3MAsz_zHJyFd_xV8_NiLMKQiw=" type="hidden"></div>
+  <div id="pricing" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+    <div id="price_amount" itemprop="price" class="price-amount pull-left h3 text-special">$150</div>
+
+    <div id="payment-period-container" class="pull-right">
+      <div id="per_night" class="per-night">
+Per Night
+      </div>
+      <div id="per_month" class="per-month hide">
+Per Month
+<i id="price-info-tooltip" class="icon icon-question hide" data-behavior="tooltip"></i>
+      </div>
+    </div>
+    <meta content="USD" itemprop="priceCurrency">
+  </div>
+  <div style="top: 0px;" class="display-subtotal" id="book_it">
+    <div class="panel">
+      <div class="panel-body panel-light">
+<div class="form-fields">
+  <div class="row row-condensed row-space-3">
+    <div class="col-md-9">
+      <div class="row row-condensed">
+        <div class="col-sm-6 row-space-1-sm">
+          <label for="checkin">
+            Check In
+          </label>
+          <input class="checkin ui-datepicker-target" id="checkin" name="checkin" placeholder="mm/dd/yyyy" type="text">
+        </div>
+        <div class="col-sm-6 row-space-1-sm">
+          <label for="checkout">
+            Check Out
+          </label>
+          <input class="checkout ui-datepicker-target" id="checkout" name="checkout" placeholder="mm/dd/yyyy" type="text">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label for="number_of_guests">
+        Guests
+      </label>
+      <div class="select select-block">
+        <select id="number_of_guests" name="number_of_guests"><option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option></select>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="" id="book_it_status">
+  <div id="book_it_enabled" class="clearfix">
+    <div id="subtotal_area" class="panel-padding-fit"><table class="table table-bordered table-breakdown">
+  
+    <tbody><tr>
+      <td>
+$150 x 2 nights
+
+      </td>
+      <td class="table-cell-price">$300</td>
+    </tr>
+  
+    <tr>
+      <td>
+Cleaning fee
+
+      </td>
+      <td class="table-cell-price">$125</td>
+    </tr>
+  
+    <tr>
+      <td>
+Service fee
+
+  <i id="service-fee-tooltip" class="icon icon-question"></i>
+
+      </td>
+      <td class="table-cell-price">$51</td>
+    </tr>
+  
+  
+    <tr class="table-row-total">
+      <td>Total</td>
+      <td class="table-cell-price">$476</td>
+    </tr>
+  
+</tbody></table>
+</div>
+    <div id="book_it_button_container" class="book-it-btn-container">
+      <button type="submit" class="btn btn-primary btn-large btn-block" id="book_it_button">
+
+        <span class="book-it">
+          Request to Book
+        </span>
+
+        <span class="instant-book">
+          <i class="icon icon-bolt icon-beach h4"></i>
+          Instant Book
+        </span>
+
+      </button>
+    </div>
+
+    
+<div id="pf-pic-prompt-container" class="hide row-space-top-2">
+
+  <div class="signup-or-separator">
+    <h6 class="signup-or-separator--text">or</h6>
+    <hr>
+  </div>
+
+  <div class="pf-pic-prompt text-center">
+    <a href="#" class="profile-pic-upsell-launcher">Add a profile photo</a> to Instant Book this listing.
+
+    <i aria-label="Instant Book lets you book a listing instantly, without having to wait for the host's confirmation." class="icon icon-question" data-behavior="tooltip" data-position="bottom"></i>
+  </div>
+</div>
+
+  </div>
+
+  <div id="book_it_disabled" class="text-center hide">
+    <p id="book_it_disabled_message" class="icon-rausch">
+      This property is unavailable.
+    </p>
+    <a href="" class="btn btn-large btn-block" id="view_other_listings_button">
+      View Other Listings
+    </a>
+  </div>
+</div>
+
+
+
+      </div>
+    </div>
+
+    <div id="highlight-cancellation-container" class="hide">
+      <div class="panel-body">
+<div class="media va-container">
+  <i class="pull-left icon icon-cancellation-policy va-top"></i>
+  <div class="media-body va-middle">
+    This host offers flexible cancellation: Full refund 1 day prior to arrival, except service fee.
+  </div>
+</div>
+      </div>
+    </div>
+  </div>
+
+  <input id="hosting_id" name="hosting_id" value="4644829" type="hidden">
+</form>
+<% end %>

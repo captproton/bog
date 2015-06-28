@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'bundler', '>= 1.8.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
@@ -55,7 +56,7 @@ group :development, :test do
   gem 'passenger', "~> 5.0.1"
   gem 'guard'
   gem 'guard-minitest'
-  # gem 'guard-passenger', '~> 0.6.0' # the code for this gem needs to be updated
+  gem 'guard-passenger', '~> 0.6.1'
   gem "guard-bundler", "~> 2.0.0"
   gem 'rr', '~> 1.1.2'
   gem 'minitest-spec-rails'
@@ -67,6 +68,14 @@ group :development, :test do
 end
 
 # App specfic gems
+# icons
+gem 'fontawesome-rails', '~> 4.0.3.0'
+# front-end resources
+source 'https://rails-assets.org' do
+  gem 'rails-assets-normalize-css'
+  gem 'rails-assets-bootstrap'
+  gem 'rails-assets-jquery-ui'
+end
 # Geocoding lat-lng
 gem 'geocoder', '~> 1.2.8'
 # Place autocomplete

@@ -6,7 +6,7 @@ describe Space do
 
   before do
     # setup_nulldb
-    @it = Space.new(:title => "TITLE")
+    @it = Space.new(:title => "TITLE", :room_style => "private_room", :home_style => "bed_and_breakfast")
     @ar = @it
     @ar_class = Space
   end
