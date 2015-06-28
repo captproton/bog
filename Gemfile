@@ -56,7 +56,7 @@ group :development, :test do
   gem 'passenger', "~> 5.0.1"
   gem 'guard'
   gem 'guard-minitest'
-  # gem 'guard-passenger', '~> 0.6.0' # the code for this gem needs to be updated
+  gem 'guard-passenger', '~> 0.6.1'
   gem "guard-bundler", "~> 2.0.0"
   gem 'rr', '~> 1.1.2'
   gem 'minitest-spec-rails'
